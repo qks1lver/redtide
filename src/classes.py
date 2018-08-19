@@ -11,6 +11,7 @@ from time import tzset, sleep, time
 from multiprocessing import Pool
 from sklearn.decomposition import KernelPCA
 from sklearn.cluster import SpectralClustering
+from sklearn.preprocessing import Imputer
 
 
 # Constants
@@ -313,9 +314,10 @@ class Stock():
             if not df.empty:
                 df = df['open']
                 x = ((df - df.min())/(df.max() - df.min())).values
-                X.append(x)
-                days.append(len(x))
-                symbs.append(symb)
+                if not np.isnan(x).any():
+                    X.append(x)
+                    days.append(len(x))
+                    symbs.append(symb)
 
         max_days = max(days)
         idx = [i for i,x in enumerate(X) if len(x) == max_days]
@@ -332,7 +334,9 @@ class Stock():
 
         X,symbs = self.range_norm(dfs, from_date=from_date, to_date=to_date)
 
-        clf = SpectralClustering().fit(X)
+        imputer = Imputer(axis=1)
+
+        clf = SpectralClustering().fit(imputer.transform(X))
 
         labels = list(set(clf.labels_))
         for l in labels:

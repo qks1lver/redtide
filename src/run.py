@@ -33,4 +33,4 @@ if __name__ == '__main__':
     if args.analyze:
         dfs = s.read_full_histories()
         # s.analyze(dfs)
-        s.cluster(dfs, from_date='2018-6-1')
+        s.cluster(dfs, from_date='2018-1-1')
