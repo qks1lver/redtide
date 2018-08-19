@@ -65,6 +65,11 @@ class Stock():
                 print('Failed to pull for %s' % symb)
             return -1
 
+        if r.status_code != requests.codes.ok:
+            if self.verbose:
+                print('Page load failed for %s' % symb)
+            return -1
+        
         raw = self.rexp_data_row.findall(r.text)
         if not raw:
             if self.verbose:
