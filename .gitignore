@@ -5,3 +5,5 @@ src/__pycache__/
 data/live_quotes/
 
 data/full_history/
+
+*slurm-*
