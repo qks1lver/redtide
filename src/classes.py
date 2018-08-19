@@ -177,7 +177,7 @@ class Stock():
 
             with Pool(processes=self.n_cpu) as pool:
 
-                res = pool.map(self._retrieve_symb, symbs)
+                res = pool.map(self.retrieve_symb, symbs)
 
             for symb,success in res:
                 if success:
@@ -209,7 +209,7 @@ class Stock():
 
         return
 
-    def _retrieve_symb(self, symb):
+    def retrieve_symb(self, symb):
 
         success = False
 
