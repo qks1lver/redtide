@@ -61,10 +61,15 @@ class Stock():
         except(KeyboardInterrupt, SystemExit):
             raise
         except:
-            print('Failed to pull for %s' % symb)
+            if self.verbose:
+                print('Failed to pull for %s' % symb)
             return -1
 
         raw = self.rexp_data_row.findall(r.text)
+        if not raw:
+            if self.verbose:
+                print('Cannot find data for %s' % symb)
+            return -1
         raw.pop(0)
 
         data = []
