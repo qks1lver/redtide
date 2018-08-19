@@ -7,4 +7,4 @@
 
 module purge; module load Python/3.6.0
 
-srun python run.py -d -v
+srun python run.py "$@"
