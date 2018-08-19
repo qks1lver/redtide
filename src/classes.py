@@ -57,7 +57,11 @@ class Stock():
         url = 'https://finance.yahoo.com/quote/%s/history?period1=%d&period2=%d&interval=1d&filter=history&frequency=1d' % (symb, period1, period2)
 
         try:
+            n_try = 0
             r = requests.get(url)
+            while r.status_code != requests.codes.ok and n_try < 10:
+                r = requests.get(url)
+                n_try += 1
         except(KeyboardInterrupt, SystemExit):
             raise
         except:
