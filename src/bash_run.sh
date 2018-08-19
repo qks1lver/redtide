@@ -2,8 +2,8 @@
 
 #SBATCH -J growth
 #SBATCH -p DPB
-#SBATCH -c 24
-#SBATCH --mem=4000
+#SBATCH -c 8
+#SBATCH --mem=8000
 
 module purge; module load Python/3.6.0
 
