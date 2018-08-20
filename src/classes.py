@@ -10,14 +10,14 @@ import numpy as np
 from time import tzset, sleep, time
 from multiprocessing import Pool
 from sklearn.decomposition import KernelPCA
-from sklearn.cluster import SpectralClustering
-from sklearn.preprocessing import Imputer
+from sklearn.cluster import DBSCAN
 
 
 # Constants
 _d_data_ = '../data/'
-_nasdaq_listing_ = _d_data_ + 'NASDAQ.txt'
-_nyse_listing_ = _d_data_ + 'NYSE.txt'
+_p_nasdaq_listing_ = _d_data_ + 'NASDAQ.txt'
+_p_nyse_listing_ = _d_data_ + 'NYSE.txt'
+_p_all_symbols_ = _d_data_ + 'all_symbols.txt'
 
 
 # Classes
@@ -37,10 +37,12 @@ class Stock():
         self._date_time_format_ = '%Y-%m-%d-%H-%M-%S'
 
         self.rexp_data_row = re.compile(r'{"date".*?}')
-        self.rexp_dollar = re.compile('currentPrice":{"raw":.+?,')
+        #self.rexp_dollar = re.compile(r'currentPrice":{"raw":.+?,')
+        self.rexp_dollar = re.compile(r'starQuote.*?<')
 
         self.n_cpu = os.cpu_count()
         self.verbose = False
+        self.symbs = list()
 
         if not os.path.isdir(self._dir_full_history_):
             os.makedirs(self._dir_full_history_)
@@ -153,19 +155,40 @@ class Stock():
 
         return(p_out)
 
-    def _all_symbols(self):
+    def all_symbols(self, try_compiled=True):
 
-        rexp = re.compile(r'-[a-zA-Z]$')
+        symbs = []
 
-        nasdaq_symbs = [rexp.sub('',s) for s in pd.read_table(_nasdaq_listing_)['Symbol'].values]
-        nyse_symbs = [rexp.sub('',s) for s in pd.read_table(_nasdaq_listing_)['Symbol'].values]
-        symbs = list(set(nasdaq_symbs) | set(nyse_symbs))
+        if try_compiled and os.path.isfile(_p_all_symbols_):
+
+            if self.verbose:
+                print('Using %s for symbols ...' % _p_all_symbols_)
+
+            with open(_p_all_symbols_, 'r') as f:
+                symbs = list(set(f.read().strip().split('\n')))
+
+        elif os.path.isfile(_p_nasdaq_listing_) and os.path.isfile(_p_nyse_listing_):
+
+            if self.verbose:
+                print('Using %s and %s for symbols' % (_p_nasdaq_listing_, _p_nyse_listing_))
+
+            rexp = re.compile(r'-[a-zA-Z]$')
+
+            nasdaq_symbs = [rexp.sub('',s) for s in pd.read_table(_p_nasdaq_listing_)['Symbol'].values]
+            nyse_symbs = [rexp.sub('',s) for s in pd.read_table(_p_nyse_listing_)['Symbol'].values]
+            symbs = list(set(nasdaq_symbs) | set(nyse_symbs))
+
+        elif self.verbose:
+            print('Missing symbol file.')
+
+        if symbs and self.verbose:
+            print('\tFound %d symbols' % len(symbs))
 
         return(symbs)
 
     def retrieve_all_symbs(self):
 
-        symbs = self._all_symbols()
+        symbs = self.all_symbols()
 
         n_symbs = len(symbs)
         n_success = 0
@@ -230,7 +253,7 @@ class Stock():
 
         if not symbs:
 
-            symbs = self._all_symbols()
+            symbs = self.all_symbols()
 
         if self.verbose:
             print('Reading %d full histories to dataframes ...' % len(symbs))
@@ -257,7 +280,11 @@ class Stock():
         tmp0 = (1 - df['close'].shift(shift0) / df['open'] >= ratio0).values
         tmp1 = (df['open'].shift(shift1) / df['open'] - 1 >= ratio1).values
 
-        rate = len(df[tmp0 & tmp1]) / len(df[tmp0])
+        n_df0 = len(df[tmp0])
+        if n_df0:
+            rate = len(df[tmp0 & tmp1]) / n_df0
+        else:
+            rate = np.nan
 
         return(rate)
 
@@ -268,7 +295,8 @@ class Stock():
         for symb in dfs:
 
             rate = self.transform(dfs[symb], 1, -1, 0.01, 0.01)
-            rates.append(rate)
+            if not np.isnan(rate):
+                rates.append(rate)
 
         mean = np.mean(rates)
         std = np.std(rates)
@@ -280,11 +308,9 @@ class Stock():
 
         return
 
-    def pca(self, dfs, from_date='', to_date=''):
+    def pca(self, X):
 
         print('\nLinear PCA')
-
-        X, _ = self.range_norm(dfs, from_date=from_date, to_date=to_date)
 
         m = KernelPCA(kernel='linear', n_jobs=self.n_cpu)
         m.fit(X)
@@ -294,7 +320,7 @@ class Stock():
             print('%d: %.4f' % (i+1, l[i]))
         print('First 10: %.4f' % sum(l[:10]))
 
-        return
+        return m
 
     def range_norm(self, dfs, from_date='', to_date=''):
 
@@ -312,8 +338,10 @@ class Stock():
         for symb in dfs:
             df = dfs[symb].loc[to_date:from_date]
             if not df.empty:
-                df = df['open']
-                x = ((df - df.min())/(df.max() - df.min())).values
+                x = df['high'].values
+                x_min = np.min(x)
+                dx = np.max(x) - x_min
+                x = (x - x_min)/dx
                 if not np.isnan(x).any():
                     X.append(x)
                     days.append(len(x))
@@ -328,15 +356,14 @@ class Stock():
 
         return(X, symbs)
 
-    def cluster(self, dfs, from_date='', to_date=''):
+    def cluster(self, X, symbs):
 
         print('\nClustering ...')
 
-        X,symbs = self.range_norm(dfs, from_date=from_date, to_date=to_date)
+        '''m = self.pca(X)
+        X = m.alphas_[:,0:50]'''
 
-        imputer = Imputer(axis=1)
-
-        clf = SpectralClustering().fit(imputer.transform(X))
+        clf = DBSCAN(n_jobs=self.n_cpu, eps=2).fit(X)
 
         labels = list(set(clf.labels_))
         for l in labels:
@@ -344,21 +371,32 @@ class Stock():
 
         return(clf)
 
-    def get_live_quote(self, symbs=list(), interval=120):
+    def get_live_quote(self, symbs=list(), interval=600):
 
         if not symbs:
-            symbs = self._all_symbols()
+            symbs = self.all_symbols()
+
+        if self.verbose:
+            print('Retrieving live quotes from %d symbols ...' % len(symbs))
 
         while 1:
 
             wday = datetime.datetime.now().weekday()
 
-            while 0 <= wday <= 4 and self._open_time_ <= self._get_current_time() <= self._close_time_:
+            t_current = self._get_current_time()
+            # while 0 <= wday <= 4 and self._open_time_ <= t_current <= self._close_time_:
+            while 0 <= wday <= 7:
                 t0 = time()
                 with Pool(processes=self.n_cpu) as pool:
                     pool.map(self._get_live_quote, symbs)
-                print('%s - %d s' % (datetime.datetime.now().strftime(self._date_time_format_), time() - t0))
-                sleep(interval)
+
+                if self.verbose:
+                    print('%s - %d s' % (datetime.datetime.now().strftime(self._date_time_format_), time() - t0))
+
+                t_wait = t_current + interval - self._get_current_time()
+                if t_wait > 0:
+                    sleep(t_wait)
+                t_current = self._get_current_time()
 
             t2open = self._open_time_ - self._get_current_time()
             if t2open < 0:
@@ -366,14 +404,16 @@ class Stock():
 
             if 0 <= wday < 4:
                 while t2open > 0:
-                    print('Waiting %s to open ...' % self._time_str(t2open))
+                    if self.verbose:
+                        print('Waiting %s to open ...' % self._time_str(t2open))
                     sleep(t2open)
                     t2open = self._open_time_ - self._get_current_time()
             else:
                 t2open += (6 - wday) * 86400
 
                 while t2open > 0:
-                    print('Waiting %s to open ...' % self._time_str(t2open))
+                    if self.verbose:
+                        print('Waiting %s to open ...' % self._time_str(t2open))
                     sleep(t2open)
                     t2open = self._open_time_ - self._get_current_time()
 
@@ -391,23 +431,39 @@ class Stock():
         ts = datetime.datetime.now().strftime(self._date_time_format_)
 
         try:
-            r = requests.get('https://finance.yahoo.com/quote/%s' % symb)
-            quote = self.rexp_dollar.search(r.text).group()[21:-1]
-
-            p_data = self._dir_live_quotes_ + '%s.csv' % symb
-
-            if not os.path.isfile(p_data):
-                with open(p_data, 'w+') as f:
-                    _ = f.write('date,price\n')
-
-            with open(p_data, 'a') as f:
-                _ = f.write('%s,%s\n' % (ts, quote))
-
+            n_try = 0
+            # url = 'https://finance.yahoo.com/quote/%s' % symb
+            url = 'https://money.cnn.com/quote/quote.html?symb=%s' % symb
+            r = requests.get(url)
+            while r.status_code != requests.codes.ok and n_try < 10:
+                r = requests.get(url)
+                n_try += 1
         except(KeyboardInterrupt, SystemExit):
             raise
-
         except:
-            print('Failed to get %s at %s' % (symb, ts))
+            if self.verbose:
+                print('Failed to get %s at %s' % (symb, ts))
+
+        if r.status_code != requests.codes.ok:
+            if self.verbose:
+                print('Page load failed for %s' % symb)
+            return
+
+        match = self.rexp_dollar.search(r.text)
+        if not match:
+            if self.verbose:
+                print('Cannot find data for %s' % symb)
+            return
+
+        quote = match.group()[11:-1]
+        p_data = self._dir_live_quotes_ + '%s.csv' % symb
+
+        if not os.path.isfile(p_data):
+            with open(p_data, 'w+') as f:
+                _ = f.write('date,price\n')
+
+        with open(p_data, 'a') as f:
+            _ = f.write('%s,%s\n' % (ts, quote))
 
         return
 
@@ -427,3 +483,86 @@ class Stock():
             return('%.1f minutes' % minutes)
 
         return('%d seconds' % dtime)
+
+    def compile_symbols(self):
+
+        self.symbs = self.all_symbols(try_compiled=False)
+        n_symbs = len(self.symbs)
+        n_compiled = 0
+        n_excluded = 0
+
+        with Pool(processes=self.n_cpu) as pool:
+            res = pool.map(self._compile_symb, self.symbs)
+
+        with open(_p_all_symbols_, 'w+') as f:
+            for symb, success in res:
+                if success:
+                    _ = f.write('%s\n' % symb)
+                    n_compiled += 1
+                else:
+                    n_excluded += 1
+
+        print('Started with: %d\nCompiled: %d\nExcluded: %d\nCompiled to: %s' % (n_symbs, n_excluded, n_compiled, _p_all_symbols_))
+
+        return
+
+    def _compile_symb(self, symb):
+
+        symb_mod = ''
+        max_try = 10
+
+        try:
+            n_try = 0
+            url = 'https://money.cnn.com/quote/quote.html?symb=%s' % symb
+            r = requests.get(url)
+            while r.status_code != requests.codes.ok and n_try < max_try:
+                r = requests.get(url)
+                n_try += 1
+        except(KeyboardInterrupt, SystemExit):
+            raise
+        except:
+            # Try removing the last letter if it's a W or C or removing the "."
+
+            if '.' in symb:
+                symb_mod = symb.replace('.','')
+            elif (symb.endswith('W') or symb.endswith('C')) and symb[:-1] not in self.symbs:
+                symb_mod = symb[:-1]
+
+            if symb_mod:
+
+                try:
+                    n_try = 0
+                    url = 'https://money.cnn.com/quote/quote.html?symb=%s' % symb_mod
+                    r = requests.get(url)
+                    while r.status_code != requests.codes.ok and n_try < max_try:
+                        r = requests.get(url)
+                        n_try += 1
+                except(KeyboardInterrupt, SystemExit):
+                    raise
+                except:
+                    if self.verbose:
+                        print('\tExcluding %s from compilation (code=1)' % symb)
+                    return(symb, False)
+
+            else:
+                if self.verbose:
+                    print('\tExcluding %s from compilation (code=0)' % symb)
+                return (symb, False)
+
+        if r.status_code != requests.codes.ok:
+            if self.verbose:
+                print('\tExcluding %s from compilation (code=2)' % symb)
+            return (symb, False)
+
+        match = self.rexp_dollar.search(r.text)
+        if not match:
+            if self.verbose:
+                print('\tExcluding %s from compilation (code=3)' % symb)
+            return (symb, False)
+
+        if symb_mod:
+            if self.verbose:
+                print('%s -> %s' % (symb, symb_mod))
+            symb = symb_mod
+
+        return(symb, True)

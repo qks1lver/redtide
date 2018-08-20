@@ -12,6 +12,7 @@ if __name__ == '__main__':
     parser.add_argument('-d', dest='daily_history', action='store_true', help='Retrieve historic data (daily resolution)')
     parser.add_argument('--symb', dest='symbol', action='store', default='', help='Specific ticker symbol')
     parser.add_argument('-a', dest='analyze', action='store_true', help='Analyze')
+    parser.add_argument('-c', dest='compile', action='store_true', help='Compile symbols')
     parser.add_argument('-v', dest='verbose', action='store_true', help='Verbose')
 
     args = parser.parse_args()
@@ -32,5 +33,8 @@ if __name__ == '__main__':
 
     if args.analyze:
         dfs = s.read_full_histories()
-        # s.analyze(dfs)
-        s.cluster(dfs, from_date='2018-1-1')
+        X, symbs = s.range_norm(dfs, from_date='2017-8-1')
+        s.cluster(X, symbs)
+
+    if args.compile:
+        s.compile_symbols()
