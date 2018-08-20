@@ -384,8 +384,7 @@ class Stock():
             wday = datetime.datetime.now().weekday()
 
             t_current = self._get_current_time()
-            # while 0 <= wday <= 4 and self._open_time_ <= t_current <= self._close_time_:
-            while 0 <= wday <= 7:
+            while 0 <= wday <= 4 and self._open_time_ <= t_current <= self._close_time_:
                 t0 = time()
                 with Pool(processes=self.n_cpu) as pool:
                     pool.map(self._get_live_quote, symbs)
