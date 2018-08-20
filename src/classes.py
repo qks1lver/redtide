@@ -502,7 +502,7 @@ class Stock():
                 else:
                     n_excluded += 1
 
-        print('Started with: %d\nCompiled: %d\nExcluded: %d\nCompiled to: %s' % (n_symbs, n_excluded, n_compiled, _p_all_symbols_))
+        print('Started with: %d\nCompiled: %d\nExcluded: %d\nCompiled to: %s' % (n_symbs, n_compiled, n_excluded, _p_all_symbols_))
 
         return
 
