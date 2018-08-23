@@ -14,11 +14,13 @@ if __name__ == '__main__':
     parser.add_argument('-a', dest='analyze', action='store_true', help='Analyze')
     parser.add_argument('-c', dest='compile', action='store_true', help='Compile symbols')
     parser.add_argument('-v', dest='verbose', action='store_true', help='Verbose')
+    parser.add_argument('--now', dest='live_now', action='store_true', help='Get live now, even if market is closed')
 
     args = parser.parse_args()
 
     s = Stock()
     s.verbose = args.verbose
+    s.live_now = args.live_now
 
     if args.live_quote:
         s.get_live_quote()

@@ -37,12 +37,12 @@ class Stock():
         self._date_time_format_ = '%Y-%m-%d-%H-%M-%S'
 
         self.rexp_data_row = re.compile(r'{"date".*?}')
-        #self.rexp_dollar = re.compile(r'currentPrice":{"raw":.+?,')
         self.rexp_dollar = re.compile(r'starQuote.*?<')
 
         self.n_cpu = os.cpu_count()
         self.verbose = False
         self.symbs = list()
+        self.live_now = False
 
         if not os.path.isdir(self._dir_full_history_):
             os.makedirs(self._dir_full_history_)
@@ -377,14 +377,14 @@ class Stock():
             symbs = self.all_symbols()
 
         if self.verbose:
-            print('Retrieving live quotes from %d symbols ...' % len(symbs))
+            print('Retrieving live quotes for %d symbols ...' % len(symbs))
 
         while 1:
 
             wday = datetime.datetime.now().weekday()
 
             t_current = self._get_current_time()
-            while 0 <= wday <= 4 and self._open_time_ <= t_current <= self._close_time_:
+            while self.live_now or 0 <= wday <= 4 and self._open_time_ <= t_current <= self._close_time_:
                 t0 = time()
                 with Pool(processes=self.n_cpu) as pool:
                     pool.map(self._get_live_quote, symbs)
@@ -431,7 +431,6 @@ class Stock():
 
         try:
             n_try = 0
-            # url = 'https://finance.yahoo.com/quote/%s' % symb
             url = 'https://money.cnn.com/quote/quote.html?symb=%s' % symb
             r = requests.get(url)
             while r.status_code != requests.codes.ok and n_try < 10:
@@ -442,6 +441,7 @@ class Stock():
         except:
             if self.verbose:
                 print('Failed to get %s at %s' % (symb, ts))
+            return
 
         if r.status_code != requests.codes.ok:
             if self.verbose:
@@ -521,7 +521,6 @@ class Stock():
             raise
         except:
             # Try removing the last letter if it's a W or C or removing the "."
-
             if '.' in symb:
                 symb_mod = symb.replace('.','')
             elif (symb.endswith('W') or symb.endswith('C')) and symb[:-1] not in self.symbs:
