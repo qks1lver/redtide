@@ -275,7 +275,8 @@ class Stock:
 
         return dfs
 
-    def transform(self, df, shift0=1, shift1=-1, ratio0=0.01, ratio1=0.01):
+    @staticmethod
+    def transform(df, shift0=1, shift1=-1, ratio0=0.01, ratio1=0.01):
 
         tmp0 = (1 - df['close'].shift(shift0) / df['open'] >= ratio0).values
         tmp1 = (df['open'].shift(shift1) / df['open'] - 1 >= ratio1).values
@@ -322,7 +323,8 @@ class Stock:
 
         return m
 
-    def range_norm(self, dfs, from_date='', to_date=''):
+    @staticmethod
+    def range_norm(dfs, from_date='', to_date=''):
 
         if not to_date:
             to_date = dfs[list(dfs.keys())[0]][0:1].index[0].to_pydatetime().strftime('%Y-%m-%d')
@@ -416,7 +418,8 @@ class Stock:
                     sleep(t2open)
                     t2open = self._open_time_ - self._get_current_time()
 
-    def _get_current_time(self):
+    @staticmethod
+    def _get_current_time():
 
         t = datetime.datetime.now()
         h = t.hour * 3600
@@ -466,7 +469,8 @@ class Stock:
 
         return
 
-    def _time_str(self, dtime):
+    @staticmethod
+    def _time_str(dtime):
 
         minutes = dtime / 60
         hours = minutes / 60
