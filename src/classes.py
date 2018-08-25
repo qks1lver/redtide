@@ -21,7 +21,7 @@ _p_all_symbols_ = _d_data_ + 'all_symbols.txt'
 
 
 # Classes
-class Stock():
+class Stock:
 
     def __init__(self):
 
@@ -134,7 +134,7 @@ class Stock():
         if self.verbose:
             print('Pulled %d days of %s' % (len(data), symb))
 
-        return(data)
+        return data
 
     def write_history(self, data, symb, dir_out=''):
 
@@ -153,7 +153,7 @@ class Stock():
         if self.verbose:
             print('Wrote %s history at %s' % (symb, p_out))
 
-        return(p_out)
+        return p_out
 
     def all_symbols(self, try_compiled=True):
 
@@ -184,7 +184,7 @@ class Stock():
         if symbs and self.verbose:
             print('\tFound %d symbols' % len(symbs))
 
-        return(symbs)
+        return symbs
 
     def retrieve_all_symbs(self):
 
@@ -245,9 +245,9 @@ class Stock():
             _ = self.write_history(data, symb)
             success = True
 
-        return(symb, success)
+        return symb, success
 
-    def read_full_histories(self, symbs=list()):
+    def read_full_histories(self, symbs=None):
 
         dfs = {}
 
@@ -273,7 +273,7 @@ class Stock():
         if self.verbose:
             print('Read %d / %d full histories to dataframes' % (len(dfs), len(symbs)))
 
-        return(dfs)
+        return dfs
 
     def transform(self, df, shift0=1, shift1=-1, ratio0=0.01, ratio1=0.01):
 
@@ -286,7 +286,7 @@ class Stock():
         else:
             rate = np.nan
 
-        return(rate)
+        return rate
 
     def analyze(self, dfs):
 
@@ -354,7 +354,7 @@ class Stock():
         X = np.array(X)
         print('\tNumber of samples: %d' % len(X))
 
-        return(X, symbs)
+        return X, symbs
 
     def cluster(self, X, symbs):
 
@@ -369,9 +369,9 @@ class Stock():
         for l in labels:
             print('Group %d: %s\n' % (l, ','.join([symbs[i] for i,j in enumerate(clf.labels_) if j == l])))
 
-        return(clf)
+        return clf
 
-    def get_live_quote(self, symbs=list(), interval=600):
+    def get_live_quote(self, symbs=None, interval=600):
 
         if not symbs:
             symbs = self.all_symbols()
@@ -423,7 +423,7 @@ class Stock():
         m = t.minute * 60
         s = t.second
 
-        return(h + m + s)
+        return h + m + s
 
     def _get_live_quote(self, symb):
 
@@ -473,15 +473,15 @@ class Stock():
         days = hours / 24
 
         if days >= 1.:
-            return('%.1f days' % days)
+            return '%.1f days' % days
 
         elif hours >= 1.:
-            return('%.1f hours' % hours)
+            return '%.1f hours' % hours
 
         elif minutes >= 1.:
-            return('%.1f minutes' % minutes)
+            return '%.1f minutes' % minutes
 
-        return('%d seconds' % dtime)
+        return '%d seconds' % dtime
 
     def compile_symbols(self):
 
@@ -540,17 +540,17 @@ class Stock():
                 except:
                     if self.verbose:
                         print('\tExcluding %s from compilation (code=1)' % symb)
-                    return(symb, False)
+                    return symb, False
 
             else:
                 if self.verbose:
                     print('\tExcluding %s from compilation (code=0)' % symb)
-                return (symb, False)
+                return symb, False
 
         if r.status_code != requests.codes.ok:
             if self.verbose:
                 print('\tExcluding %s from compilation (code=2)' % symb)
-            return (symb, False)
+            return symb, False
 
         match = self.rexp_dollar.search(r.text)
         if not match:
