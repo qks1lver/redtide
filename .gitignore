@@ -8,3 +8,4 @@ data/full_history/
 
 *slurm-*
 *.zip
+*.pyc

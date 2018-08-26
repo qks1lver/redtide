@@ -38,6 +38,7 @@ class Stock:
 
         self.rexp_data_row = re.compile(r'{"date".*?}')
         self.rexp_dollar = re.compile(r'starQuote.*?<')
+        self.rexp_volume = re.compile(r'olume<.+?</td>')
 
         self.n_cpu = os.cpu_count()
         self.verbose = False
@@ -386,7 +387,7 @@ class Stock:
             wday = datetime.datetime.now().weekday()
 
             t_current = self._get_current_time()
-            while self.live_now or 0 <= wday <= 4 and self._open_time_ <= t_current <= self._close_time_:
+            while self.live_now or (0 <= wday <= 4 and self._open_time_ <= t_current <= self._close_time_):
                 t0 = time()
                 with Pool(processes=self.n_cpu) as pool:
                     pool.map(self._get_live_quote, symbs)
@@ -410,7 +411,7 @@ class Stock:
                     sleep(t2open)
                     t2open = self._open_time_ - self._get_current_time()
             else:
-                t2open += (6 - wday) * 86400
+                t2open += (7 - wday) * 86400
 
                 while t2open > 0:
                     if self.verbose:
@@ -454,18 +455,25 @@ class Stock:
         match = self.rexp_dollar.search(r.text)
         if not match:
             if self.verbose:
-                print('Cannot find data for %s' % symb)
+                print('Cannot find quote for %s' % symb)
             return
-
         quote = match.group()[11:-1]
+
+        match = self.rexp_volume.search(r.text)
+        if not match:
+            if self.verbose:
+                print('Cannot find volumn for %s' % symb)
+            return
+        volume = match.group()[42:].replace('</td>','').replace(',','')
+
         p_data = self._dir_live_quotes_ + '%s.csv' % symb
 
         if not os.path.isfile(p_data):
             with open(p_data, 'w+') as f:
-                _ = f.write('date,price\n')
+                _ = f.write('date,price,volume\n')
 
         with open(p_data, 'a') as f:
-            _ = f.write('%s,%s\n' % (ts, quote))
+            _ = f.write('%s,%s,%s\n' % (ts, quote, volume))
 
         return
 
