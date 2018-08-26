@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
     if args.analyze:
         dfs = s.read_full_histories()
-        X, symbs = s.range_norm(dfs, from_date='2017-8-1')
+        X, symbs = s.range_norm(dfs, from_date='2018-5-1')
         s.cluster(X, symbs)
 
     if args.compile:

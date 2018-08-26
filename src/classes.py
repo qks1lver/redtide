@@ -10,7 +10,7 @@ import numpy as np
 from time import tzset, sleep, time
 from multiprocessing import Pool
 from sklearn.decomposition import KernelPCA
-from sklearn.cluster import DBSCAN
+from sklearn.cluster import AffinityPropagation
 
 
 # Constants
@@ -342,13 +342,14 @@ class Stock:
             df = dfs[symb].loc[to_date:from_date]
             if not df.empty:
                 x = df['high'].values
-                x_min = np.min(x)
-                dx = np.max(x) - x_min
-                x = (x - x_min)/dx
                 if not np.isnan(x).any():
-                    X.append(x)
-                    days.append(len(x))
-                    symbs.append(symb)
+                    x_min = np.min(x)
+                    dx = np.max(x) - x_min
+                    if dx != 0:
+                        x = (x - x_min) / dx
+                        X.append(x)
+                        days.append(len(x))
+                        symbs.append(symb)
 
         max_days = max(days)
         idx = [i for i,x in enumerate(X) if len(x) == max_days]
@@ -363,10 +364,10 @@ class Stock:
 
         print('\nClustering ...')
 
-        '''m = self.pca(X)
-        X = m.alphas_[:,0:50]'''
+        m = self.pca(X)
+        X = m.alphas_[:,0:50]
 
-        clf = DBSCAN(n_jobs=self.n_cpu, eps=2).fit(X)
+        clf = AffinityPropagation().fit(X)
 
         labels = list(set(clf.labels_))
         for l in labels:
