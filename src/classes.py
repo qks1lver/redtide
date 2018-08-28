@@ -364,8 +364,8 @@ class Stock:
 
         print('\nClustering ...')
 
-        m = self.pca(X)
-        X = m.alphas_[:,0:50]
+        '''m = self.pca(X)
+        X = m.alphas_[:,0:50]'''
 
         clf = AffinityPropagation().fit(X)
 
@@ -569,11 +569,11 @@ class Stock:
         if not match:
             if self.verbose:
                 print('\tExcluding %s from compilation (code=3)' % symb)
-            return (symb, False)
+            return symb, False
 
         if symb_mod:
             if self.verbose:
                 print('%s -> %s' % (symb, symb_mod))
             symb = symb_mod
 
-        return(symb, True)
+        return symb, True

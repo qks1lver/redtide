@@ -10,10 +10,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Redtide is coming')
     parser.add_argument('-l', dest='live_quote', action='store_true', help='Retrieve live quotes')
     parser.add_argument('-d', dest='daily_history', action='store_true', help='Retrieve historic data (daily resolution)')
-    parser.add_argument('--symb', dest='symbol', action='store', default='', help='Specific ticker symbol')
+    parser.add_argument('--symb', dest='symbol', default='', help='Specific ticker symbol')
     parser.add_argument('-a', dest='analyze', action='store_true', help='Analyze')
     parser.add_argument('-c', dest='compile', action='store_true', help='Compile symbols')
     parser.add_argument('-v', dest='verbose', action='store_true', help='Verbose')
+    parser.add_argument('--from', dest='from_date', default='2018-1-1', help='Analyze data from this date')
+    parser.add_argument('--to', dest='to_date', default='', help='Analyze data until this date')
     parser.add_argument('--now', dest='live_now', action='store_true', help='Get live now, even if market is closed')
 
     args = parser.parse_args()
@@ -35,7 +37,7 @@ if __name__ == '__main__':
 
     if args.analyze:
         dfs = s.read_full_histories()
-        X, symbs = s.range_norm(dfs, from_date='2018-5-1')
+        X, symbs = s.range_norm(dfs, from_date=args.from_date, to_date=args.to_date)
         s.cluster(X, symbs)
 
     if args.compile:
