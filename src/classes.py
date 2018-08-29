@@ -279,8 +279,8 @@ class Stock:
     @staticmethod
     def transform(df, shift0=1, shift1=-1, ratio0=0.01, ratio1=0.01):
 
-        tmp0 = (1 - df['close'].shift(shift0) / df['open'] >= ratio0).values
-        tmp1 = (df['open'].shift(shift1) / df['open'] - 1 >= ratio1).values
+        tmp0 = (1 - df['low'].shift(shift0) / df['open'] >= ratio0).values
+        tmp1 = (df['high'].shift(shift1) / df['open'] - 1 >= ratio1).values
 
         n_df0 = len(df[tmp0])
         if n_df0:
@@ -288,25 +288,25 @@ class Stock:
         else:
             rate = np.nan
 
-        return rate
+        freq = n_df0 / (len(df) - (abs(shift0) + abs(shift1)))
 
-    def analyze(self, dfs):
+        return rate, freq
 
-        rates = []
+    def analyze(self, dfs, from_date='', to_date=''):
+
+        if not to_date:
+            to_date = dfs[list(dfs.keys())[0]][0:1].index[0].to_pydatetime().strftime('%Y-%m-%d')
+
+        if not from_date:
+            from_date = (datetime.datetime.strptime(to_date, '%Y-%m-%d') - datetime.timedelta(days=365)).strftime('%Y-%m-%d')
+
+        print('Analyzing from %s to %s ...' % (from_date, to_date))
 
         for symb in dfs:
 
-            rate = self.transform(dfs[symb], 1, -1, 0.01, 0.01)
-            if not np.isnan(rate):
-                rates.append(rate)
-
-        mean = np.mean(rates)
-        std = np.std(rates)
-        min_rate = np.min(rates)
-        max_rate = np.max(rates)
-
-        print('\nMean (SD): %.3f (%.3f)' % (mean, std))
-        print('%.3f - %.3f' % (min_rate, max_rate))
+            rate, freq = self.transform(dfs[symb].loc[to_date:from_date], 1, -1, 0.01, 0.01)
+            if not np.isnan(rate) and rate >= 0.9 and freq >= 0.5:
+                    print('%s - %.2f (%.2f)' % (symb, rate, freq))
 
         return
 

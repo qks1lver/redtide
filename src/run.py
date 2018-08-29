@@ -14,6 +14,7 @@ if __name__ == '__main__':
     parser.add_argument('-a', dest='analyze', action='store_true', help='Analyze')
     parser.add_argument('-c', dest='compile', action='store_true', help='Compile symbols')
     parser.add_argument('-v', dest='verbose', action='store_true', help='Verbose')
+    parser.add_argument('--clust', dest='cluster', action='store_true', help='Cluster')
     parser.add_argument('--from', dest='from_date', default='2018-1-1', help='Analyze data from this date')
     parser.add_argument('--to', dest='to_date', default='', help='Analyze data until this date')
     parser.add_argument('--now', dest='live_now', action='store_true', help='Get live now, even if market is closed')
@@ -35,10 +36,14 @@ if __name__ == '__main__':
         else:
             s.retrieve_all_symbs()
 
-    if args.analyze:
+    if args.cluster:
         dfs = s.read_full_histories()
         X, symbs = s.range_norm(dfs, from_date=args.from_date, to_date=args.to_date)
         s.cluster(X, symbs)
 
     if args.compile:
         s.compile_symbols()
+
+    if args.analyze:
+        dfs = s.read_full_histories()
+        s.analyze(dfs=dfs, from_date=args.from_date, to_date=args.to_date)
