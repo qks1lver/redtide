@@ -190,6 +190,11 @@ class Stock:
     def retrieve_all_symbs(self):
 
         symbs = self.all_symbols()
+        updated_symbs = self.updated_symbs()
+        if updated_symbs:
+            symbs = list(set(symbs) - set(updated_symbs))
+            if self.verbose:
+                print('Skip pull for %d symbols, only pulling for %d symbols ...' % (len(updated_symbs), len(symbs)))
 
         n_symbs = len(symbs)
         n_success = 0
@@ -233,6 +238,22 @@ class Stock:
                 print('\t%s' % symb)
 
         return
+
+    def updated_symbs(self):
+        # Symbols that have already had full history pulled today
+        t = datetime.datetime.today()
+        t_close = datetime.datetime(year=t.year, month=t.month, day=t.day, hour=18).timestamp()
+
+        symbs = []
+        for p in os.listdir(self._dir_full_history_):
+            t = os.path.getmtime(self._dir_full_history_ + p)
+            if t > t_close:
+                symbs.append(p.replace('.csv', ''))
+
+        if self.verbose:
+            print('Full history up-to-date for %d symbols' % len(symbs))
+
+        return symbs
 
     def retrieve_symb(self, symb):
 
@@ -292,6 +313,9 @@ class Stock:
 
         return rate, freq
 
+    def gen_feature_part(self):
+        return
+    
     def analyze(self, dfs, from_date='', to_date=''):
 
         if not to_date:
