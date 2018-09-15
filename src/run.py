@@ -2,7 +2,7 @@
 
 # Import
 import argparse
-from classes import Stock
+from classes import Stock, Regressor
 
 # Run
 if __name__ == '__main__':
@@ -18,6 +18,7 @@ if __name__ == '__main__':
     parser.add_argument('--from', dest='from_date', default='2018-1-1', help='Analyze data from this date')
     parser.add_argument('--to', dest='to_date', default='', help='Analyze data until this date')
     parser.add_argument('--now', dest='live_now', action='store_true', help='Get live now, even if market is closed')
+    parser.add_argument('--debug', dest='debug', action='store_true', help='Debug current updates')
 
     args = parser.parse_args()
 
@@ -37,13 +38,20 @@ if __name__ == '__main__':
             s.retrieve_all_symbs()
 
     if args.cluster:
-        dfs = s.read_full_histories()
-        X, symbs = s.range_norm(dfs, from_date=args.from_date, to_date=args.to_date)
+        s.read_full_histories()
+        X, symbs = s.range_norm(from_date=args.from_date, to_date=args.to_date)
         s.cluster(X, symbs)
 
     if args.compile:
         s.compile_symbols()
 
     if args.analyze:
-        dfs = s.read_full_histories()
-        s.analyze(dfs=dfs, from_date=args.from_date, to_date=args.to_date)
+        s.read_full_histories()
+        s.analyze(from_date=args.from_date, to_date=args.to_date)
+
+    if args.debug:
+        symb = 'NVDA'
+        s.read_full_histories(symbs=[symb])
+        f,l = s.gen_feature(symb=symb, n_sampling=5, n_project=1)
+        m = Regressor()
+        m.train(f,l)

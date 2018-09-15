@@ -7,10 +7,15 @@ import datetime
 import os
 import pandas as pd
 import numpy as np
+import torch.nn as nn
+import pdb
 from time import tzset, sleep, time
 from multiprocessing import Pool
 from sklearn.decomposition import KernelPCA
 from sklearn.cluster import AffinityPropagation
+from sklearn.preprocessing import minmax_scale
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import KFold
 
 
 # Constants
@@ -44,6 +49,7 @@ class Stock:
         self.verbose = False
         self.symbs = list()
         self.live_now = False
+        self.dfs = None
 
         if not os.path.isdir(self._dir_full_history_):
             os.makedirs(self._dir_full_history_)
@@ -240,7 +246,7 @@ class Stock:
         return
 
     def updated_symbs(self):
-        # Symbols that have already had full history pulled today
+
         t = datetime.datetime.today()
         t_close = datetime.datetime(year=t.year, month=t.month, day=t.day, hour=18).timestamp()
 
@@ -271,7 +277,7 @@ class Stock:
 
     def read_full_histories(self, symbs=None):
 
-        dfs = {}
+        self.dfs = {}
 
         if not symbs:
 
@@ -290,12 +296,12 @@ class Stock:
                 continue
 
             df = pd.read_csv(p_data, index_col='date', parse_dates=True)
-            dfs[symb] = df
+            self.dfs[symb] = df
 
         if self.verbose:
-            print('Read %d / %d full histories to dataframes' % (len(dfs), len(symbs)))
+            print('Read %d / %d full histories to dataframes' % (len(self.dfs), len(symbs)))
 
-        return dfs
+        return
 
     @staticmethod
     def transform(df, shift0=1, shift1=-1, ratio0=0.01, ratio1=0.01):
@@ -313,22 +319,55 @@ class Stock:
 
         return rate, freq
 
-    def gen_feature_part(self):
-        return
+    def gen_feature(self, symb, n_sampling=10, n_project=1):
+
+        if symb not in self.dfs:
+            raise ValueError('{} not in read stock dataframe dictionary'.format(symb))
+
+        if len(self.dfs[symb]) < n_sampling+1:
+            raise ValueError('Not enough data for %s to sample %d + %d' % (symb, n_sampling, n_project))
+
+        if self.verbose:
+            print('Generating features/labels for %s' % symb)
+        df = self.dfs[symb].iloc[::-1]
+        features = []
+        labels = []
+        for i in range(0, len(df) - n_sampling - n_project):
+            x = minmax_scale(df[i:n_sampling+i].values, axis=0).flatten()
+
+            tmp = df.iloc[n_sampling+i-1]['close']
+            if not tmp:
+                continue
+            tell = df.iloc[n_sampling+i]['open'] / tmp
+
+            tmp = df.iloc[n_sampling+i]['open']
+            if not tmp:
+                continue
+            y1 = df.iloc[n_sampling+i]['low'] / tmp
+
+            tmp = df.iloc[n_sampling+i]['low']
+            if not tmp:
+                continue
+            y2 = df.iloc[n_sampling+i+n_project-1]['high'] / tmp
+
+            features.append(np.concatenate([x, np.array([tell], float)], 0))
+            labels.append(np.concatenate([[y1], [y2]]))
+
+        return np.array(features), np.array(labels)
     
-    def analyze(self, dfs, from_date='', to_date=''):
+    def analyze(self, from_date='', to_date=''):
 
         if not to_date:
-            to_date = dfs[list(dfs.keys())[0]][0:1].index[0].to_pydatetime().strftime('%Y-%m-%d')
+            to_date = self.dfs[list(self.dfs.keys())[0]][0:1].index[0].to_pydatetime().strftime('%Y-%m-%d')
 
         if not from_date:
             from_date = (datetime.datetime.strptime(to_date, '%Y-%m-%d') - datetime.timedelta(days=365)).strftime('%Y-%m-%d')
 
         print('Analyzing from %s to %s ...' % (from_date, to_date))
 
-        for symb in dfs:
+        for symb in self.dfs:
 
-            rate, freq = self.transform(dfs[symb].loc[to_date:from_date], 1, -1, 0.01, 0.01)
+            rate, freq = self.transform(self.dfs[symb].loc[to_date:from_date], 1, -1, 0.01, 0.01)
             if not np.isnan(rate) and rate >= 0.9 and freq >= 0.5:
                     print('%s - %.2f (%.2f)' % (symb, rate, freq))
 
@@ -348,11 +387,10 @@ class Stock:
 
         return m
 
-    @staticmethod
-    def range_norm(dfs, from_date='', to_date=''):
+    def range_norm(self, from_date='', to_date=''):
 
         if not to_date:
-            to_date = dfs[list(dfs.keys())[0]][0:1].index[0].to_pydatetime().strftime('%Y-%m-%d')
+            to_date = self.dfs[list(self.dfs.keys())[0]][0:1].index[0].to_pydatetime().strftime('%Y-%m-%d')
 
         if not from_date:
             from_date = (datetime.datetime.strptime(to_date, '%Y-%m-%d') - datetime.timedelta(days=365)).strftime('%Y-%m-%d')
@@ -362,8 +400,8 @@ class Stock:
         X = []
         days = []
         symbs = []
-        for symb in dfs:
-            df = dfs[symb].loc[to_date:from_date]
+        for symb in self.dfs:
+            df = self.dfs[symb].loc[to_date:from_date]
             if not df.empty:
                 x = df['high'].values
                 if not np.isnan(x).any():
@@ -601,3 +639,64 @@ class Stock:
             symb = symb_mod
 
         return symb, True
+
+class NN(nn.Module):
+
+    def __init__(self, n_sampling=10):
+        super(NN, self).__init__()
+
+        self.n_sampling = n_sampling
+
+        self.n_l1 = 2 * self.n_sampling
+
+        self.bn = nn.BatchNorm1d(self.n_sampling)
+        self.l1 = nn.Linear(self.n_sampling, self.n_l1)
+        self.l2 = nn.Linear(self.n_l1, self.n_l1)
+        self.l3 = nn.Linear(self.n_l1, self.n_l1)
+        self.l4 = nn.Linear(self.n_l1, 1)
+
+    def forward(self, input):
+
+        return self.l4(self.l3(self.l2(self.l1(self.bn(input)))))
+
+class Regressor:
+
+    def __init__(self, n_sampling0=10, clf_type='rf', kfold=10):
+
+        self.n_sampling0 = n_sampling0
+        self.clf_type = clf_type
+        self.kfold = kfold
+
+        self.model = None
+
+    def train(self, features, labels):
+
+        if self.clf_type == 'nn':
+            self.train_nn()
+        elif self.clf_type == 'rf':
+            self.train_rf(features, labels)
+
+        return
+
+    def train_nn(self):
+
+        self.model = NN(n_sampling=self.n_sampling0)
+
+        return
+
+    def train_rf(self, features, labels):
+
+        print('Training random forest ...')
+
+        self.model = RandomForestRegressor(n_estimators=100,
+                                           n_jobs=-1)
+
+        kfold = KFold(n_splits=self.kfold, shuffle=True)
+
+        for ifold, (train, test) in enumerate(kfold.split(labels)):
+            self.model.fit(features[train], labels[train])
+            score_train = self.model.score(features[train], labels[train])
+            score_test = self.model.score(features[test], labels[test])
+            print('Fold %d: %.4f / %.4f' % (ifold, score_test, score_train))
+
+        return
