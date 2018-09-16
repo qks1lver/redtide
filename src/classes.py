@@ -8,14 +8,16 @@ import os
 import pandas as pd
 import numpy as np
 import torch.nn as nn
+import matplotlib.pyplot as plt
+import seaborn as sns
 import pdb
 from time import tzset, sleep, time
 from multiprocessing import Pool
 from sklearn.decomposition import KernelPCA
 from sklearn.cluster import AffinityPropagation
-from sklearn.preprocessing import minmax_scale
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import KFold
+from sklearn.utils import shuffle
 
 
 # Constants
@@ -332,8 +334,11 @@ class Stock:
         df = self.dfs[symb].iloc[::-1]
         features = []
         labels = []
-        for i in range(0, len(df) - n_sampling - n_project):
-            x = minmax_scale(df[i:n_sampling+i].values, axis=0).flatten()
+        for i in range(1, len(df) - n_sampling - n_project):
+            data = df[(i-1):(n_sampling+i)].values
+            if not data.all():
+                continue
+            x = (data[1:n_sampling+1] / data[:n_sampling]).flatten()
 
             tmp = df.iloc[n_sampling+i-1]['close']
             if not tmp:
@@ -661,7 +666,7 @@ class NN(nn.Module):
 
 class Regressor:
 
-    def __init__(self, n_sampling0=10, clf_type='rf', kfold=10):
+    def __init__(self, n_sampling0=10, clf_type='rf', kfold=5):
 
         self.n_sampling0 = n_sampling0
         self.clf_type = clf_type
@@ -689,14 +694,32 @@ class Regressor:
         print('Training random forest ...')
 
         self.model = RandomForestRegressor(n_estimators=100,
+                                           max_features='sqrt',
+                                           max_depth=np.ceil(len(features[0])/5),
+                                           min_samples_leaf=1,
                                            n_jobs=-1)
 
         kfold = KFold(n_splits=self.kfold, shuffle=True)
+
+        features, labels = shuffle(features, labels)
+
+        sns.set(style='whitegrid', context='paper')
 
         for ifold, (train, test) in enumerate(kfold.split(labels)):
             self.model.fit(features[train], labels[train])
             score_train = self.model.score(features[train], labels[train])
             score_test = self.model.score(features[test], labels[test])
             print('Fold %d: %.4f / %.4f' % (ifold, score_test, score_train))
+
+            fig, axs = plt.subplots(2,2)
+            true_train = labels[train].transpose()
+            true_test = labels[test].transpose()
+            pred_train = self.model.predict(features[train]).transpose()
+            pred_test = self.model.predict(features[test]).transpose()
+            sns.scatterplot(x=true_train[0], y=pred_train[0], ax=axs[0,0])
+            sns.scatterplot(x=true_test[0], y=pred_test[0], ax=axs[1,0])
+            sns.scatterplot(x=true_train[1], y=pred_train[1], ax=axs[0,1])
+            sns.scatterplot(x=true_test[1], y=pred_test[1], ax=axs[1,1])
+            plt.show()
 
         return
