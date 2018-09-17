@@ -15,9 +15,14 @@ from time import tzset, sleep, time
 from multiprocessing import Pool
 from sklearn.decomposition import KernelPCA
 from sklearn.cluster import AffinityPropagation
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier, GradientBoostingClassifier, AdaBoostClassifier
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.model_selection import KFold
 from sklearn.utils import shuffle
+from sklearn.preprocessing import minmax_scale
+from sklearn.metrics import roc_auc_score, precision_score
+from sklearn.dummy import DummyClassifier, DummyRegressor
+from sklearn.linear_model import LinearRegression
 
 
 # Constants
@@ -673,6 +678,8 @@ class Regressor:
         self.kfold = kfold
 
         self.model = None
+        self.model2 = None
+        self.lr = None
 
     def train(self, features, labels):
 
@@ -699,7 +706,21 @@ class Regressor:
                                            min_samples_leaf=1,
                                            n_jobs=-1)
 
+        self.model2 = RandomForestClassifier(
+            n_estimators=100,
+            max_features='sqrt',
+            max_depth=np.ceil(len(features[0])/5),
+            min_samples_leaf=1,
+            n_jobs=-1
+        )
+
+        self.lr = LinearRegression(n_jobs=-1)
+
+        reg_dummy = DummyRegressor()
+        clf_dummy = DummyClassifier()
+
         kfold = KFold(n_splits=self.kfold, shuffle=True)
+        kfold2 = KFold(n_splits=self.kfold, shuffle=True)
 
         features, labels = shuffle(features, labels)
 
@@ -709,17 +730,36 @@ class Regressor:
             self.model.fit(features[train], labels[train])
             score_train = self.model.score(features[train], labels[train])
             score_test = self.model.score(features[test], labels[test])
-            print('Fold %d: %.4f / %.4f' % (ifold, score_test, score_train))
+            reg_dummy.fit(features[train], labels[train])
+            score_dummy = reg_dummy.score(features[test], labels[test])
+            print('Fold %d: %.4f / %.4f (%.4f)' % (ifold, score_test, score_train, score_dummy))
 
-            fig, axs = plt.subplots(2,2)
+            self.lr.fit(labels[train], self.model.predict(features[train]))
+            y_lr = self.lr.predict(labels[test])
+            y_pred = self.model.predict(features[test])
+            dy = np.abs((y_lr - y_pred).transpose()[1]) < 0.01
+            print('\t%d / %d' % (np.sum(dy), np.sum(1 - dy)))
+            for jfold, (train2, test2) in enumerate(kfold2.split(dy)):
+                self.model2.fit(features[test[train2]], dy[train2])
+                y_pred = self.model2.predict(features[test[test2]])
+                score_train2 = precision_score(dy[train2], self.model2.predict(features[test[train2]]), average='binary')
+                score_test2 = precision_score(dy[test2], y_pred, average='binary')
+                clf_dummy.fit(features[test[train2]], dy[train2])
+                score_dummy = precision_score(dy[test2], clf_dummy.predict(features[test[test2]]), average='binary')
+                print('\tFold %d: %.4f / %.4f (%.4f)' % (jfold, score_test2, score_train2, score_dummy))
+
+                score_final = self.model.score(features[test[test2[y_pred]]], labels[test[test2[y_pred]]])
+                print('\tFinal: %.4f' % score_final)
+
+            '''fig, axs = plt.subplots(2,2)
             true_train = labels[train].transpose()
             true_test = labels[test].transpose()
             pred_train = self.model.predict(features[train]).transpose()
-            pred_test = self.model.predict(features[test]).transpose()
+            pred_test = y_pred.transpose()
             sns.scatterplot(x=true_train[0], y=pred_train[0], ax=axs[0,0])
             sns.scatterplot(x=true_test[0], y=pred_test[0], ax=axs[1,0])
             sns.scatterplot(x=true_train[1], y=pred_train[1], ax=axs[0,1])
             sns.scatterplot(x=true_test[1], y=pred_test[1], ax=axs[1,1])
-            plt.show()
+            plt.show()'''
 
         return

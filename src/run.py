@@ -52,6 +52,6 @@ if __name__ == '__main__':
     if args.debug:
         symb = 'NVDA'
         s.read_full_histories(symbs=[symb])
-        f,l = s.gen_feature(symb=symb, n_sampling=200, n_project=1)
+        f,l = s.gen_feature(symb=symb, n_sampling=20, n_project=1)
         m = Regressor()
         m.train(f,l)
