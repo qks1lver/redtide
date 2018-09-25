@@ -50,8 +50,8 @@ if __name__ == '__main__':
         s.analyze(from_date=args.from_date, to_date=args.to_date)
 
     if args.debug:
-        symb = 'NVDA'
-        s.read_full_histories(symbs=[symb])
-        f,l = s.gen_feature(symb=symb, n_sampling=20, n_project=1)
+        symbs = ['NVDA', 'AMZN', 'AAPL']
+        s.read_full_histories(symbs=symbs)
+        f,l = s.gen_features(symbs=symbs, n_sampling=20, n_project=1)
         m = Regressor()
         m.train(f,l)

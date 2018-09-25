@@ -8,21 +8,17 @@ import os
 import pandas as pd
 import numpy as np
 import torch.nn as nn
-import matplotlib.pyplot as plt
-import seaborn as sns
 import pdb
 from time import tzset, sleep, time
 from multiprocessing import Pool
 from sklearn.decomposition import KernelPCA
 from sklearn.cluster import AffinityPropagation
-from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier, GradientBoostingClassifier, AdaBoostClassifier
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.model_selection import KFold
 from sklearn.utils import shuffle
-from sklearn.preprocessing import minmax_scale
-from sklearn.metrics import roc_auc_score, precision_score
+from sklearn.metrics import precision_score
 from sklearn.dummy import DummyClassifier, DummyRegressor
-from sklearn.linear_model import LinearRegression
+from sklearn import linear_model
 
 
 # Constants
@@ -325,6 +321,36 @@ class Stock:
         freq = n_df0 / (len(df) - (abs(shift0) + abs(shift1)))
 
         return rate, freq
+
+    def gen_features(self, symbs, n_sampling=10, n_project=1):
+
+        not_in_dfs = []
+        not_enough_data = []
+        for symb in symbs:
+            if symb not in self.dfs:
+                not_in_dfs.append(symb)
+            if len(self.dfs[symb]) < n_sampling + 1:
+                not_enough_data.append(symb)
+
+        if not_enough_data and not_in_dfs:
+            raise ValueError('%s not in dataframe, and not enough data for %s' % (''.join(not_in_dfs), ''.join(not_enough_data)))
+        elif not_in_dfs:
+            raise ValueError('%s not in dataframe' % ''.join(not_in_dfs))
+        elif not_enough_data:
+            raise ValueError('Not enough data for %s' % ''.join(not_enough_data))
+
+        feats = None
+        labels = None
+        for symb in symbs:
+            f, l = self.gen_feature(symb=symb, n_sampling=n_sampling, n_project=n_project)
+            if feats is None and labels is None:
+                feats = f
+                labels = l
+            else:
+                feats = np.concatenate([feats, f])
+                labels = np.concatenate([labels, l])
+
+        return feats, labels
 
     def gen_feature(self, symb, n_sampling=10, n_project=1):
 
@@ -714,7 +740,7 @@ class Regressor:
             n_jobs=-1
         )
 
-        self.lr = LinearRegression(n_jobs=-1)
+        self.lr = linear_model.LinearRegression()
 
         reg_dummy = DummyRegressor()
         clf_dummy = DummyClassifier()
@@ -724,6 +750,8 @@ class Regressor:
 
         features, labels = shuffle(features, labels)
 
+        import matplotlib.pyplot as plt
+        import seaborn as sns
         sns.set(style='whitegrid', context='paper')
 
         for ifold, (train, test) in enumerate(kfold.split(labels)):
@@ -751,7 +779,7 @@ class Regressor:
                 score_final = self.model.score(features[test[test2[y_pred]]], labels[test[test2[y_pred]]])
                 print('\tFinal: %.4f' % score_final)
 
-            '''fig, axs = plt.subplots(2,2)
+            fig, axs = plt.subplots(2,2)
             true_train = labels[train].transpose()
             true_test = labels[test].transpose()
             pred_train = self.model.predict(features[train]).transpose()
@@ -760,6 +788,6 @@ class Regressor:
             sns.scatterplot(x=true_test[0], y=pred_test[0], ax=axs[1,0])
             sns.scatterplot(x=true_train[1], y=pred_train[1], ax=axs[0,1])
             sns.scatterplot(x=true_test[1], y=pred_test[1], ax=axs[1,1])
-            plt.show()'''
+            plt.show()
 
         return
