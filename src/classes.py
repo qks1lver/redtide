@@ -16,9 +16,10 @@ from sklearn.cluster import AffinityPropagation
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.model_selection import KFold
 from sklearn.utils import shuffle
-from sklearn.metrics import precision_score
+from sklearn.metrics import precision_score, roc_auc_score
 from sklearn.dummy import DummyClassifier, DummyRegressor
 from sklearn import linear_model
+from sklearn import preprocessing
 
 
 # Constants
@@ -389,7 +390,7 @@ class Stock:
             features.append(np.concatenate([x, np.array([tell], float)], 0))
             labels.append(np.concatenate([[y1], [y2]]))
 
-        return np.array(features), np.array(labels)
+        return np.array(features), preprocessing.scale(np.array(labels), axis=0)
     
     def analyze(self, from_date='', to_date=''):
 
@@ -705,7 +706,8 @@ class Regressor:
 
         self.model = None
         self.model2 = None
-        self.lr = None
+        self.lr0 = None
+        self.lr1 = None
 
     def train(self, features, labels):
 
@@ -729,18 +731,19 @@ class Regressor:
         self.model = RandomForestRegressor(n_estimators=100,
                                            max_features='sqrt',
                                            max_depth=np.ceil(len(features[0])/5),
-                                           min_samples_leaf=1,
+                                           min_samples_leaf=3,
                                            n_jobs=-1)
 
         self.model2 = RandomForestClassifier(
             n_estimators=100,
             max_features='sqrt',
             max_depth=np.ceil(len(features[0])/5),
-            min_samples_leaf=1,
+            min_samples_leaf=3,
             n_jobs=-1
         )
 
-        self.lr = linear_model.LinearRegression()
+        self.lr0 = linear_model.TheilSenRegressor()
+        self.lr1 = linear_model.TheilSenRegressor()
 
         reg_dummy = DummyRegressor()
         clf_dummy = DummyClassifier()
@@ -762,32 +765,38 @@ class Regressor:
             score_dummy = reg_dummy.score(features[test], labels[test])
             print('Fold %d: %.4f / %.4f (%.4f)' % (ifold, score_test, score_train, score_dummy))
 
-            self.lr.fit(labels[train], self.model.predict(features[train]))
-            y_lr = self.lr.predict(labels[test])
-            y_pred = self.model.predict(features[test])
-            dy = np.abs((y_lr - y_pred).transpose()[1]) < 0.01
+            labels_t = labels.transpose()
+            y_pred = self.model.predict(features)
+            y_pred_t = y_pred.transpose()
+            # self.lr0.fit(labels_t[0][train].reshape(-1, 1), y_pred_t[0][train])
+            self.lr1.fit(labels_t[1][train].reshape(-1, 1), y_pred_t[1][train])
+            y_lr = self.lr1.predict(labels_t[1][test].reshape(-1,1))
+            dy = np.abs(y_pred_t[1][test] - y_lr) < 0.2
             print('\t%d / %d' % (np.sum(dy), np.sum(1 - dy)))
             for jfold, (train2, test2) in enumerate(kfold2.split(dy)):
                 self.model2.fit(features[test[train2]], dy[train2])
-                y_pred = self.model2.predict(features[test[test2]])
+                y_pred2 = self.model2.predict(features[test[test2]])
                 score_train2 = precision_score(dy[train2], self.model2.predict(features[test[train2]]), average='binary')
-                score_test2 = precision_score(dy[test2], y_pred, average='binary')
+                score_test2 = precision_score(dy[test2], y_pred2, average='binary')
                 clf_dummy.fit(features[test[train2]], dy[train2])
                 score_dummy = precision_score(dy[test2], clf_dummy.predict(features[test[test2]]), average='binary')
                 print('\tFold %d: %.4f / %.4f (%.4f)' % (jfold, score_test2, score_train2, score_dummy))
 
-                score_final = self.model.score(features[test[test2[y_pred]]], labels[test[test2[y_pred]]])
-                print('\tFinal: %.4f' % score_final)
+                score_final_train = self.model.score(features[test[train2]], labels[test[train2]])
+                score_final_test = self.model.score(features[test[test2[y_pred2]]], labels[test[test2[y_pred2]]])
+                print('\tFinal: %.4f / %.4f' % (score_final_test, score_final_train))
 
             fig, axs = plt.subplots(2,2)
-            true_train = labels[train].transpose()
-            true_test = labels[test].transpose()
-            pred_train = self.model.predict(features[train]).transpose()
-            pred_test = y_pred.transpose()
-            sns.scatterplot(x=true_train[0], y=pred_train[0], ax=axs[0,0])
-            sns.scatterplot(x=true_test[0], y=pred_test[0], ax=axs[1,0])
-            sns.scatterplot(x=true_train[1], y=pred_train[1], ax=axs[0,1])
-            sns.scatterplot(x=true_test[1], y=pred_test[1], ax=axs[1,1])
-            plt.show()
+            train_truth = labels[train].transpose()
+            train_pred = self.model.predict(features[train]).transpose()
+            test_truth = labels[test].transpose()
+            test_pred = y_pred[test].transpose()
+            sns.scatterplot(x=train_truth[0], y=train_pred[0], ax=axs[0,0])
+            sns.scatterplot(x=train_truth[1], y=train_pred[1], ax=axs[0,1])
+            sns.scatterplot(x=test_truth[0][test2[y_pred2]], y=test_pred[0][test2[y_pred2]], ax=axs[1, 0])
+            sns.scatterplot(x=test_truth[1][test2[y_pred2]], y=test_pred[1][test2[y_pred2]], ax=axs[1,1])
+            plt.draw()
+
+        plt.show()
 
         return
