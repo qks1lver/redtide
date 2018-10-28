@@ -5,7 +5,6 @@ AAC	Aac Holdings Inc
 AAN	Aaron's Inc
 AAP	Advance Auto Parts Inc
 AAT	American Assets Trust
-AAV	Advantage Oil & Gas Ltd
 AB	Alliancebernstein Holding LP
 ABB	Abb Ltd
 ABBV	Abbvie Inc
@@ -20,6 +19,7 @@ ABR-C	Arbor Realty Trust
 ABT	Abbott Laboratories
 ABX	Barrick Gold Corp
 AC	Associated Capital Group Inc
+ACB	Aurora Cannabis Inc
 ACC	American Campus Communities Inc
 ACCO	Acco Brands Corp
 ACH	Aluminum Corporation of China Ltd
@@ -33,7 +33,7 @@ ADM	Archer Daniels Midland Company
 ADNT	Adient Plc
 ADS	Alliance Data Systems Corp
 ADSW	Advanced Disposal Services Inc
-ADT	ADT Inc.
+ADT	ADT Inc
 ADX	Adams Express Company
 AEB	Aegon N.V. Perp Cap Secs Floating Rate [Ne]
 AED	Aegon N.V. Perp Cap Secs [Ne]
@@ -64,7 +64,6 @@ AFSS	Amtrust Financial Services Inc
 AFST	Amtrust Financial Services Inc
 AFT	Apollo Senior Floating Rate Fund Inc
 AG	First Majestic Silver
-AGC	Advent Claymore Convertible Securities
 AGCO	Agco Corp
 AGD	Alpine Global Dynamic Dividend Fund
 AGI	Alamos Gold Inc
@@ -80,7 +79,7 @@ AGO-E	Assured Guaranty Ltd [E]
 AGO-F	Assured Guaranty Ltd [F]
 AGR	Avangrid Inc
 AGRO	Adecoagro S.A.
-AGS	Playags Inc.
+AGS	Playags Inc
 AGX	Argan Inc
 AHC	A.H. Belo Corp
 AHH	Armada Hoffler Properties Inc
@@ -149,12 +148,13 @@ AMH-D	American Homes 4 Rent
 AMH-E	American Homes 4 Rent 6.35% Ser
 AMH-F	American Homes 4 Rent Cum Red Perp Pfd Shs
 AMH-G	American Homes 4 Rent Series G Pfd
+AMH-H	American Homes 4 Rent Perp Cum Red Pfd Shs Ser H
 AMID	American Midstreampartners LP
 AMN	Amn Healthcare Services Inc
 AMOV	America Movil A ADR
 AMP	Ameriprise Financial Services
 AMRC	Ameresco Inc
-AMRX	Amneal Pharmaceuticals Inc.
+AMRX	Amneal Pharmaceuticals Inc
 AMT	American Tower Corp
 AMX	America Movil S.A.B. De C.V.
 AN	Autonation Inc
@@ -170,7 +170,6 @@ ANH-C	Anworth Mortgage Asset Corpora
 ANTM	Anthem Inc
 ANW	Aegean Marine Petroleum Network
 AOD	Alpine Total Dynamic Dividend
-AOI	Alliance One International
 AON	AON Plc
 AOS	Smith [A.O.] Corp
 AP	Ampco-Pittsburgh Corp
@@ -189,9 +188,10 @@ APRN	Blue Apron Holdings Inc
 APTS	Preferred Apartment Communities
 APTV	Aptiv Plc
 APU	Amerigas Partners LP
-APY	Apergy Corp.
+APY	Apergy Corp
 AQ	Aquantia Corp
 AQN	Algonquin Pwr & Util
+AQNA	Algonquin Power & Utilities Corp
 AQUA	Evoqua Water Technologies Corp
 AR	Antero Resources Corp
 ARA	American Renal Associates Holdi
@@ -209,7 +209,7 @@ ARGO	Argo Group Intl Hlds
 ARI	Apollo Commercial Real Estate
 ARI-C	Apollo Commercial 8% Cum. Perp. Pfd. Series C
 ARL	American Realty Investors
-ARLO	Arlo Technologies Inc.
+ARLO	Arlo Technologies Inc
 ARMK	Aramark Holdings Corp
 ARNC	Arconic Inc
 AROC	Archrock Inc
@@ -221,6 +221,7 @@ ASA	ASA Gold and Precious Metals
 ASB	Associated Banc-Corp
 ASB-C	Associated Banc-Corp Depositary
 ASB-D	Associated Banc-Corp
+ASB-E	Associated Banc-Corp Depositary Shs
 ASC	Ardmore Shipping Corp
 ASG	Liberty All-Star Growth Fund
 ASGN	On Assignment
@@ -251,8 +252,8 @@ AVB	Avalonbay Communities
 AVD	American Vanguard Corp
 AVH	Avianca Holdings S.A.
 AVK	Advent Claymore Convertible Securities
-AVLR	Avalara Inc.
-AVNS	Avanos Medical Inc.
+AVLR	Avalara Inc
+AVNS	Avanos Medical Inc
 AVP	Avon Products
 AVX	Avx Corp
 AVY	Avery Dennison Corp
@@ -262,8 +263,10 @@ AWI	Armstrong World Industries Inc
 AWK	American Water Works
 AWP	Alpine Global Premier Propertie
 AWR	American States Water Company
+AX	Axos Financial Inc.
 AXE	Anixter International Inc
 AXL	American Axle & Manufacturing
+AXO	Axos Financial Inc.
 AXP	American Express Company
 AXR	Amrep Corp
 AXS	Axis Capital Holdings
@@ -280,12 +283,11 @@ AZUL	Azul S.A. ADR
 AZZ	Azz Inc
 B	Barnes Group
 BA	Boeing Company
-BABA	Alibaba Group Holding Ltd
+BABA	Alibaba Group Holding
 BAC	Bank of America Corp
 BAC-A	Bank of America Corp Pfd A
 BAC-B	Bank of America Corp. Dep Shs Repstg 1/1000Th In
 BAC-C	Bank of America Corp Pfd C
-BAC-D	Bank of America Dep Share D
 BAC-E	Bank of America Corp Dep R
 BAC-K	Bank of America Corp Dep Shs Repstg 1/1000Th Int
 BAC-L	Bank of America Corp Pfd L
@@ -297,7 +299,6 @@ BAF	Blackrock Income Inv Quality Trust
 BAH	Booz Allen Hamilton Holding Corp
 BAK	Braskem S.A.
 BAM	Brookfield Asset Management Inc
-BAN-C	Banc of California Inc Deposi
 BAN-D	Bank of California Inc Pref Share Series D
 BAN-E	Banc of California Inc
 BANC	First Pactrust Bancorp
@@ -306,7 +307,7 @@ BAS	Basic Energy Services
 BAX	Baxter International Inc
 BB	Blackberry Ltd
 BBD	Banco Bradesco S.A.
-BBDC	Barings Bdc Inc.
+BBDC	Barings Bdc Inc
 BBDO	Banco Bradesco S.A.
 BBF	Blackrock Muni Income Trust
 BBK	Blackrock Muni Trust
@@ -324,6 +325,7 @@ BBW	Build-A-Bear Workshop
 BBX	Bbx Capital Corp
 BBY	Best Buy Co
 BC	Brunswick Corp
+BC-A	Brunswick Corp 6.500% Sr Notes Due 2048
 BCC	Boise Cascade L.L.C.
 BCE	BCE Inc
 BCEI	Bonanza Creek Energy Inc
@@ -358,7 +360,6 @@ BFY	Blackrock New York Muni Trust II
 BFZ	Blackrock California Muni Trust
 BG	Bunge Ltd
 BGB	Blackstone / Gso Strategic Cre
-BGCA	Bgc Partners Inc
 BGG	Briggs & Stratton Corp
 BGH	Babson Capital Global Short Du
 BGIO	Blackrock 2022 Global Income Opportunity Trust
@@ -369,13 +370,13 @@ BGX	Blackstone Gso Long Short Credit Fund
 BGY	Blackrock International
 BH	Biglari Holdings Inc
 BH.A	Biglari Holdings Inc. Class A
-BHC	Bausch Health Companies Inc.
+BHC	Bausch Health Companies Inc
 BHE	Benchmark Electronics
 BHGE	Baker Hughes A Ge Co. Cl. A
 BHK	Blackrock Core Trust
 BHLB	Berkshire Hills Bancorp
 BHP	Bhp Billiton Ltd
-BHR	Braemar Hotels & Resorts Inc.
+BHR	Braemar Hotels & Resorts Inc
 BHR-B	Braemar Hotels & Resorts Inc. Pfd B
 BHV	Blackrock Virginia Muni Trust
 BHVN	Biohaven Pharmaceutical Holding Company Ltd
@@ -387,7 +388,7 @@ BIO.B	Bio Rad Labs Cl B
 BIP	Brookfield Infrastructure Partners LP
 BIT	Blackrock Multi-Sector Income T
 BITA	Bitauto Holdings Ltd
-BJ	Bj's Wholesale Club Holdings Inc.
+BJ	Bj's Wholesale Club Holdings Inc
 BJZ	Blackrock California Muni 2018 Trust
 BK	Bank of New York Mellon Corp
 BK-C	The Bank of New York Mellon Co
@@ -413,7 +414,6 @@ BME	Blackrock Health Sciences Trust
 BMI	Badger Meter
 BML-G	Bank America Dep G
 BML-H	Bank America Dep H
-BML-I	Bank America Dep I
 BML-J	Bank America Dep J
 BML-L	Bank America Dep L
 BMO	Bank of Montreal
@@ -444,7 +444,7 @@ BRS	Bristow Group Inc
 BRSS	Global Brass and Copper Holdin
 BRT	BRT Realty Trust
 BRX	Brixmor Property Group Inc
-BSA	Brightsphere Investment Group Plc.
+BSA	Brightsphere Investment Group Plc
 BSAC	Banco Santander Chile ADR
 BSBR	Banco Santander Brasil S.A.
 BSD	Blackrock Strategic Muni Trust Inc
@@ -467,7 +467,7 @@ BTZ	Blackrock Preferred
 BUD	Anheuser-Busch Inbev S.A.
 BUI	Blackrock Utility and Infrastr
 BURL	Burlington Stores Inc
-BV	Brightview Holdings Inc.
+BV	Brightview Holdings Inc
 BVN	Compania Mina Buenaventura S.A.
 BW	Babcock & Wilcox Enterprises I
 BWA	Borgwarner Inc
@@ -505,12 +505,13 @@ CAG	Conagra Brands Inc
 CAH	Cardinal Health
 CAI	Cai International
 CAI-A	Cai International Inc Red Perp Pfd Ser A Fixed/F
+CAI-B	Cai International Inc 8.50% Red Perp Pfd Ser B F
 CAJ	Canon Inc
 CAL	Caleres Inc
 CALX	Calix Inc
 CANG	Cango Inc. ADR
 CAPL	Crossamerica Partners LP
-CARS	Cars.Com Inc
+CARS	Cars.com Inc
 CAT	Caterpillar Inc
 CATO	Cato Corp
 CB	Chubb Ltd
@@ -524,17 +525,17 @@ CBL	Cbl & Associates Properties
 CBL-D	Cbl Pfd D
 CBL-E	Cbl & Associates Properties I
 CBM	Cambrex Corp
-CBO	Cbo Common Stock
 CBPX	Continental Building Products
 CBRE	CBRE Group Inc
 CBS	CBS Corp
 CBS.A	CBS Corp
 CBT	Cabot Corp
 CBU	Community Bank System
-CBX	Cbx NYSE Networks Ae Common Stock
 CBZ	Cbiz Inc
 CC	Chemours Company
+CCC.U	Churchill Capital Corp
 CCE	Coca Cola European Partners
+CCH.U	Collier Creek Holdings Units
 CCI	Crown Castle International Corp
 CCI-A	Crown Castle International Corp
 CCJ	Cameco Corp
@@ -585,7 +586,7 @@ CHL	China Mobile [Hong Kong] Ltd
 CHM-A	Cherry Hill Mortgage Investment Corp
 CHMI	Cherry Hill Mortgage Investmen
 CHN	China Fund
-CHRA	Charah Solutions Inc.
+CHRA	Charah Solutions Inc
 CHS	Chico's Fas
 CHSP	Chesapeake Lodging Trust
 CHT	Chunghwa Telecom Co Ltd
@@ -604,6 +605,7 @@ CII	Blackrock Capital and Income Strategies
 CIM	Chimera Investment Corp
 CIM-A	Chimera Investment Corp
 CIM-B	Chimera Investment Corp
+CIM-C	Chimera Investment Corp Pfd Ser C
 CINR	Ciner Resources LP
 CIO	City Office REIT Inc
 CIO-A	City Office REIT Inc
@@ -629,7 +631,7 @@ CLN-H	Colony Northstar [Clnsph]
 CLN-I	Colony Northstar Inc. 7.15% Series I Pfd
 CLN-J	Colony Northstar Inc Cum Red Perp Pfd Ser J
 CLNC	Colony Northstar Credit Real Estate Inc. Class
-CLNY	Colony Capital Inc.
+CLNY	Colony Capital Inc
 CLPR	Clipper Realty Inc
 CLR	Continental Resources
 CLS	Celestica Inc
@@ -654,21 +656,23 @@ CMRE	Costamare Inc
 CMS	Cms Energy Corp
 CMS-B	Consumers Engry 4.50
 CMSA	Cms Energy Corporation 5.625% Junior Subordinate
+CMSC	Cms Energy Corporation
 CMU	Colonial Muni Income Trust
 CNA	Cna Financial Corp
 CNC	Centene Corp
 CNDT	Conduent Inc
 CNHI	CNH Industrial N.V.
-CNI	Canadian National Railway Company
+CNI	Canadian National Railway
 CNK	Cinemark Holdings Inc
 CNNE	Cannae Holdings Inc
 CNO	Cno Financial Group
 CNP	Centerpoint Energy Inc
+CNP-B	Centerpoint Energy Inc Dep Shs Repstg 1/20Th Pfd
 CNQ	Canadian Natural Resources
 CNS	Cohn & Steers Inc
 CNX	CNX Resources Corp
 CNXM	CNX Midstream Partners LP
-CO	Global Cord Blood Corp.
+CO	Global Cord Blood Corp
 COD-A	Compass Diversified Holdings Pfd Ser A
 COD-B	Compass Diversified Holdings Fixed/Fltg Rate Cum
 CODI	Compass Diversified Holdings
@@ -690,7 +694,6 @@ COR	Coresite Realty Corp
 COR-Z	Corenergy Infrastructure Trust Inc Dep. Pfd
 CORR	Corenergy Infrastructure Trust Inc
 COT	Cott Corp
-COTV	Cotiviti Holdings
 COTY	Coty Inc
 CP	Canadian Pacific Railway
 CPA	Copa Holdings S.A.
@@ -707,14 +710,14 @@ CPS	Cooper Std Hldg Inc
 CPT	Camden Property Trust
 CR	Crane Company
 CRC	California Resources Corporatio
-CRCM	Care.Com Inc
+CRCM	Care.com Inc
 CRD.A	Crawford Co Cl A
 CRD.B	Crawford Co Cl B
 CRH	CRH Plc
 CRI	Carter's Inc
 CRK	Comstock Resources
 CRL	Charles River Laboratories Intl
-CRM	Salesforce.Com Inc
+CRM	Salesforce.com Inc
 CRR	Carbo Ceramics
 CRS	Carpenter Technology Corp
 CRT	Cross Timbers Royalty Trust
@@ -730,15 +733,13 @@ CTAA	Qwest Corp
 CTB	Cooper Tire & Rubber Company
 CTBB	Qwest Corp
 CTDD	Qwest Corporation 6.75% Notes Due 2057
+CTK	Cootek [Cayman] Inc.
 CTL	Centurylink
 CTLT	Catalent Inc
 CTR	Clearbridge Energy MLP Fund In
 CTS	Cts Corp
 CTT	Catchmark Timber Trust Inc
-CTU	Qwest Corp
 CTV	Qwest Corp
-CTW	Qwest Corp
-CTX	Qwest Corp
 CTY	Qwest Corp
 CTZ	Qwest Corporation 6.625% Notes
 CUB	Cubic Corp
@@ -748,7 +749,6 @@ CUB-E	Customers Bancorp Inc
 CUB-F	Customers Bancorp Inc Prf
 CUBE	Cubesmart
 CUBI	Customers Bancorp
-CUBS	Customers Bancorp Inc
 CUK	Carnival Plc ADR
 CULP	Culp Inc
 CURO	Curo Group Holdings Corp
@@ -758,12 +758,14 @@ CVE	Cenovus Energy Inc
 CVEO	Civeo Corp
 CVG	Convergys Corp
 CVI	Cvr Energy Inc
-CVIA	Covia Holdings Corp.
+CVIA	Covia Holdings Corp
 CVNA	Carvana Co. Class A
 CVRR	Cvr Refining LP
 CVS	CVS Corp
 CVX	Chevron Corp
 CW	Curtiss-Wright Corp
+CWE.A	Clearway Energy Inc. Cl. A
+CWEN	Clearway Energy Inc. Cl. C
 CWH	Camping World Holdings Inc
 CWK	Cushman & Wakefield Plc
 CWT	California Water Service Group Holding
@@ -775,9 +777,6 @@ CXP	Columbia Property Trust Inc
 CXW	Corecivic Inc
 CYD	China Yuchai International
 CYH	Community Health Systems
-CYS	Cys Investments Inc
-CYS-A	Cys Investments Inc
-CYS-B	Cys Investments Inc
 CZZ	Cosan Ltd
 D	Dominion Resources
 DAC	Danaos Corp
@@ -794,7 +793,7 @@ DCI	Donaldson Company
 DCO	Ducommun Inc
 DCP	Dcp Midstream LP
 DCP-B	Dcp Midstream LP Red Perp Cum Pfd Unit Ser B
-DCT	Dct Industrial Trust Inc
+DCP-C	Dcp Midstream LP Red Perp Pfd Unit Ser C Fixed/F
 DCUD	Dominion Resources Inc
 DD-A	Du Pont E I 3.50 Pfd
 DD-B	Du Pont E I 4.50 Pfd
@@ -812,7 +811,7 @@ DEA	Easterly Government Properties
 DECK	Deckers Outdoor Corp
 DEI	Douglas Emmett
 DEO	Diageo Plc
-DESP	Despegar.Com Corp
+DESP	Despegar.com Corp
 DEX	Delaware Enhanced Global Dividend
 DF	Dean Foods Company
 DFIN	Donnelly Financial Solutions Inc
@@ -827,7 +826,7 @@ DHI	D.R. Horton
 DHR	Danaher Corp
 DHT	Dht Holdings
 DHX	Dice Holdings
-DIAX	Nuveen DOW
+DIAX	Nuveen Dow
 DIN	Dineequity Inc
 DIS	Walt Disney Company
 DK	Delek US Holdings
@@ -879,7 +878,6 @@ DSU	Blackrock Debt Strategies Fund
 DSW	DSW Inc
 DSX	Diana Shipping Inc
 DSX-B	Diana Shipping
-DSXN	Diana Shipping Inc
 DTE	Dte Energy Company
 DTF	Duff & Phelps Utilities Tax-Free Income
 DTJ	Dte Energy Company 2016 Series
@@ -890,6 +888,7 @@ DTW	Dte Energy Company 2017 Series E 5.25% Jr
 DTY	Dte Energy Co
 DUC	Duff & Phelps Utility & Corporate Trust
 DUK	Duke Energy Corp
+DUKB	Duke Energy Corporation 5.625% Junior Subordinat
 DUKH	Duke Energy Corp
 DVA	Davita Healthcare Partners Inc
 DVD	Dover Downs Entertainment
@@ -906,10 +905,11 @@ DYNC	Dynegy Inc 7.00% Tangible Equi
 E	Eni S.P.A.
 EAB	First Mortgage Bonds
 EAE	Entergy Arkansas Inc
-EAF	Graftech International Ltd.
+EAF	Graftech International Ltd
 EAI	Entergy Arkansas Inc
 EARN	Ellington Residential Mortgage
 EAT	Brinker International
+EB	Eventbrite Inc
 EBF	Ennis Inc
 EBR	Centrais Electricas Brazil
 EBR.B	Centrais Eletricas Brasileiras
@@ -930,7 +930,6 @@ EDD	Emerging Markets Domestic Debt Fund
 EDF	Stone Harbor Emerging Markets
 EDI	Stone Harbor Emerging Markets
 EDN	Empresa Distribuidora Y Comercializadora
-EDR	Education Realty Trust Inc
 EDU	New Oriental Education & Technology Group
 EE	El Paso Electric Company
 EEA	European Equity Fund
@@ -951,13 +950,14 @@ EGN	Energen Corp
 EGO	Eldorado Gold Corp
 EGP	Eastgroup Properties
 EGY	Vaalco Energy Inc
-EHC	Encompass Health Corp.
+EHC	Encompass Health Corp
 EHI	Western Asset Global High
 EHIC	Ehi Car Services Ltd
 EHT	Eaton Vance High Income 2021 Ta
 EIG	Employers Holdings Inc
 EIX	Edison International
 EL	Estee Lauder Companies
+ELAN	Elanco Animal Health Inc
 ELC	Entergy Louisiana Llc
 ELF	E.L.F. Beauty Inc
 ELJ	Entergy Louisiana Llc
@@ -1004,12 +1004,12 @@ EPR	Entertainment Properties Trust
 EPR-C	Entertainment Prp Pf
 EPR-E	Entertainment Ppty P
 EPR-G	Epr Properties Pfd Ser G
-EPRT	Essential Properties Realty Trust Inc.
+EPRT	Essential Properties Realty Trust Inc
 EQC	Equity Commonwealth
 EQC-D	Equity Commonwealth
 EQGP	Eqt Gp Holdings LP
 EQH	Axa Equitable Holdings Inc
-EQM	Equity Midstream Partners LP
+EQM	Eqm Midstream Partners LP
 EQNR	Equinor ASA
 EQR	Equity Residential
 EQS	Equus Total Return
@@ -1024,8 +1024,10 @@ ESL	Esterline Technologies Corp
 ESNT	Essent Group Ltd
 ESRT	Empire State Realty Trust Inc
 ESS	Essex Property Trust
+ESTC	Elastic N.V. Ordinary Shares
 ESTE	Earthstone Energy
 ESV	Ensco Plc
+ET	Energy Transfer LP
 ETB	Eaton Vance Tax-Managed Buy-Write
 ETE	Energy Transfer Equity LP
 ETG	Eaton Vance Tax-Advantaged Global Dividend
@@ -1034,9 +1036,9 @@ ETJ	Eaton Vance Risk-Managed Diversified Equity
 ETM	Entercom Communications Corp
 ETN	Eaton Corp
 ETO	Eaton Vance Tax-Advantage Global Dividend Opp
-ETP	Energy Transfer Partners
-ETP-C	Energy Transfer Partners LP Perp Pfd Unit Ser C
-ETP-D	Energy Transfer Partners LP Cum Red Perp Pfd Uni
+ETP	Energy Transfer Operating LP
+ETP-C	Energy Transfer Operating L.P. Pfd Ser C
+ETP-D	Energy Transfer Operating LP Pfd Ser D
 ETR	Entergy Corp
 ETV	Eaton Vance Corp
 ETW	Eaton Vance Corp
@@ -1052,7 +1054,7 @@ EVH	Evolent Health Inc Class A Com
 EVHC	Envision Healthcare Holdings
 EVN	Eaton Vance Muni Income Trust
 EVR	Evercore Partners Inc
-EVRG	Evergy Inc.
+EVRG	Evergy Inc
 EVRI	Everi Holdings Inc
 EVT	Eaton Vance Tax Advantaged Dividend
 EVTC	Evertec Inc
@@ -1166,10 +1168,11 @@ FSM	Fortuna Silver Mines
 FSS	Federal Signal Corp
 FT	Franklin Universal Trust
 FTAI	Fortress Transportation & Infra
+FTCH	Farfetch Limited Class A
 FTI	Technipfmc Plc
 FTK	Flotek Industries
 FTS	Fortis Inc
-FTSI	Fts International Inc.
+FTSI	Fts International Inc
 FTV	Fortive Corp
 FTV-A	Fortive Corp Pfd Conv Ser A
 FUL	H. B. Fuller Company
@@ -1192,6 +1195,7 @@ GCO	Genesco Inc
 GCP	Gcp Applied Technologies Inc C
 GCV	Gabelli Convertible and Income Securities
 GCV-B	Gabelli 6.00% Pfd B
+GCV.P	Gabelli Convertible & Income Securities Rights
 GD	General Dynamics Corp
 GDDY	Godaddy Inc
 GDI	Gardner Denver Holdings Inc
@@ -1220,8 +1224,6 @@ GG	Goldcorp Inc
 GGB	Gerdau S.A.
 GGG	Graco Inc
 GGM	Guggenheim Credit Allocation F
-GGP	Ggp Inc
-GGP-A	Ggp Inc Prf A
 GGT	Gabelli Global Multi-Media Trust
 GGT-B	Gabelli Global Multi-Media Trus
 GGT-E	Gabelli Multimedia Trust Inc Pfd Ser E
@@ -1255,6 +1257,7 @@ GLOB	Globant S.A.
 GLOG	Gaslog Ltd
 GLOP	Gaslog Partners LP
 GLP	Global Partners LP
+GLP-A	Global Partners L.P. Pfd A
 GLT	Glatfelter
 GLW	Corning Inc
 GM	General Motors Company
@@ -1263,7 +1266,7 @@ GME	Gamestop Corp
 GMED	Globus Medical Inc
 GMR-A	Global Med REIT Inc Pfd.
 GMRE	Global Medical REIT Inc
-GMS	Gms Inc.
+GMS	Gms Inc
 GMTA	GATX Corporation 5.625% Senior
 GMZ	Goldman Sachs MLP Income Oppor
 GNC	GNC Holdings Inc
@@ -1293,6 +1296,7 @@ GPT	Gramercy Property Trust
 GPT-A	Gramercy Property Trust
 GPX	Gp Strategies Corp
 GRA	W.R. Grace & Company
+GRA.U	Graf Industrial Corp.
 GRAM	Grana Y Montero S.A.A.
 GRC	Gorman-Rupp Company
 GRP.U	Granite Real Estate Investment
@@ -1309,9 +1313,10 @@ GS-J	Goldman Sachs Pfd Series J
 GS-K	Goldman Sachs Pfd Series K
 GS-N	Goldman Sachs Pfd Series N
 GSA.U	GS Acquisition Holdings Corp Units
+GSA.W	GS Acquisition Holdings Corp Warrants
 GSAH	GS Acquisition Holdings Corp. Class A
 GSBD	Goldman Sachs Bdc Inc
-GSH	Guangshen Railway Company
+GSH	Guangshen Railway
 GSK	Glaxosmithkline Plc
 GSL	Global Ship Lease Inc
 GSL-B	Global Ship Lease Inc
@@ -1320,6 +1325,7 @@ GTN	Gray Television
 GTN.A	Gray Television
 GTS	Triple-S Management Corp
 GTT	Global Telcom & Technology Inc
+GTX	Garrett Motion Inc.
 GTY	Getty Realty Corp
 GUT	Gabelli Utility Trust
 GUT-A	Gabelli Utility Trust Ser A Pfd
@@ -1342,11 +1348,12 @@ HBM	Hudbay Minerals Inc
 HCA	Hca Holdings Inc
 HCC	Warrior Met Coal Inc
 HCF-A	Hunt Companies Finance Trust Inc Pfd
-HCFT	Hunt Companies Finance Trust Inc.
+HCFT	Hunt Companies Finance Trust Inc
 HCHC	Hc2 Holdings Inc
 HCI	Homeowners Choice
 HCLP	Hi-Crush Partners LP
 HCP	HCP Inc
+HCXY	Hercules Capital Inc. 6.25% Notes Due 2033
 HCXZ	Hercules Capital Inc. 5.25% Notes Due 2025
 HD	Home Depot
 HDB	Hdfc Bank Ltd
@@ -1363,7 +1370,6 @@ HF	HFF Inc
 HFC	Hollyfrontier Corp
 HFRO	Highland Floating Rate Opportunities Fund
 HGH	The Hartford Financial Srvcs G
-HGT	Hugoton Royalty Trust
 HGV	Hilton Grand Vacations Inc
 HHC	Howard Hughes Corp
 HHS	Harte-Hanks
@@ -1373,7 +1379,7 @@ HIFR	Infrareit Inc
 HIG	Hartford Financial Services Group
 HIG.W	Hartford Financial Services Group
 HII	Huntington Ingalls Industries
-HIL	Hill International
+HIL	Hill International Inc.
 HIO	Western Asset High
 HIVE	Aerohive Networks Inc
 HIW	Highwoods Properties
@@ -1393,6 +1399,7 @@ HML-A	Hoegh Lng Partners LP Cum Red Pfd Ser A
 HMLP	Hoegh Lng Partners LP
 HMN	Horace Mann Educators Corp
 HMY	Harmony Gold Mining Co. Ltd
+HNGR	Hanger Inc
 HNI	Hon Industries Inc
 HNP	Huaneng Power Intl
 HOG	Harley-Davidson Inc
@@ -1406,7 +1413,7 @@ HPF	John Hancock Pfd II
 HPI	John Hancock Preferred
 HPP	Hudson Pacific Properties
 HPQ	Hewlett-Packard Company
-HPR	Highpoint Resources Corp.
+HPR	Highpoint Resources Corp
 HPS	John Hancock Preferred Income Fund III
 HQH	Tekla Healthcare Investors
 HQL	Tekla Life Sciences Investors
@@ -1439,7 +1446,7 @@ HUBS	Hubspot Inc
 HUD	Hudson Ltd. Class A Common Shares
 HUM	Humana Inc
 HUN	Huntsman Corp
-HUYA	Huya Inc.
+HUYA	Huya Inc
 HVT	Haverty Furniture Companies
 HVT.A	Haverty Furn Cl A SC
 HXL	Hexcel Corp
@@ -1464,6 +1471,7 @@ IDE	VOYA Infrastructure Industrial
 IDT	IDT Corp
 IEX	Idex Corp
 IFF	International Flavors & Fragrances
+IFFT	International Flavors & Fragrances Inc
 IFN	India Fund
 IGA	VOYA Global Advantage and Premium
 IGD	VOYA Global Equity Dividend and Premium
@@ -1552,7 +1560,7 @@ JDD	Nuveen Diversified Dividend and
 JE	Just Energy Group Inc
 JE-A	Just Energy Group Inc
 JEC	Jacobs Engineering Group Inc
-JEF	Jefferies Financial Group Inc.
+JEF	Jefferies Financial Group Inc
 JELD	Jeld-Wen Holding Inc
 JEMD	Nuveen Emerging Markets Debt 2022 Target Term Fu
 JEQ	Japan Equity Fund
@@ -1561,7 +1569,7 @@ JGH	Nuveen Global High Income Fund
 JHA	Nuveen High Income December
 JHB	Nuveen High Income November 2021 Target Term Fun
 JHD	Nuveen High Income December 2019 Target Term Fun
-JHG	Janus Henderson Group Plc.
+JHG	Janus Henderson Group Plc
 JHI	John Hancock Investors Trust
 JHS	John Hancock Income Securities Trust
 JHX	James Hardie Industries Se
@@ -1589,6 +1597,7 @@ JPI	Nuveen Preferred and Income Term Fund
 JPM	JP Morgan Chase & Co
 JPM-A	JP Morgan Chase & Co
 JPM-B	Jpmorgan Chase & Co. 6.70%
+JPM-D	Jpmorgan Chase & Co Depositary Shs Repstg 1/400T
 JPM-E	Jpmorgan Chase & Co
 JPM-F	J P Morgan Chase & Co Depositar
 JPM-G	J P Morgan Chase & Co Depositar
@@ -1616,8 +1625,7 @@ KB	KB Financial Group Inc
 KBH	KB Home
 KBR	KBR Inc
 KDMN	Kadmon Holdings Llc
-KDP	Keurig Dr Pepper Inc.
-KED	Kayne Anderson Energy Development Company
+KDP	Keurig Dr Pepper Inc
 KEG	Key Energy Services Inc
 KEM	Kemet Corp
 KEN	Kenon Holdings Ltd Ordinary Sh
@@ -1657,8 +1665,6 @@ KNL	Knoll Inc
 KNOP	Knot Offshore Partners LP
 KNX	Knight-Swift Transporation Inc
 KO	Coca-Cola Company
-KOD.W	Eastman Kodak Co. WT
-KOD.X	Eastman Kodak Co. WT X
 KODK	Eastman Kodak
 KOF	Coca Cola Femsa S.A.B. De C.V.
 KOP	Koppers Holdings Inc
@@ -1684,20 +1690,19 @@ KTN	Lehman Abs Corp
 KTP	Lehman Abs Corp
 KW	Kennedy-Wilson Holdings Inc
 KWR	Quaker Chemical Corp
-KYE	Kayne Anderson Energy Total Return Fund
 KYN	Kayne Anderson MLP Investment Company
 KYN-F	Kayne Anderson MLP Investment
 L	Loews Corp
 LAC	Lithium Americas Corp
 LAD	Lithia Motors
 LADR	Ladder Capital Corp
+LAIX	Laix Inc. ADR
 LAZ	Lazard Ltd
 LB	L Brands Inc
-LBRT	Liberty Oilfield Services Inc.
+LBRT	Liberty Oilfield Services Inc
 LC	Lendingclub Corp
 LCI	Lannett Co Inc
 LCII	Lci Industries
-LCM	Advent/Claymore Enhanced Growth &
 LDF	Latin American Discovery Fund
 LDL	Lydall Inc
 LDOS	Leidos Holdings Inc
@@ -1711,7 +1716,6 @@ LEN	Lennar Corp
 LEN.B	Lennar Corp Cl B
 LEO	Dreyfus Strategic Municipals
 LFC	China Life Insurance Company Ltd
-LFGR	Leaf Group Ltd
 LGC	Legacy Acquisition Corp
 LGC.U	Legacy Acquisition Corp Units
 LGC.W	Legacy Acquisition Corp. WT
@@ -1727,7 +1731,7 @@ LHO-I	Lasalle Hotel Properties
 LHO-J	Lasalle Hotel Properties
 LII	Lennox International
 LITB	Lightinthebox Holding Co. Ltd
-LKM	Link Motion Inc.
+LKM	Link Motion Inc
 LKSD	Lsc Communications Inc
 LL	Lumber Liquidators Holdings Inc
 LLL	L-3 Communications Holdings
@@ -1753,8 +1757,9 @@ LPX	Louisiana-Pacific Corp
 LRN	K12 Inc
 LSI	Life Storage
 LTC	Ltc Properties
+LTHM	Livent Corporation
 LTM	Latam Airlines Group S.A.
-LTN	Union Acquisition Corp.
+LTN	Union Acquisition Corp
 LTN.P	Union Acquisition Corp Rights
 LTN.U	Union Acquisition Corp
 LTN.W	Union Acquisition Corp. Warrant
@@ -1818,6 +1823,9 @@ MET-A	Metlife Pfd A Fltg
 MET-E	Metlife Inc Pfd
 MFA	MFA Financial Inc
 MFA-B	MFA Financial Inc
+MFA.U	Megalith Financial Acquisition Corp. Units
+MFA.W	Megalith Financial Acquisition Corp Warrants
+MFAC	Megalith Financial Acquisition Corp. Class A
 MFC	Manulife Financial Corp
 MFCB	Mfc Industrial Ltd
 MFD	Macquarie/First Trust Global
@@ -1834,7 +1842,8 @@ MGF	MFS Government Markets Income Trust
 MGM	MGM Resorts International
 MGP	MGM Growth Properties Llc
 MGU	Macquarie Global Infrastructure Total Return Fun
-MGY	Magnolia Oil & Gas Corp.
+MGY	Magnolia Oil & Gas Corp
+MGY.W	Magnolia Oil & Gas Corp. Warrant
 MH-A	Maiden Holdings Ltd 8.25%
 MH-C	Maiden Holdings North America
 MH-D	Maiden Holdings Ltd Pref Ser D
@@ -1883,11 +1892,10 @@ MOG.A	Moog Inc Cl A
 MOG.B	Moog Inc Cl B
 MOH	Molina Healthcare Inc
 MOS	Mosaic Company
-MOS.U	Mosaic Acquisition Corp.
+MOS.U	Mosaic Acquisition Corp
 MOS.W	Mosaic Acquisition Corp. WT
 MOSC	Mosaic Acquisition Corp
 MOV	Movado Group Inc
-MP-D	Mississippi Pr 5.25
 MPA	Blackrock Muniyield Pennsylvania Quality Fund
 MPC	Marathon Petroleum Corp
 MPLX	Mplx LP
@@ -1910,6 +1918,7 @@ MS-I	Morgan Stanley
 MS-K	Morgan Stanley Dep Shs Repstg 1/1000Th Sh Non-Cu
 MSA	Msa Safety Inc
 MSB	Mesabi Trust
+MSC	Studio City Intl Holdings Ltd ADR
 MSCI	MSCI Inc
 MSD	Morgan Stanley Emerging Markets Debt
 MSF	Morgan Stanley Emerging Markets Fund Inc
@@ -1931,7 +1940,7 @@ MTH	Meritage Corp
 MTL	Mechel Oao
 MTL.P	Mechel Steel Group Oao American
 MTN	Vail Resorts
-MTOR	Meritor Inc.
+MTOR	Meritor Inc
 MTR	Mesa Royalty Trust
 MTRN	Materion Corp
 MTT	Western Asset Muni Defined Opportunity Trust Inc
@@ -1968,7 +1977,6 @@ MYJ	Blackrock Muniyield New Jersey Fund
 MYN	Blackrock Muniyield New York Quality Fund
 MYOV	Myovant Sciences Ltd
 MZA	Muniyield Arizona Fund
-MZF	Managed Duration Investment Grade Fund
 NAC	Nuveen California Divadv Fund
 NAD	Nuveen Divadv Fund
 NAN	Nuveen New York Divadv Fund
@@ -1993,16 +2001,16 @@ NCLH	Norwegian Cruise Ord
 NCR	NCR Corp
 NCS	NCI Building Systems
 NCV	Agic Convertible &
+NCV-A	Allianzgi Convertible & Income Fund Pfd Shs Ser
 NCZ	Agic Convertible & II
+NCZ-A	Allianzgi Convertible & Income Fund II Pfd Shs S
 NDP	Tortoise Energy Independence F
-NDRO	Enduro Royalty Trust
 NE	Noble Corp
 NEA	Nuveen Insured Tax-Free Advantage Fund
 NEE	Nextera Energy
 NEE-I	Nextera Energy Capital Holding
 NEE-J	Nextera Energy Capital Holding
 NEE-K	Nextera Energy Inc Series K J
-NEE-Q	Nextera Energy Inc Corporate
 NEE-R	Nextera Energy Inc
 NEM	Newmont Mining Corp
 NEP	Nextera Energy Partners LP
@@ -2013,8 +2021,9 @@ NEW	Puxin Limited
 NEWM	New Media Investment Group Inc
 NEWR	New Relic Inc
 NEXA	Nexa Resources S.A.
-NFC	New Frontier Corporation
+NFC	New Frontier Corp
 NFC.U	New Frontier Corporation Units Each Consisting
+NFC.W	New Frontier Corp. Warrants
 NFG	National Fuel Gas Company
 NFJ	Nfj Dividend Interest & Premium Strategy Fund
 NFX	Newfield Exploration Company
@@ -2033,6 +2042,7 @@ NID	Nuveen Intermediate Duration M
 NIE	Agic Equity & Convertible
 NIM	Nuveen Maturities Fund
 NINE	Nine Energy Service Inc
+NIO	Nio Inc
 NIQ	Nuveen Intermediate Duration Q
 NJR	Newjersey Resources Corp
 NJV	Nuveen New Jersey Muni Value Fund
@@ -2047,10 +2057,12 @@ NLY-C	Annaly Capital Management Inc
 NLY-D	Annaly Capital Management Inc
 NLY-F	Annaly Capital Management Inc Pfd
 NLY-G	Annaly Capital Management Inc Pfd
+NLY-H	Annaly Capital Mgmt 8.125%
 NM	Navios Maritime Holdings Inc
 NM-G	Navios Maritime
 NM-H	Navios Maritime Holdngs Inc
 NMFC	New Mountain Finance Corporati
+NMFX	New Mountain Finance Corp
 NMI	Nuveen Muni
 NMK-B	Niagara Mohawk Holdings Inc P
 NMK-C	Niagara Mohawk 3.60
@@ -2097,7 +2109,6 @@ NSA	National Storage Affiliates Tru
 NSA-A	National Storage Affiliates Trust Pfd Cum Red BE
 NSC	Norfolk Southern Corp
 NSL	Nuveen Senior
-NSM	Nationstar Mortgage Holdngs I
 NSP	Insperity Inc
 NSS	Nustar Logistics LP
 NTB	Bank of Butterfield Ltd
@@ -2137,8 +2148,6 @@ NXRT	Nexpoint Residential Trust Inc
 NYC-A	New York Community Bancorp Inc
 NYC-U	New York Community Bancorp Inc
 NYCB	New York Community Bancorp
-NYL.A	NRG Yield Inc Class A
-NYLD	NRG Yield Inc
 NYRT	New York REIT Inc
 NYT	New York Times Company
 NYV	Nuveen New York Muni Value Fund 2
@@ -2146,6 +2155,7 @@ NZF	Nuveen Divadv Fund 3
 O	Realty Income Corp
 OAK	Oaktree Capital Group Llc
 OAK-A	Oaktree Cap Group Llc Series A Pfd
+OAK-B	Oaktree Capital Group Llc Pfd Unit Ser B
 OAS	Oasis Petroleum Inc
 OBE	Obsidian Energy Ltd
 OC	Owens Corning Inc
@@ -2208,7 +2218,6 @@ PAM	Pampa Energia S.A.
 PANW	Palo Alto Networks Inc
 PAR	Par Technology Corp
 PARR	Par Petroleum Corp
-PAY	Verifone Systems
 PAYC	Paycom Software Inc
 PB	Prosperity Bancshares
 PBA	Pembina Pipeline Cor
@@ -2243,7 +2252,7 @@ PEI-B	Pennsylvania Real Estate Inves
 PEI-C	Pennsylvania Real Estate Investment Trust Red Pe
 PEI-D	Pennsylvania Real Estate Investment Trust Pfd
 PEN	Penumbra Inc
-PEO	Adams Natural Resources Fund Inc.
+PEO	Adams Natural Resources Fund Inc
 PER	Sandridge Permian Trust
 PES	Pioneer Energy Services Corp
 PF	Pinnacle Foods Inc
@@ -2285,6 +2294,7 @@ PKG	Packaging Corporation of America
 PKI	Perkinelmer
 PKO	Pimco Income Opportunity Fund
 PKX	Posco ADR
+PLAN	Anaplan Inc.
 PLD	Prologis Inc
 PLNT	Planet Fitness
 PLOW	Douglas Dynamics
@@ -2328,7 +2338,8 @@ PRI	Primerica Inc
 PRI-A	Priority Income Fund Inc Term Pfd Ser A
 PRLB	Proto Labs Inc
 PRO	Pros Holdings
-PRSP	Perspecta Inc.
+PRS	Prudential Financial Inc. 5.625% Junior
+PRSP	Perspecta Inc
 PRT	Permrock Royalty Trust Trust Units
 PRTY	Party City Holdco Inc
 PRU	Prudential Financial Inflation Retail
@@ -2365,19 +2376,20 @@ PUK.P	Prudential 6.75%
 PUMP	Propetro Holding Corp
 PVG	Pretium Res Inc
 PVH	Phillips-Van Heusen Corp
-PVTL	Pivotal Software Inc.
+PVL	Permianville Royalty Trust
+PVTL	Pivotal Software Inc
 PWR	Quanta Services
 PX	Praxair
 PXD	Pioneer Natural Resources Co
 PYN	Pimco New York Muni Income Fund III
 PYS	Pplus Trust
 PYT	Pplus Trust
+PYX	Pyxus International Inc
 PZC	Pimco California Muni Income Fund III
 PZN	Pzena Investment Management Inc
-QCP	Quality Care Properties Inc
 QD	Qudian Inc ADR
 QEP	Qep Resources
-QES	Quintana Energy Services Inc.
+QES	Quintana Energy Services Inc
 QGEN	Qiagen N.V.
 QHC	Quorum Health Corp
 QSR	Restaurant Brands International
@@ -2388,18 +2400,23 @@ QTS-B	Qts Realty Trust Inc Cum Perp Pfd Conv Ser B
 QTWO	Q2 Holdings Inc
 QUAD	Quad Graphics Inc
 QUOT	Quotient Technology Inc
+QVCD	Qvc Inc. 6.375% Senior Secured Notes Due 2067
 R	Ryder System
 RA	Brookfield Real Assets Income Fund Inc
 RACE	Ferrari N.V.
 RAD	Rite Aid Corp
+RAMP	Liveramp Holdings Inc.
 RBA	Ritchie Bros. Auctioneers Inc
 RBC	Regal-Beloit Corp
 RBS	Royal Bank Scotland Group Plc
 RBS-S	Royal Bank Scotland
+RC	Ready Capital Corp.
+RCA	Ready Capital Corp. 7.00%
 RCI	Rogers Communication
 RCL	Royal Caribbean Cruises Ltd
+RCP	Ready Capital Corp. 6.50% Series
 RCS	Rcm Strategic Global Government Fund
-RCUS	Arcus Biosciences Inc.
+RCUS	Arcus Biosciences Inc
 RDC	Rowan Companies
 RDN	Radian Group Inc
 RDS.A	Royal Dutch Shell Plc
@@ -2410,7 +2427,6 @@ REG	Regency Centers Corp
 RELX	Relx Plc
 REN	Resolute Energy Corp
 RENN	Renren Inc
-RENX	Relx N.V.
 RES	RPC Inc
 RESI	Altisource Residential Corporat
 REV	Revlon Inc
@@ -2419,6 +2435,7 @@ REX	Rex American Resources Corp
 REX-A	Rexford Industrial Realty Inc
 REX-B	Rexford Industrial Realty Inc Pfd B
 REXR	Rexford Industrial Realty Inc
+REZ.P	Resideo Technologies Inc Wi
 RF	Regions Financial Corp
 RF-A	Regions Financial Corp
 RF-B	Regions Financial Corp
@@ -2435,6 +2452,7 @@ RHT	Red Hat Inc
 RIG	Transocean Inc
 RIO	Rio Tinto Plc
 RIV	Rivernorth Opportunities Fund
+RIV-R	Rivernorth Opportunities Fund Inc
 RJF	Raymond James Financial
 RL	Ralph Lauren Corp
 RLGY	Realogy Holdings Corp
@@ -2445,6 +2463,7 @@ RLJ-A	Rlj Lodging Trust $1.95 Series A
 RM	Regional Managment Corp
 RMAX	Re/Max Holdings Inc
 RMD	Resmed Inc
+RMED	Ra Medical Systems Inc.
 RMP.P	Rivernorth Marketplace Lending Corp Term Pfd Ser
 RMT	Royce Micro-Cap Trust
 RNG	Ringcentral Inc
@@ -2473,7 +2492,7 @@ RST	Rosetta Stone
 RTEC	Rudolph Technologies
 RTN	Raytheon Company
 RUBI	The Rubicon Project Inc
-RVI	Retail Value Inc.
+RVI	Retail Value Inc
 RVT	Royce Value Trust
 RWG.U	Regalwood Global Energy
 RWG.W	Regalwood Global Energy Ws
@@ -2493,6 +2512,7 @@ RZB	Reinsurance Group of America I
 S	Sprint Corp
 SA	Seabridge Gold
 SAB	Saratoga Investment Corp 6.75% Notes Due 2023
+SAF	Saratoga Investment Corp
 SAFE	Safety Income and Growth Inc
 SAH	Sonic Automotive
 SAIC	Science Applications Internatio
@@ -2551,7 +2571,7 @@ SF-A	Stifel Financial Corp
 SFB	Stifel Financial Corporation 5.20% Senior Notes
 SFE	Safeguard Scientifics
 SFL	Ship Finance International
-SFS	Smart & Final Stores Inc.
+SFS	Smart & Final Stores Inc
 SFUN	Soufun Holdings
 SGU	Star Gas Partners LP
 SGZA	Selective Insurance Group Inc
@@ -2566,10 +2586,14 @@ SHOP	Shopify Inc
 SHW	Sherwin-Williams Company
 SID	Companhia Siderurgica Nacional
 SIG	Signet Jewelers Ltd
+SIT-A	Site Centers Corp Shs Pfd Cl A
+SIT-J	Site Centers Corp Dep Shs Pfd J
+SIT-K	Site Centers Corp. Dep Shs Pfd K
+SITC	Site Centers Corp.
 SITE	Siteone Landscape Supply
 SIX	Six Flags Entertainment Corp
 SJI	South Jersey Industries
-SJIU	South Jersey Industries Inc.
+SJIU	South Jersey Industries Inc
 SJM	J.M. Smucker Company
 SJR	Shaw Communications Inc
 SJT	San Juan Basin Royalty Trust
@@ -2581,7 +2605,6 @@ SKY	Skyline Corp
 SLB	Schlumberger N.V.
 SLCA	U.S. Silica Holdings Inc
 SLD	Sutherland Asset Management Corp MD
-SLDA	Sutherland Asset Management Corporation 7.00% Co
 SLDD	Sutherland Asset Management Corporation 6.50% Se
 SLF	Sun Life Financial Inc
 SLG	SL Green Realty Corp
@@ -2619,7 +2642,10 @@ SOL	Renesola Ltd
 SON	Sonoco Products Company
 SOR	Source Capital
 SPA	Sparton Corp
-SPB	Spectrum Brands Holdings Inc.
+SPA.U	Spartan Energy Acquisition Corp. Units
+SPA.W	Spartan Energy Acquisition Corp Warrants
+SPAQ	Spartan Energy Acquisition Corp Class A
+SPB	Spectrum Brands Holdings Inc
 SPE	Special Opportunities Fund Inc
 SPE-B	Special Opportunities 3.5% Conv. Pfd. Series B
 SPG	Simon Property Group
@@ -2658,6 +2684,7 @@ SSW-D	Seaspan Corp
 SSW-E	Seaspan Corp
 SSW-G	Seaspan Corp
 SSW-H	Seaspan Corp
+SSW-I	Seaspan Corp Fixed/Fltg Perp Pfd Ser I
 SSWA	Seaspan Corporation 7.125% Notes Due 2027
 SSWN	Seaspan Corp
 ST	Sensata Technologies Holding N.V.
@@ -2698,6 +2725,7 @@ SUP	Superior Industries International
 SUPV	Grupo Supervielle S.A.
 SVU	Supervalu Inc
 SWCH	Switch Inc
+SWI	Solarwinds Corporation
 SWJ	Stanley Black & Decker Inc
 SWK	Stanley Black & Decker Inc
 SWM	Schweitzer-Mauduit International
@@ -2719,16 +2747,13 @@ T	AT&T Inc
 TAC	Transalta Corp
 TAHO	Tahoe Res Inc
 TAL	Tal Education Group
-TALO	Talos Energy Inc.
+TALO	Talos Energy Inc
 TAP	Molson Coors Brewing Company
 TAP.A	Molson Coors Brewing Company
 TARO	Taro Pharm Inds
 TBB	AT&T Inc 5.350% Global Notes Due 2066
 TBC	AT&T Inc. 5.625% Global Notes Due 2067
 TBI	Trueblue Inc
-TCAP	Triangle Capital Corp
-TCCA	Triangle Capital Corp
-TCCB	Triangle Capital Corp
 TCF	TCF Financial Corp
 TCF-D	TCF Financial Corp
 TCF.W	TCF Financial Corp
@@ -2737,6 +2762,7 @@ TCO	Taubman Centers
 TCO-J	Taubman Centers Inc Preferred
 TCO-K	Taubman Centers Inc
 TCP	TCP Pipelines
+TCRW	THL Credit Inc. 6.125% Notes Due 2023
 TCRX	THL Credit Inc
 TCRZ	THL Credit Inc
 TCS	The Container Store Group Inc
@@ -2748,7 +2774,7 @@ TDF	Templeton Dragon Fund
 TDG	Transdigm Group Inc
 TDI	Telephone and Data Systems
 TDJ	Telephone and Data Systems Inc
-TDOC	Teladoc Health Inc.
+TDOC	Teladoc Health Inc
 TDS	Telephone and Data Systems
 TDW	Tidewater Inc
 TDW.A	Tidewater Inc Series A Warrants
@@ -2821,11 +2847,8 @@ TOT	Totalfinaelf S.A.
 TOWR	Tower International
 TPB	Turning Point Brands
 TPC	Tutor Perini Corp
-TPG.E	Tpg Pace Energy Holdings Corp
-TPG.F	Tpg Pace Energy Holdings Corp Warrant
 TPG.H	Tpg Pace Holdings Corp
 TPG.I	Tpg Pace Holdings Corp Warrants
-TPGE	Tpg Pace Energy Holdings Corp Class A
 TPGH	Tpg Pace Holdings Corp Class A Ordinary Shares
 TPH	Tri Pointe Homes Inc
 TPL	Texas Pacific Land Trust
@@ -2879,6 +2902,8 @@ TWO	Two Harbors Investments Corp
 TWO-A	Two Harbors Investment Corp
 TWO-B	Two Harbors Investment Corp
 TWO-C	Two Harbors Investment Corp Cum Red Pfd Ser C FI
+TWO-D	Two Harbors Investments Corp 7.75% Series D
+TWO-E	Two Harbors Investments Corp 7.50% Series E
 TWTR	Twitter Inc
 TX	Ternium S.A.
 TXT	Textron Inc
@@ -2888,7 +2913,6 @@ TYG	Tortoise Energy Infrastructure Corp
 TYL	Tyler Technologies
 UA	Under Armour Inc Class C Comm
 UAA	Under Armour
-UAL	United Continental Holdings
 UAN	Cvr Partners LP
 UBA	Urstadt Biddle Properties Inc
 UBP	Urstadt Biddle Properties Inc
@@ -2927,6 +2951,7 @@ USB-A	U.S. Bancorp Depositary Shares
 USB-H	U.S. Bancorp Dep Sh
 USB-M	U.S. Bancorp
 USB-O	U.S. Bancorp
+USB-P	US Bancorp [De] Depositary Shs Repstg 1/1000Th P
 USDP	USD Partners LP
 USFD	US Foods Holding
 USG	USG Corp
@@ -2981,7 +3006,7 @@ VMI	Valmont Industries
 VMO	Invesco Muni Opportunity Trust
 VMW	Vmware Inc
 VNCE	Vince Holding Corp
-VNE	Veoneer Inc.
+VNE	Veoneer Inc
 VNO	Vornado Realty Trust
 VNO-K	Vornado Realty Trust
 VNO-L	Vornado Realty Trust
@@ -2991,16 +3016,14 @@ VOC	Voc Energy Trust
 VOYA	VOYA Financial Inc
 VPG	Vishay Precision Group
 VPV	Invesco Pennsylvania Muni
-VR-A	Validus Holdings Ltd
-VR-B	Validus Holdings Ltd
 VRS	Verso Corp
 VRTV	Veritiv Corp
 VSH	Vishay Intertechnology
 VSI	Vitamin Shoppe Inc
 VSLR	Vivint Solar Inc
 VSM	Versum Materials Inc
-VST	Vistra Energy Corp.
-VST.A	Vistra Energy Corp.
+VST	Vistra Energy Corp
+VST.A	Vistra Energy Corp
 VSTO	Vista Outdoor Inc
 VTA	Invesco Dynamic Credit Fund
 VTN	Invesco Trust New York Muni
@@ -3020,7 +3043,7 @@ WAIR	Wesco Aircraft Holdings Inc
 WAL	Western Alliance Bancorporation
 WALA	Western Alliance Bancorporation
 WAT	Waters Corp
-WBAI	500Wan.Com Ltd
+WBAI	500Wan.com Ltd
 WBC	Wabco Holdings Inc
 WBK	Westpac Banking Corp
 WBS	Webster Financial Corp
@@ -3039,7 +3062,6 @@ WES	Western Gas Partners LP
 WEX	Wex Inc
 WF	Woori Finance Holdings Co Ltd
 WFC	Wells Fargo & Company
-WFC-J	Wells Fargo Pfd J
 WFC-L	Wells Fargo Pfd L
 WFC-N	Wells Fargo & Company Dep Shs R
 WFC-O	Wells Fargo & Company
@@ -3056,7 +3078,7 @@ WFE-A	Wells Fargo Real Estate Invest
 WFT	Weatherford International Ltd
 WGO	Winnebago Industries
 WGP	Western Gas Eqty Partners LP
-WH	Wyndham Hotels & Resorts Inc.
+WH	Wyndham Hotels & Resorts Inc
 WHD	Cactus Inc. Class A
 WHG	Westwood Holdings Group Inc
 WHR	Whirlpool Corp
@@ -3079,7 +3101,7 @@ WNC	Wabash National Corp
 WNS	Wns Ltd
 WOR	Worthington Industries
 WOW	Wideopenwest Inc
-WP	Worldpay Inc.
+WP	Worldpay Inc
 WPC	W.P. Carey & Co. Llc
 WPG	Washington Prime Group Inc
 WPG-H	Washington Prime Group Inc 7.5
@@ -3087,8 +3109,6 @@ WPG-I	Wp Glimcher Inc
 WPM	Wheaton Precious Metals
 WPP	Wpp Plc ADR
 WPX	Wpx Energy Inc
-WPXP	Wpx Energy Inc
-WPZ	Williams Partners LP
 WRB	W.R. Berkley Corp
 WRB-B	W.R. Berkley Corp
 WRB-C	W.R. Berkley Corp
@@ -3110,26 +3130,25 @@ WTS	Watts Water Technologies
 WTTR	Select Energy Services Inc
 WTW	Weight Watchers International Inc
 WU	Western Union Company
-WUBA	58.Com Inc
+WUBA	58.com Inc
 WWE	World Wrestling Entertainment
 WWW	Wolverine World Wide
 WY	Weyerhaeuser Company
-WYND	Wyndham Destinations Inc.
+WYND	Wyndham Destinations Inc
 X	United States Steel Corp
-XAN	Exantas Capital Corp.
+XAN	Exantas Capital Corp
 XAN-C	Exantas Capital Corp. Pfd
 XEC	Cimarex Energy Co
 XFLT	Xai Octagon Floating Alt Income Term Trust Co
 XHR	Xenia Hotels & Resorts Inc
 XIN	Xinyuan Real Estate Co Ltd
-XL	XL Company Switzerland Gmbh
 XOM	Exxon Mobil Corp
-XON	Intrexon Corp
 XOXO	Xoxo Group Inc
 XPO	Xpo Logistics Inc
 XRF	China Rapid Finance Limited ADR
 XRM	Xerium Technologies
 XRX	Xerox Corp
+XYF	X Financial
 XYL	Xylem Inc
 Y	Alleghany Corp
 YELP	Yelp Inc
@@ -3151,5 +3170,5 @@ ZOES	Zoe's Kitchen Inc
 ZTO	Zto Express [Cayman] Inc
 ZTR	Zweig Total Return Fund
 ZTS	Zoetis Inc Class A
-ZUO	Zuora Inc.
+ZUO	Zuora Inc
 ZYME	Zymeworks Inc
