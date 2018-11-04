@@ -19,6 +19,7 @@ ABR-C	Arbor Realty Trust
 ABT	Abbott Laboratories
 ABX	Barrick Gold Corp
 AC	Associated Capital Group Inc
+ACA	Arcosa Inc.
 ACB	Aurora Cannabis Inc
 ACC	American Campus Communities Inc
 ACCO	Acco Brands Corp
@@ -158,7 +159,6 @@ AMRX	Amneal Pharmaceuticals Inc
 AMT	American Tower Corp
 AMX	America Movil S.A.B. De C.V.
 AN	Autonation Inc
-ANDV	Andeavor
 ANDX	Andeavor Logistics LP
 ANET	Arista Networks Inc
 ANF	Abercrombie & Fitch Company
@@ -533,6 +533,7 @@ CBT	Cabot Corp
 CBU	Community Bank System
 CBZ	Cbiz Inc
 CC	Chemours Company
+CCC	Calgon Carbon Corp
 CCC.U	Churchill Capital Corp
 CCE	Coca Cola European Partners
 CCH.U	Collier Creek Holdings Units
@@ -571,7 +572,6 @@ CFR-A	Cullen/Frost Bankers Inc
 CFX	Colfax Corp
 CGA	China Green Agriculture
 CGC	Canopy Growth Corp
-CGG	Compagnie Generale De Gephysqu
 CHA	China Telecom Corp Ltd
 CHAP	Chaparral Energy Inc
 CHCT	Community Healthcare Trust Inc
@@ -756,7 +756,6 @@ CUZ	Cousins Properties Inc
 CVA	Covanta Holding Corp
 CVE	Cenovus Energy Inc
 CVEO	Civeo Corp
-CVG	Convergys Corp
 CVI	Cvr Energy Inc
 CVIA	Covia Holdings Corp
 CVNA	Carvana Co. Class A
@@ -836,6 +835,7 @@ DKT	Deutsch Bk Contingent Cap TR V
 DL	China Distance Education Holdings
 DLB	Dolby Laboratories
 DLN-A	Dynagas Lng Partners LP 9.00% Series A
+DLN-B	Dynagas Lng Partners LP Pfd Unit Ser B Fixed/Flt
 DLNG	Dynagas Lng Partners LP
 DLPH	Delphi Technologies Plc
 DLR	Digital Realty Trust
@@ -1082,7 +1082,6 @@ FCAU	Fiat Chrysler Automobiles N.V.
 FCB	Fcb Financial Holdings Inc
 FCE.A	Forest City Ent Cl A
 FCF	First Commonwealth Financial Corp
-FCFS	First Cash Fin Svcs
 FCN	Fti Consulting
 FCPT	Four Corners Property Trust In
 FCT	Senior Floating Rate II
@@ -1297,6 +1296,7 @@ GPT-A	Gramercy Property Trust
 GPX	Gp Strategies Corp
 GRA	W.R. Grace & Company
 GRA.U	Graf Industrial Corp.
+GRAF	Graf Industrial Corp.
 GRAM	Grana Y Montero S.A.A.
 GRC	Gorman-Rupp Company
 GRP.U	Granite Real Estate Investment
@@ -1730,6 +1730,7 @@ LHO	Lasalle Hotel Properties
 LHO-I	Lasalle Hotel Properties
 LHO-J	Lasalle Hotel Properties
 LII	Lennox International
+LIN	Lin Media Llc
 LITB	Lightinthebox Holding Co. Ltd
 LKM	Link Motion Inc
 LKSD	Lsc Communications Inc
@@ -1927,7 +1928,6 @@ MSGN	Msg Networks Inc
 MSI	Motorola Solutions
 MSL	Midsouth Bancorp
 MSM	Msc Industrial Direct Company
-MSP	Madison Strategic Sector Premium Fund
 MT	Arcelormittal
 MTB	M&T Bank Corp
 MTB-C	M&T Bank Corporation Fixed Rate
@@ -1984,7 +1984,6 @@ NAO	Nordic American Offshore Ltd
 NAP	Navios Maritime Midstream Partn
 NAT	Nordic American Tanker Shipping Ltd
 NAV	Navistar International Corp
-NAV-D	Navistar Intl Pfd D
 NAZ	Nuveen Arizona Premium Fund
 NBB	Nuveen Build America Bond Fund
 NBD	Nuveen Build America Bond Opportunity Fund
@@ -2274,7 +2273,6 @@ PGZ	Principal Real Estate Income F
 PH	Parker-Hannifin Corp
 PHD	Pioneer Floating Rate Trust
 PHG	Koninklijke Philips Electronics
-PHH	Phh Corp
 PHI	Philippine Long Distance Telephone
 PHK	Pimco High
 PHM	Pultegroup
@@ -2464,6 +2462,7 @@ RM	Regional Managment Corp
 RMAX	Re/Max Holdings Inc
 RMD	Resmed Inc
 RMED	Ra Medical Systems Inc.
+RMI	Rivernorth Opportunistic Municipal Income Fund
 RMP.P	Rivernorth Marketplace Lending Corp Term Pfd Ser
 RMT	Royce Micro-Cap Trust
 RNG	Ringcentral Inc
@@ -2604,8 +2603,6 @@ SKX	Skechers U.S.A.
 SKY	Skyline Corp
 SLB	Schlumberger N.V.
 SLCA	U.S. Silica Holdings Inc
-SLD	Sutherland Asset Management Corp MD
-SLDD	Sutherland Asset Management Corporation 6.50% Se
 SLF	Sun Life Financial Inc
 SLG	SL Green Realty Corp
 SLG-I	SL Green Realty Corp
@@ -2763,7 +2760,6 @@ TCO-J	Taubman Centers Inc Preferred
 TCO-K	Taubman Centers Inc
 TCP	TCP Pipelines
 TCRW	THL Credit Inc. 6.125% Notes Due 2023
-TCRX	THL Credit Inc
 TCRZ	THL Credit Inc
 TCS	The Container Store Group Inc
 TD	Toronto Dominion Bank
@@ -3152,6 +3148,7 @@ XYF	X Financial
 XYL	Xylem Inc
 Y	Alleghany Corp
 YELP	Yelp Inc
+YETI	Yeti Holdings Inc.
 YEXT	Yext Inc
 YPF	Ypf Sociedad Anonima
 YRD	Yirendai Ltd

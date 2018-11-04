@@ -43,7 +43,6 @@ ACT	Advisorshares Vice ETF
 ACTG	Acacia Res-Acacia
 ACWI	ACWI Ishares MSCI ETF
 ACWX	ACWI Ex US Ishares MSCI ETF
-ACXM	Acxiom Cp
 ADAP	Adaptimmune Ther Ads
 ADBE	Adobe Systems Inc
 ADES	Advanced Emissions Solutions Inc
@@ -101,7 +100,6 @@ AHPI	Allied Healthcare
 AIA	Asia 50 Ishares ETF
 AIHS	Senmiao Technology Limited
 AIMC	Altra Indtl Mtn
-AIMCV	Altra Industrial Motion Corp
 AIMT	Aimmune Therap
 AINV	Apollo Investment Co
 AIPT	Precision Therapeutics Inc
@@ -117,6 +115,7 @@ AKER	Akers Biosciences
 AKRX	Akorn Inc
 AKTS	Akoustis Technologies Inc
 AKTX	Akari Therapeutics
+ALACU	Alberton Acquisition Corporation Unit
 ALBO	Albireo Pharma Inc
 ALCO	Alico Inc
 ALDR	Alder Biopharma
@@ -295,7 +294,6 @@ AVDL	Avadel Pharmaceuticals Plc
 AVEO	Aveo Pharmaceuticals
 AVGO	Broadcom Ltd
 AVGR	Avinger Inc
-AVHI	A V Homes Inc
 AVID	Avid Tech Inc
 AVNW	Aviat Networks Inc
 AVRO	Avrobio Inc. Common Stock
@@ -306,6 +304,7 @@ AWSM	Cool Holdings Inc
 AXAS	Abraxas Petro Corp
 AXDX	Accelerate Diagnosti
 AXGN	Axogen Inc
+AXNX	Axonics Modulation Technologies
 AXON	Axovant Sciences Ltd
 AXSM	Axsome Thera
 AXTI	Axt Inc
@@ -411,8 +410,6 @@ BNSO	Bonso Elec Intl In
 BNTC	Benitec Biopharm Ads
 BNTCW	Benitec Biopharm Wrt
 BOCH	Bank of Commerce Hld
-BOFI	Bofi Holding Inc
-BOFIL	Bofi Hld Sub Not
 BOJA	Bojangles Inc CS
 BOKF	Bok Financial Corp
 BOKFL	Bok Financial Corp
@@ -458,6 +455,7 @@ BTAI	Bioxcel Therapeutics Inc
 BTEC	Principal Healthcare Innovators Index
 BURG	Chanticleer Hldgs
 BUSE	First Busey Corp
+BVNSC	Brandes Investment Trust Brandes Value Nextshare
 BVSN	Broadvision Inc
 BVXV	Biondvax Pharma Ads
 BVXVW	Biondvax Pharma WT
@@ -676,7 +674,6 @@ CNST	Constellation Pharmaceuticals Inc
 CNTF	China Techfaith Wire
 CNTY	Century Casinos In
 CNXN	PC Connection Inc
-COBZ	Cobiz Financial Inc
 COCP	Cocrystal Pharma Inc
 CODA	Coda Octopus Group
 CODX	Co-Diagnostics Inc
@@ -755,6 +752,7 @@ CSWC	Capital Southwest
 CSWCL	Capital Southwest Corporation 5.95% Notes Due 20
 CSWI	Csw Industrials Inc
 CSX	CSX Corp
+CTAC	1-800 Contacts Inc.
 CTACU	Chaserg Technology Acquisition Corp. Unit
 CTAS	Cintas Corp
 CTBI	Community TR Bancp
@@ -789,7 +787,6 @@ CVLY	Codorus Valley Bncp
 CVON	Convergeone Holdings Inc
 CVTI	Covenant Transportn
 CVV	CVD Equipment Corp
-CWAY	Coastway Bancorp Inc
 CWBC	Community West Bncsh
 CWBR	Cohbar Inc
 CWCO	Cons Water Co Inc
@@ -961,6 +958,7 @@ EDNT	Edison Nation Inc
 EDRY	Eurodry Ltd
 EDTX	Edtechx Holdings Acquisition Corp
 EDTXU	Edtechx Holdings Acquisition Corp. Unit
+EDTXW	Edtechx Holdings Acquisition Corp. Warrant
 EDUC	Educational Dev Cp
 EEFT	Euronet Worldwide
 EEI	Ecology Environment
@@ -1050,10 +1048,8 @@ EVBG	Everbridge Inc
 EVER	Everquote Inc. Class A
 EVFM	Evofem Biosciences Inc
 EVFTC	Eaton Vance Nextshares Trust II
-EVGBC	Eaton Vance Nextshares Global Income Builder
 EVGN	Evogene Ltd Ord
 EVK	Ever Glory Intl Grp
-EVLMC	Eaton Vance Nextshares Trust II Eaton Vance Tabs
 EVLO	Evelo Biosciences Inc
 EVLV	Evine Live Cl A
 EVOK	Evoke Pharma
@@ -1096,7 +1092,6 @@ FBIOP	Fortress Biotech Inc 9.375% Series A Cumulativ
 FBIZ	First Business Finan
 FBMS	First Bancshs [Ms]
 FBNC	First Bancorp [Nc]
-FBNK	First Connecticut BA
 FBSS	Fauquier Bankshares
 FBZ	Brazil Alphadex Fund FT
 FCA	China Alphadex Fund FT
@@ -1243,7 +1238,6 @@ FTC	Largecap Growth Alphadex Fund FT
 FTCS	Capital Strength ETF FT
 FTD	Ftd Companies
 FTDR	Frontdoor Inc
-FTDRV	Frontdoor Inc
 FTEK	Fuel Tech Inc
 FTEO	Fronteo Inc
 FTFT	Future Fintech Group Inc
@@ -1341,6 +1335,7 @@ GLPI	Gaming & Leisure
 GLRE	Greenlight Cap. Re.
 GLUU	Glu Mobile Inc
 GLYC	Glycomimetics Inc
+GMDA	Gamida Cell Ltd.
 GMLP	Golar Lng Partners
 GMLPP	Golar Lng Partners LP
 GNBC	Green Bancorp
@@ -1381,6 +1376,7 @@ GRMN	Garmin Ltd
 GRNQ	Greenpro Capital Corp
 GROW	U S Global Inv Inc
 GRPN	Groupon Cl A
+GRSH	Gores Holdings Cm A
 GRSHU	Gores Holdings III Inc
 GRTS	Gritstone Oncology Inc.
 GRVY	Gravity Co. Ltd
@@ -1530,7 +1526,6 @@ IBCP	Independent Bk Cp
 IBKC	Iberiabank Corp
 IBKCO	Iberiabank Ds Rep C
 IBKCP	Iberiabank Dp Sh B
-IBKR	Interactive Brokers
 IBOC	Intl Bancshares
 IBTX	Independent Bank Grp
 IBUY	Amplify Onln Rtl ETF
@@ -1670,7 +1665,6 @@ ITIC	Investors Title Co
 ITRI	Itron Inc
 ITRM	Iterum Therapeutics Plc Ordinary Share
 ITRN	Ituran Location
-ITUS	Itus Corp
 IUS	Invesco Strategic US ETF
 IUSB	USD Bond Market Total Ishares Core ETF
 IUSG	S&P US Growth Ishares Core ETF
@@ -1855,6 +1849,7 @@ LMST	Limestone Bancorp Inc
 LNDC	Landec Cp
 LNGR	G-X Longevity Thematic Et
 LNTH	Lantheus Holdings
+LOAC	Longevity Acquisition Corporation Right
 LOACR	Longevity Acquisition Corporation Right
 LOACU	Longevity Acquisition Corporation Units
 LOACW	Longevity Acquisition Corporation Warrant
@@ -1889,6 +1884,7 @@ LSXMB	Liberty Srs XM CS B
 LSXMK	Liberty Srs XM CS C
 LTBR	Lightbridge Corp
 LTRPA	Liberty Tripadv A
+LTRPB	Liberty Tripadv B
 LTRX	Lantronix Inc
 LTXB	Legacytexas Fnl
 LULU	Lululemon Athletica
@@ -1996,7 +1992,7 @@ MLNX	Mellanox Technologies
 MLVF	Malvern Bncp
 MMAC	Mma Capital Mngt
 MMDM	Modern Media Acquisition Corp
-MMDMU	Modern Media Acquisition Corp Unit
+MMDMR	Modern Media Acquisition Corp Right
 MMDMW	Modern Media Acquisition Corp Warrant
 MMLP	Martin Midstrm LP
 MMSI	Merit Medical Sys
@@ -2058,6 +2054,7 @@ MTECW	Mtech Acquisition Corp. Warrant
 MTEM	Molecular Templates Inc
 MTEX	Mannatech Inc
 MTFB	Motif Bio Plc
+MTFBW	Motif Bio Plc Warrants To Purchase Adrs
 MTLS	Materialise Nv Ads
 MTP	Midatech Pharma Ads
 MTRX	Matrix Service Co
@@ -2110,6 +2107,7 @@ NDRAW	Endra Life Sciences Inc Warrants
 NDSN	Nordson Corp
 NEBU	Nebula Acquisition Corporation Class A
 NEBUU	Nebula Acquisition Corporation Unit
+NEBUW	Nebula Acquisition Corporation Warrant
 NEO	Neogenomics Inc
 NEOG	Neogen Cp
 NEON	Neonode Inc
@@ -2237,10 +2235,12 @@ OFIX	Orthofix Intl Nv
 OFLX	Omega Flex Inc
 OFS	Ofs Capital Corporat
 OFSSL	Ofs Capital Corporation 6.375% Notes Due 2025
+OFSSZ	Ofs Capital Corporation 6.50% Notes Due 2025
 OHAI	Oha Investmnt Cp
 OHGI	One Horizon Grp
 OHRP	Ohr Pharmceutial
 OIIM	O2Micro Intl Ltd
+OKDCC	Eaton Vance Nextshares Trust II Eaton Vance Oakt
 OKTA	Okta Inc Class A
 OLBK	Old Line Bancshs MD
 OLD	Long-Term Care ETF
@@ -2288,6 +2288,7 @@ ORLY	O'Reilly Automotive
 ORMP	Oramed Pharma
 ORPN	Bioblast Pharma Ltd
 ORRF	Orrstown Finl Svcs
+ORTX	Orchard Therapeutics Limited
 OSBC	Old Second Bancorp
 OSBCP	Old Second Bncp
 OSIR	Osiris Therapeutics
@@ -2429,7 +2430,6 @@ PMBC	Pacific Mercantile
 PMD	Psychemedics
 PME	Pingtan Marine
 PMOM	Principal Sustainable Momentum Index ETF
-PMPT	Isectors Post-Mpt Growth ETF
 PMTS	CPI Card Group
 PNBK	Patriot Natl Bncp
 PNFP	Pinnacle Finl Ptnrs
@@ -2495,6 +2495,7 @@ PSET	Principal Price Setters ETF
 PSL	DWA Cons Staples Mmtm Port PS
 PSMT	Pricesmart Inc
 PSTI	Pluristem Therapeutc
+PT	Pintec Technology Holdings Limited ADR
 PTC	Ptc Inc
 PTCT	Ptc Therapeutics
 PTE	Polarityte Inc
@@ -2520,7 +2521,6 @@ PWOD	Penns Woods Bancorp
 PXI	DWA Energy Mmtm Port PS
 PXLW	Pixelworks Inc
 PXS	Pyxis Tankers
-PXUS	Principal International Multi-Factor Index ETF
 PY	Principal Shareholders Yield ETF
 PYDS	Payment Data Syst
 PYPL	Paypal Holdings
@@ -2629,7 +2629,6 @@ RLM	Realm Therapeutics Plc ADR
 RMBL	Smart Server Inc
 RMBS	Rambus Inc
 RMCF	Rocky Mt Chocolate
-RMGN	Rmg Networks Holding
 RMNI	Rimini Street Inc
 RMR	The Rmr Grp A
 RMTI	Rockwell Medical In
@@ -2918,6 +2917,7 @@ STLRW	Stellar Acquisition III Inc Warrants
 STML	Stemline Therapeutic
 STMP	Stamps.com Inc
 STND	Standard Financial
+STNE	Stoneco Ltd. Class A
 STNL	Sentinel Energy Services Inc. Class A
 STNLU	Sentinel Energy Services Inc
 STNLW	Sentinel Energy Services Inc. Warrant
@@ -3350,7 +3350,6 @@ WWR	Westwater Resources
 WYNN	Wynn Resorts Ltd
 XBIO	Xenetic Biosciences Inc
 XBIT	Xbiotech Inc
-XCRA	Xcerra Corp
 XEL	XCEL Energy Inc
 XELA	Exela Technologies Inc
 XELB	XCEL Brands
