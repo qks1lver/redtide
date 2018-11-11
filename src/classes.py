@@ -26,7 +26,12 @@ from sklearn import preprocessing
 _d_data_ = '../data/'
 _p_nasdaq_listing_ = _d_data_ + 'NASDAQ.txt'
 _p_nyse_listing_ = _d_data_ + 'NYSE.txt'
+_p_amex_listing_ = _d_data_ + 'AMEX.txt'
 _p_all_symbols_ = _d_data_ + 'all_symbols.txt'
+_p_excluded_symbols_ = _d_data_ + 'excluded_symbols.txt'
+_url_cnn_ = 'https://money.cnn.com/quote/quote.html?symb=%s'
+_url_yahoo_ = 'https://finance.yahoo.com/quote/%s'
+_url_yahoo_daily_ = 'https://finance.yahoo.com/quote/%s/history?period1=%d&period2=%d&interval=1d&filter=history&frequency=1d'
 
 
 # Classes
@@ -44,6 +49,7 @@ class Stock:
         self._close_time_ = 18 * 3600
         self._date_format_ = '%Y-%m-%d'
         self._date_time_format_ = '%Y-%m-%d-%H-%M-%S'
+        self._max_connection_attempts_ = 10
 
         self.rexp_data_row = re.compile(r'{"date".*?}')
         self.rexp_dollar = re.compile(r'starQuote.*?<')
@@ -68,7 +74,7 @@ class Stock:
         if not period2:
             period2 = (datetime.datetime.now() - self._date0_).total_seconds()
 
-        url = 'https://finance.yahoo.com/quote/%s/history?period1=%d&period2=%d&interval=1d&filter=history&frequency=1d' % (symb, period1, period2)
+        url = _url_yahoo_daily_ % (symb, period1, period2)
 
         try:
             n_try = 0
@@ -178,16 +184,17 @@ class Stock:
             with open(_p_all_symbols_, 'r') as f:
                 symbs = list(set(f.read().strip().split('\n')))
 
-        elif os.path.isfile(_p_nasdaq_listing_) and os.path.isfile(_p_nyse_listing_):
+        elif os.path.isfile(_p_nasdaq_listing_) and os.path.isfile(_p_nyse_listing_) and os.path.isfile(_p_amex_listing_):
 
             if self.verbose:
-                print('Using %s and %s for symbols' % (_p_nasdaq_listing_, _p_nyse_listing_))
+                print('Getting symbols from:\n\t%s\n\t%s\n\t%s' % (_p_nasdaq_listing_, _p_nyse_listing_, _p_amex_listing_))
 
             rexp = re.compile(r'-[a-zA-Z]$')
 
             nasdaq_symbs = [rexp.sub('',s) for s in pd.read_table(_p_nasdaq_listing_)['Symbol'].values]
             nyse_symbs = [rexp.sub('',s) for s in pd.read_table(_p_nyse_listing_)['Symbol'].values]
-            symbs = list(set(nasdaq_symbs) | set(nyse_symbs))
+            amex_symbs = [rexp.sub('', s) for s in pd.read_table(_p_amex_listing_)['Symbol'].values]
+            symbs = list(set(nasdaq_symbs) | set(nyse_symbs) | set(amex_symbs))
 
         elif self.verbose:
             print('Missing symbol file.')
@@ -195,7 +202,7 @@ class Stock:
         if symbs and self.verbose:
             print('\tFound %d symbols' % len(symbs))
 
-        return symbs
+        return sorted(symbs)
 
     def retrieve_all_symbs(self):
 
@@ -597,83 +604,130 @@ class Stock:
 
     def compile_symbols(self):
 
+        print('Compiling symbols ...')
+
         self.symbs = self.all_symbols(try_compiled=False)
         n_symbs = len(self.symbs)
         n_compiled = 0
         n_excluded = 0
 
-        with Pool(processes=self.n_cpu) as pool:
-            res = pool.map(self._compile_symb, self.symbs)
+        # Initialize/clear write files
+        with open(_p_all_symbols_, 'w+') as f, open(_p_excluded_symbols_, 'w+') as fx:
+            _ = f.write('')
+            _ = fx.write('')
 
-        with open(_p_all_symbols_, 'w+') as f:
-            for symb, success in res:
-                if success:
-                    _ = f.write('%s\n' % symb)
-                    n_compiled += 1
-                else:
-                    n_excluded += 1
+        if self.verbose:
+            print('Looking up symbols on Yahoo Finance ...')
+
+        symb_batches = self._gen_symbol_batches(self.symbs)
+        n_symb_completed = 0
+        for batch in symb_batches:
+            with Pool(processes=self.n_cpu) as pool:
+                res = pool.map(self._compile_symb, batch)
+
+            with open(_p_all_symbols_, 'a+') as f, open(_p_excluded_symbols_, 'a+') as fx:
+                for symb, success in res:
+                    if success:
+                        _ = f.write('%s\n' % symb)
+                        n_compiled += 1
+                    else:
+                        _ = fx.write('%s\n' % symb)
+                        n_excluded += 1
+
+            n_symb_completed += len(batch)
+            if self.verbose:
+                print('{}% completed - {} / {}'.format(int(n_symb_completed / n_symbs * 100), n_symb_completed, n_symbs))
 
         print('Started with: %d\nCompiled: %d\nExcluded: %d\nCompiled to: %s' % (n_symbs, n_compiled, n_excluded, _p_all_symbols_))
 
         return
 
-    def _compile_symb(self, symb):
+    @staticmethod
+    def _gen_symbol_batches(symbs, n_batches=20):
 
-        symb_mod = ''
-        max_try = 10
+        symb_batches = []
+        n_symbs = len(symbs)
+        batch_size = np.ceil(n_symbs / n_batches)
+
+        batch = []
+        for i, s in enumerate(symbs):
+
+            if i % batch_size == 0:
+                if batch:
+                    symb_batches.append(batch)
+                batch = []
+
+            batch.append(s)
+
+        if batch:
+            symb_batches.append(batch)
+
+        return symb_batches
+
+    def _try_request(self, url, n_tries=0):
+
+        r = None
 
         try:
-            n_try = 0
-            url = 'https://money.cnn.com/quote/quote.html?symb=%s' % symb
             r = requests.get(url)
-            while r.status_code != requests.codes.ok and n_try < max_try:
-                r = requests.get(url)
-                n_try += 1
         except(KeyboardInterrupt, SystemExit):
             raise
         except:
-            # Try removing the last letter if it's a W or C or removing the "."
-            if '.' in symb:
-                symb_mod = symb.replace('.','')
-            elif (symb.endswith('W') or symb.endswith('C')) and symb[:-1] not in self.symbs:
-                symb_mod = symb[:-1]
+            if n_tries < self._max_connection_attempts_:
+                r = self._try_request(url, n_tries+1)
 
-            if symb_mod:
+        return r
 
-                try:
-                    n_try = 0
-                    url = 'https://money.cnn.com/quote/quote.html?symb=%s' % symb_mod
-                    r = requests.get(url)
-                    while r.status_code != requests.codes.ok and n_try < max_try:
-                        r = requests.get(url)
-                        n_try += 1
-                except(KeyboardInterrupt, SystemExit):
-                    raise
-                except:
-                    if self.verbose:
-                        print('\tExcluding %s from compilation (code=1)' % symb)
-                    return symb, False
+    def _check_symbol_(self, symb, try_cnn=False):
 
-            else:
-                if self.verbose:
-                    print('\tExcluding %s from compilation (code=0)' % symb)
-                return symb, False
+        """
+        Check whether a symbol exists
 
-        if r.status_code != requests.codes.ok:
+        :param symb: String
+        :return: 1 - found, 0 - not found, -1 - connection error, -x - request message code x
+        """
+
+        msg = 0
+
+        # Try Yahoo Finance first
+        url = _url_yahoo_ % symb
+        r = self._try_request(url)
+        if r is None:
+            msg = -1
+        else:
+            if r.status_code != requests.codes.ok:
+                msg = -r.status_code
+            elif 'Symbol Lookup' not in r.text[:300]:
+                msg = 1
+
+            if msg != 1 and try_cnn:
+                # Try CNN Money
+                url = _url_cnn_ % symb
+                r = self._try_request(url)
+                if r is None:
+                    msg = -1
+                else:
+                    if r.status_code != requests.codes.ok:
+                        msg = -r.status_code
+                    elif 'Symbol not found' not in r.text[:250]:
+                        msg = 1
+
+        return msg
+
+    def _compile_symb(self, symb):
+
+        msg = self._check_symbol_(symb)
+        if msg < 1:
+
             if self.verbose:
-                print('\tExcluding %s from compilation (code=2)' % symb)
+                if msg == 0:
+                    print('%s excluded - not found' % symb)
+                elif msg == -1:
+                    print('%s excluded - max connection attempt reached' % symb)
+                else:
+                    print('%s excluded - request code: %d' % (symb, -msg))
+
             return symb, False
-
-        match = self.rexp_dollar.search(r.text)
-        if not match:
-            if self.verbose:
-                print('\tExcluding %s from compilation (code=3)' % symb)
-            return symb, False
-
-        if symb_mod:
-            if self.verbose:
-                print('%s -> %s' % (symb, symb_mod))
-            symb = symb_mod
 
         return symb, True
 

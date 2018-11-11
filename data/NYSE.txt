@@ -180,6 +180,7 @@ APC	Anadarko Petroleum Corp
 APD	Air Products and Chemicals
 APF	Morgan Stanley Asia Pacific Fund Inc
 APH	Amphenol Corp
+APHA	Aphria Inc
 APLE	Apple Hospitality REIT Inc
 APO	Apollo Global Management Llc C
 APO-A	Apollo Global Management Llc Pfd Ser A
@@ -533,9 +534,10 @@ CBT	Cabot Corp
 CBU	Community Bank System
 CBZ	Cbiz Inc
 CC	Chemours Company
-CCC	Calgon Carbon Corp
+CCC	Churchill Capital Corp Class A
 CCC.U	Churchill Capital Corp
 CCE	Coca Cola European Partners
+CCEP	Coca Cola European Partners
 CCH.U	Collier Creek Holdings Units
 CCI	Crown Castle International Corp
 CCI-A	Crown Castle International Corp
@@ -661,6 +663,7 @@ CMU	Colonial Muni Income Trust
 CNA	Cna Financial Corp
 CNC	Centene Corp
 CNDT	Conduent Inc
+CNF	CNF Inc.
 CNHI	CNH Industrial N.V.
 CNI	Canadian National Railway
 CNK	Cinemark Holdings Inc
@@ -737,6 +740,7 @@ CTK	Cootek [Cayman] Inc.
 CTL	Centurylink
 CTLT	Catalent Inc
 CTR	Clearbridge Energy MLP Fund In
+CTRA	Contura Energy Inc.
 CTS	Cts Corp
 CTT	Catchmark Timber Trust Inc
 CTV	Qwest Corp
@@ -799,10 +803,6 @@ DD-B	Du Pont E I 4.50 Pfd
 DDD	3D Systems Corp
 DDE	Dover Downs Gaming & Entertainment Inc
 DDF	Delaware Dividend & Income
-DDR	DDR Corp
-DDR-A	DDR Corp Dep Shs Pfd Cl A
-DDR-J	DDR Corp Dep Shs Pfd J
-DDR-K	DDR Corp Dep Shs Pfd K
 DDS	Dillard's
 DDT	Dillard's
 DE	Deere & Company
@@ -1051,7 +1051,6 @@ EVC	Entravision Communications Corp
 EVF	Eaton Vance Senior Income Trust
 EVG	Eaton Vance Short Diversified
 EVH	Evolent Health Inc Class A Com
-EVHC	Envision Healthcare Holdings
 EVN	Eaton Vance Muni Income Trust
 EVR	Evercore Partners Inc
 EVRG	Evergy Inc
@@ -1291,8 +1290,6 @@ GPMT	Granite Point Mortgage Trust Inc
 GPN	Global Payments Inc
 GPRK	Geopark Hldgs Lmtd
 GPS	Gap Inc
-GPT	Gramercy Property Trust
-GPT-A	Gramercy Property Trust
 GPX	Gp Strategies Corp
 GRA	W.R. Grace & Company
 GRA.U	Graf Industrial Corp.
@@ -1730,7 +1727,7 @@ LHO	Lasalle Hotel Properties
 LHO-I	Lasalle Hotel Properties
 LHO-J	Lasalle Hotel Properties
 LII	Lennox International
-LIN	Lin Media Llc
+LIN	Linde Plc
 LITB	Lightinthebox Holding Co. Ltd
 LKM	Link Motion Inc
 LKSD	Lsc Communications Inc
@@ -1984,6 +1981,7 @@ NAO	Nordic American Offshore Ltd
 NAP	Navios Maritime Midstream Partn
 NAT	Nordic American Tanker Shipping Ltd
 NAV	Navistar International Corp
+NAV-D	Navistar Intl Pfd D
 NAZ	Nuveen Arizona Premium Fund
 NBB	Nuveen Build America Bond Fund
 NBD	Nuveen Build America Bond Opportunity Fund
@@ -2434,6 +2432,7 @@ REX-A	Rexford Industrial Realty Inc
 REX-B	Rexford Industrial Realty Inc Pfd B
 REXR	Rexford Industrial Realty Inc
 REZ.P	Resideo Technologies Inc Wi
+REZI	Resideo Technologies Inc.
 RF	Regions Financial Corp
 RF-A	Regions Financial Corp
 RF-B	Regions Financial Corp
@@ -2993,10 +2992,6 @@ VLO	Valero Energy Corp
 VLP	Valero Energy Partners LP
 VLRS	Controladora Vuela Compaia De
 VLT	Invesco High
-VLY	Valley National Bancorp
-VLY-A	Valley National Bancorp
-VLY-B	Valley National Bancorp [Nj] Non Cum Perp Pfd Se
-VLY.W	Valley National Bancorp
 VMC	Vulcan Materials Company
 VMI	Valmont Industries
 VMO	Invesco Muni Opportunity Trust
@@ -3090,7 +3085,6 @@ WM	Waste Management
 WMB	Williams Companies
 WMC	Western Asset Mortgage Capital
 WMK	Weis Markets
-WMLP	Westmoreland Resource Partners LP
 WMS	Advanced Drainage Systems Inc
 WMT	Wal-Mart Stores
 WNC	Wabash National Corp

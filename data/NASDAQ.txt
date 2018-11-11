@@ -144,6 +144,7 @@ ALT	Altimmune Inc
 ALTR	Altair Engineering Inc Class A
 ALTY	G-X Super Dividend Alternatives ETF
 ALXN	Alexion Pharm Inc
+ALYA	Alithya Group Inc. Class A
 AMAG	Amag Pharmaceuticals
 AMAL	Amalgamated Bk
 AMAT	Applied Materials
@@ -290,6 +291,7 @@ AUPH	Aurinia Pharm Ord
 AUTL	Autolus Therapeutics Plc ADR
 AUTO	Autoweb Inc
 AVAV	Aerovironment Inc
+AVCO	Avalon Globocare
 AVDL	Avadel Pharmaceuticals Plc
 AVEO	Aveo Pharmaceuticals
 AVGO	Broadcom Ltd
@@ -304,7 +306,7 @@ AWSM	Cool Holdings Inc
 AXAS	Abraxas Petro Corp
 AXDX	Accelerate Diagnosti
 AXGN	Axogen Inc
-AXNX	Axonics Modulation Technologies
+AXNX	Axonics Modulation Technologies Inc.
 AXON	Axovant Sciences Ltd
 AXSM	Axsome Thera
 AXTI	Axt Inc
@@ -433,6 +435,7 @@ BPTH	Bio-Path Holdings
 BPY	Brookfield Property Partners L
 BRAC	Black Ridge Acquisition Corp
 BRACR	Black Ridge Acquisition Corp Right
+BRACU	Black Ridge Acquisition Corp Unit
 BRACW	Black Ridge Acquisition Corp Warrant
 BREW	Craft Brew Alliance
 BRID	Bridgford Foods Cp
@@ -455,7 +458,7 @@ BTAI	Bioxcel Therapeutics Inc
 BTEC	Principal Healthcare Innovators Index
 BURG	Chanticleer Hldgs
 BUSE	First Busey Corp
-BVNSC	Brandes Investment Trust Brandes Value Nextshare
+BVNSC	Brandes Value Nextshare Investment Trust
 BVSN	Broadvision Inc
 BVXV	Biondvax Pharma Ads
 BVXVW	Biondvax Pharma WT
@@ -752,7 +755,7 @@ CSWC	Capital Southwest
 CSWCL	Capital Southwest Corporation 5.95% Notes Due 20
 CSWI	Csw Industrials Inc
 CSX	CSX Corp
-CTAC	1-800 Contacts Inc.
+CTAC	Chaserg Technology Acquisition Corp. Class A
 CTACU	Chaserg Technology Acquisition Corp. Unit
 CTAS	Cintas Corp
 CTBI	Community TR Bancp
@@ -761,6 +764,7 @@ CTHR	Charles & Colvard
 CTIB	Cti Inds Corp
 CTIC	Cti Biopharm Corp
 CTMX	Cytomx Thera
+CTRC	Centric Brands Inc.
 CTRE	Caretrust REIT Inc
 CTRL	Control4 Corp
 CTRN	Citi Trends Inc
@@ -1055,6 +1059,7 @@ EVLV	Evine Live Cl A
 EVOK	Evoke Pharma
 EVOL	Evolving Systems Inc
 EVOP	Evo Payments Inc. Class A
+EVSTC	Eaton Vance Nextshares Trust Eaton Vance Stock N
 EWBC	East West Bancorp
 EWZS	Brazil Small-Cap Ishares MSCI ETF
 EXAS	Exact Sciences Cor
@@ -1376,8 +1381,9 @@ GRMN	Garmin Ltd
 GRNQ	Greenpro Capital Corp
 GROW	U S Global Inv Inc
 GRPN	Groupon Cl A
-GRSH	Gores Holdings Cm A
+GRSH	Gores Holdings IIi Inc. Class A
 GRSHU	Gores Holdings III Inc
+GRSHW	Gores Holdings IIi Inc. Warrants
 GRTS	Gritstone Oncology Inc.
 GRVY	Gravity Co. Ltd
 GSBC	Great Southern Bncp
@@ -1745,7 +1751,6 @@ KIRK	Kirkland's Inc
 KLAC	K L A-Tencor Corp
 KLIC	Kulicke and Soffa
 KLXE	Klx Energy Services Holdings Inc
-KLXI	Klx Inc
 KMDA	Kamada Ltd
 KMPH	Kempharm Inc
 KNDI	Kandi Techs Grp
@@ -1849,7 +1854,7 @@ LMST	Limestone Bancorp Inc
 LNDC	Landec Cp
 LNGR	G-X Longevity Thematic Et
 LNTH	Lantheus Holdings
-LOAC	Longevity Acquisition Corporation Right
+LOAC	Longevity Acquisition Corporation Ordinary Share
 LOACR	Longevity Acquisition Corporation Right
 LOACU	Longevity Acquisition Corporation Units
 LOACW	Longevity Acquisition Corporation Warrant
@@ -1993,6 +1998,7 @@ MLVF	Malvern Bncp
 MMAC	Mma Capital Mngt
 MMDM	Modern Media Acquisition Corp
 MMDMR	Modern Media Acquisition Corp Right
+MMDMU	Modern Media Acquisition Corp Unit
 MMDMW	Modern Media Acquisition Corp Warrant
 MMLP	Martin Midstrm LP
 MMSI	Merit Medical Sys
@@ -2288,7 +2294,7 @@ ORLY	O'Reilly Automotive
 ORMP	Oramed Pharma
 ORPN	Bioblast Pharma Ltd
 ORRF	Orrstown Finl Svcs
-ORTX	Orchard Therapeutics Limited
+ORTX	Orchard Therapeutics Plc ADR
 OSBC	Old Second Bancorp
 OSBCP	Old Second Bncp
 OSIR	Osiris Therapeutics
@@ -2742,6 +2748,7 @@ SFLY	Shutterfly Inc
 SFM	Sprouts Farmers Mark
 SFNC	Simmons First Natl
 SFST	Southern First Bancs
+SG	Sirius International Insurance Group
 SGA	Saga Communications
 SGBX	Sg Blocks Inc
 SGC	Superior Uniform Grp
@@ -2781,6 +2788,7 @@ SILC	Silicom Ltd
 SIMO	Silicon Motion Techn
 SINA	Sina Corp
 SINO	Sino-Global Shipping
+SINT	Sintx Technologies Inc.
 SIR	Select Income REIT
 SIRI	Sirius XM Holdings I
 SITO	Sito Mobile
@@ -2953,7 +2961,6 @@ SYNA	Synaptics Inc
 SYNC	Synacor Inc
 SYNH	Syneos Health Inc
 SYNL	Synalloy Cp
-SYNT	Syntel Inc
 SYPR	Sypris Solutions
 SYRS	Syros Pharmaceuticals
 TA	Travelcenters of America Llc
@@ -2981,6 +2988,7 @@ TBRGW	Thunder Bridge Acquisition Ltd. Warrant
 TCBI	Texas Capital Bncsh
 TCBIL	Texas Cap 6.5 Sr NTS
 TCBIP	Texas Capital
+TCBIW	Texas Capital Bancshares Inc. Warrant
 TCBK	Trico Bancshares
 TCCO	Technical Commctn Cp
 TCDA	Tricida Inc
@@ -3064,7 +3072,6 @@ TRMB	Trimble Navigation
 TRMD	Torm Plc Class A
 TRMK	Trustmark Corp
 TRMT	Tremont Mortgage Trust Common Shares of Benefici
-TRNC	Tronc Inc
 TRNS	Transcat Inc
 TROV	Trovagene Inc
 TROW	T Rowe Price Group
@@ -3111,6 +3118,7 @@ TWMC	Trans World Entert
 TWNK	Hostess Brands Inc
 TWNKW	Gores Holdings Warr
 TWOU	2U Inc
+TWST	Twist Bioscience Corporation
 TXMD	Therapeuticsmd Inc
 TXN	Texas Instruments
 TXRH	Texas Roadhouse Inc
@@ -3135,6 +3143,7 @@ UBX	Unity Biotechnology Inc
 UCBI	United Comm Banks
 UCFC	United Community Fnl
 UCTT	Ultra Clean Holdings
+UDBI	Legg US Diversified Core ETF
 UEIC	Universal Elect In
 UEPS	Net 1 Ueps Techs Inc
 UFCS	United Fire Group I
@@ -3294,7 +3303,6 @@ WCFB	Webster City Fed Bcp
 WDAY	Workday Inc
 WDC	Western Digital Cp
 WDFC	W D 40 Co
-WEB	Web.com Group Inc
 WEBK	Wellesley Bncp Inc
 WEN	Wendys Company
 WERN	Werner Enterprise
@@ -3321,7 +3329,6 @@ WLFC	Willis Lease Fin C
 WLTW	Willis Towers Wts
 WMGI	Wright Med Grp Nv
 WMGIZ	Wright Medic. N.V Cv
-WMIH	Wmih Corp
 WNEB	Western New England Bancorp Inc
 WOOD	Global Timber & Forestry Ishares ETF
 WPRT	Westport Fuel Systems Inc
