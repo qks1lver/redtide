@@ -76,17 +76,10 @@ class Stock:
 
         url = _url_yahoo_daily_ % (symb, period1, period2)
 
-        try:
-            n_try = 0
-            r = requests.get(url)
-            while r.status_code != requests.codes.ok and n_try < 10:
-                r = requests.get(url)
-                n_try += 1
-        except(KeyboardInterrupt, SystemExit):
-            raise
-        except:
+        r = self._try_request(url)
+        if r is None:
             if self.verbose:
-                print('Failed to pull for %s' % symb)
+                print('Page load failed for %s' % symb)
             return -1
 
         if r.status_code != requests.codes.ok:
@@ -674,6 +667,7 @@ class Stock:
             raise
         except:
             if n_tries < self._max_connection_attempts_:
+                sleep(1)
                 r = self._try_request(url, n_tries+1)
 
         return r
