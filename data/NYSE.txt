@@ -126,7 +126,6 @@ ALK	Alaska Air Group
 ALL	Allstate Corp
 ALL-A	Allstate Corporation Pfd
 ALL-B	Ally Financial Inc Fixed Rate F
-ALL-C	The Allstate Corp
 ALL-D	Allstate Corp
 ALL-E	The Allstate Corp
 ALL-F	The Allstate Corp
@@ -740,7 +739,7 @@ CTK	Cootek [Cayman] Inc.
 CTL	Centurylink
 CTLT	Catalent Inc
 CTR	Clearbridge Energy MLP Fund In
-CTRA	Contura Energy Inc.
+CTRA	Contura Energy Inc
 CTS	Cts Corp
 CTT	Catchmark Timber Trust Inc
 CTV	Qwest Corp
@@ -1040,6 +1039,7 @@ ETP	Energy Transfer Operating LP
 ETP-C	Energy Transfer Operating L.P. Pfd Ser C
 ETP-D	Energy Transfer Operating LP Pfd Ser D
 ETR	Entergy Corp
+ETRN	Equitrans Midstream Corp.
 ETV	Eaton Vance Corp
 ETW	Eaton Vance Corp
 ETX	Eaton Vance Municipal Income T
@@ -1193,7 +1193,6 @@ GCO	Genesco Inc
 GCP	Gcp Applied Technologies Inc C
 GCV	Gabelli Convertible and Income Securities
 GCV-B	Gabelli 6.00% Pfd B
-GCV.P	Gabelli Convertible & Income Securities Rights
 GD	General Dynamics Corp
 GDDY	Godaddy Inc
 GDI	Gardner Denver Holdings Inc
@@ -1374,6 +1373,7 @@ HI	Hillenbrand Inc
 HIE	Miller/Howard High Income Eqty
 HIFR	Infrareit Inc
 HIG	Hartford Financial Services Group
+HIG-G	Hartford Financial Services Grp Inc. Pfd
 HIG.W	Hartford Financial Services Group
 HII	Huntington Ingalls Industries
 HIL	Hill International Inc.
@@ -2471,6 +2471,7 @@ RNR	Renaissancere Holdings Ltd
 RNR-C	Renaissancere 6.08 C
 RNR-E	Renaissancere Holdings Ltd
 RNR-F	Renaissancere Holdings Ltd - Prf Perpetual USD 2
+ROAN	Roan Resources Inc.
 ROG	Rogers Corp
 ROK	Rockwell Automation Inc
 ROL	Rollins Inc
@@ -3118,7 +3119,6 @@ WTM	White Mountains Insurance Group
 WTR	Aqua America
 WTS	Watts Water Technologies
 WTTR	Select Energy Services Inc
-WTW	Weight Watchers International Inc
 WU	Western Union Company
 WUBA	58.com Inc
 WWE	World Wrestling Entertainment
@@ -3136,7 +3136,6 @@ XOM	Exxon Mobil Corp
 XOXO	Xoxo Group Inc
 XPO	Xpo Logistics Inc
 XRF	China Rapid Finance Limited ADR
-XRM	Xerium Technologies
 XRX	Xerox Corp
 XYF	X Financial
 XYL	Xylem Inc

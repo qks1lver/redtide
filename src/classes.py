@@ -49,7 +49,7 @@ class Stock:
         self._close_time_ = 18 * 3600
         self._date_format_ = '%Y-%m-%d'
         self._date_time_format_ = '%Y-%m-%d-%H-%M-%S'
-        self._max_connection_attempts_ = 10
+        self._max_connection_attempts_ = 20
 
         self.rexp_data_row = re.compile(r'{"date".*?}')
         self.rexp_dollar = re.compile(r'starQuote.*?<')
@@ -657,7 +657,7 @@ class Stock:
 
         return symb_batches
 
-    def _try_request(self, url, n_tries=0):
+    def _try_request(self, url, n_tries=1):
 
         r = None
 
@@ -667,7 +667,6 @@ class Stock:
             raise
         except:
             if n_tries < self._max_connection_attempts_:
-                sleep(1)
                 r = self._try_request(url, n_tries+1)
 
         return r

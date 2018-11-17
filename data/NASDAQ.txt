@@ -141,6 +141,8 @@ ALRM	Alarm.com
 ALRN	Aileron Therapeutics Inc
 ALSK	Alaska Commun Sys
 ALT	Altimmune Inc
+ALTM	Altus Midstream Company
+ALTMW	Altus Midstream Company Warrants
 ALTR	Altair Engineering Inc Class A
 ALTY	G-X Super Dividend Alternatives ETF
 ALXN	Alexion Pharm Inc
@@ -410,7 +412,6 @@ BNGO	Bionano Genomics Inc
 BNGOW	Bionano Genomics Inc Warrant
 BNSO	Bonso Elec Intl In
 BNTC	Benitec Biopharm Ads
-BNTCW	Benitec Biopharm Wrt
 BOCH	Bank of Commerce Hld
 BOJA	Bojangles Inc CS
 BOKF	Bok Financial Corp
@@ -501,6 +502,7 @@ CATH	G-X S&P 500 Catholic Values ETF
 CATM	Cardtronics Inc
 CATS	Catasys Inc
 CATY	Cathay Genl Bncp
+CATYW	Cathay General Bancorp Warrant
 CBAK	China Bak Battery
 CBAN	Colony Bankcorp Inc
 CBAY	Cymabay Therapeutics
@@ -555,7 +557,6 @@ CENT	Central Garden
 CENTA	Central Garden & Pet
 CENX	Century Aluminum C
 CERC	Cerecor Inc
-CERCW	Cerecor Inc Cl A WT
 CERN	Cerner Corp
 CERS	Cerus Corp
 CETV	Central EUR Med A
@@ -670,6 +671,7 @@ CNCE	Concert Pharmaceutic
 CNCR	Loncar Cancer Immunotherapy ETF
 CNET	Chinanet Online Hldg
 CNFR	Conifer Holdings
+CNFRL	Conifer Holdings Inc. 6.75% Senior Unsecured No
 CNMD	C O N M E D Cp
 CNOB	Connectone Bancorp
 CNSL	Consolidated Communications Holdings Inc
@@ -1388,9 +1390,6 @@ GRTS	Gritstone Oncology Inc.
 GRVY	Gravity Co. Ltd
 GSBC	Great Southern Bncp
 GSHD	Goosehead Insurance Inc. Class A Common Stock
-GSHT	Gores Holdings II Inc Class A
-GSHTU	Gores Holdings II Inc Units
-GSHTW	Gores Holdings II Inc Warrants
 GSIT	Gsi Technology Inc
 GSKY	Greensky Inc. Class A
 GSM	Ferroglobe Plc Os
@@ -1432,7 +1431,6 @@ HBP	Huttig Bldg Products
 HCAP	Harvest Capital Cred
 HCAPZ	Harvest Capital Credit Corporation 6.125% Notes
 HCCH	Hl Acquisitions Corp
-HCCHR	Hl Acquisitions Corp. Right
 HCCHU	Hl Acquisitions Corp. Unit
 HCCHW	Hl Acquisitions Corp. Warrant
 HCCI	Heritage-Crystal
@@ -1548,6 +1546,7 @@ ICON	Iconix Brand Group
 ICPT	Intercept Pharmaceut
 ICUI	I C U Medical Inc
 IDCC	Interdigital Inc
+IDEX	Ideanomics Inc
 IDLB	FTSE Intl Low Beta Equal Weight Port PS
 IDRA	Idera Pharmaceutical
 IDSA	Industrial Svcs Am
@@ -2439,7 +2438,6 @@ PMOM	Principal Sustainable Momentum Index ETF
 PMTS	CPI Card Group
 PNBK	Patriot Natl Bncp
 PNFP	Pinnacle Finl Ptnrs
-PNK	Pinnacle Entmt
 PNNT	Pennantpark Investme
 PNQI	Nasdaq Internet Portfolio PS
 PNRG	Primeenergy Cp
@@ -2595,9 +2593,9 @@ RDWR	Radware Ltd
 RECN	Resources Connect
 REDU	Rise Education Cayman Ltd ADR
 REFR	Research Frontiers
+REG	Regency Centers Corp
 REGI	Renewable Energy
 REGN	Regeneron Pharmaceutical
-REIS	Reis Inc
 RELL	Richardson Electrncs
 RELV	Reliv Intl Inc
 REPH	Recro Pharma Inc
@@ -3058,7 +3056,6 @@ TOUR	Tuniu Corporatio Ads
 TOWN	Towne Bank
 TPCO	Tribune Publishing Company
 TPIC	Tpi Composites Inc
-TPIV	Tapimmune Inc
 TPNL	3Pea Intl Inc
 TQQQ	Ultrapro QQQ Proshares
 TRCB	Two River Bncrp
@@ -3186,6 +3183,8 @@ USLM	U S Lime & Mineral
 USLV	VS 3X Silver
 USMC	Principal U.S. Mega-Cap Multi-Factor Index ETF
 USOI	Credit Suisse Ag Credit Suisse X-Links Crude Oil
+USWS	U.S. Well Services Inc.
+USWSW	U.S. Well Services Inc. Warrants
 UTHR	United Therapeutic
 UTMD	Utah Medical Prod
 UTSI	Utstarcom Holdings C
@@ -3263,7 +3262,6 @@ VRTS	Virtus Inv Prts
 VRTSP	Virtus Investment Partners Inc Mandatory Pfd Con
 VRTU	Virtusa Corp
 VRTX	Vertex Pharmaceutic
-VSAR	Versartis Inc
 VSAT	Viasat Inc
 VSDA	Victory Dividend Accelerator ETF
 VSEC	V S E Cp

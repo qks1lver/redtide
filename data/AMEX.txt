@@ -844,8 +844,6 @@ HAO	China Small Cap Guggenheim ETF
 HAP	Rve Hard Assets Producers Vaneck ETF
 HAUD	Australia Curr Hedged Ishares MSCI ETF
 HAWX	ACWI Curr Hedged Ex US Ishares MSCI ETF
-HCA.W	Hennessy Capital Acquisition Corp III Warrants
-HCAC	Hennessy Capital Acquisition Corp III
 HDAW	Db-Xt MSCI All World Ex-US Div Yld Hgd Eq
 HDEF	Db-Xt MSCI EAFE High Div Yld Hgd Eq
 HDG	Hedge Replication Proshares
@@ -999,7 +997,6 @@ IHY	Intl High Yield Bond ETF Vaneck
 IHYD	Invesco Corp Income Defensive ETF
 IHYV	Invesco Corporate Income Value ETF
 IIGD	Invesco Investment Grade Defensive ETF
-IIGV	Invesco Investment Grade Value ETF
 IJH	S&P Mid-Cap 400 Ishares Core ETF
 IJJ	S&P Mid-Cap 400 Value Ishares ETF
 IJK	S&P Mid-Cap 400 Growth Ishares ETF
@@ -1014,8 +1011,6 @@ IMO	Imperial Oil Ltd
 IMOM	Intl Quantitative Momentum ETF
 IMTB	5-10 Year USD Bond Ishares Core ETF
 IMTM	Intl Momentum Factor Ishares Edge MSCI ETF
-IMU.W	Immunocellular Therapeutics Warrant
-IMUC	Immunocellular Thera
 INCO	India Consumer Egshares
 INDA	India MSCI Ishares ETF
 INDL	India Bull 3X Direxion
