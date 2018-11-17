@@ -209,7 +209,7 @@ class Stock:
         n_symbs = len(symbs)
         n_success = 0
         failed_symbs = []
-        print('Pulling for %d symbols on NASDAQ and NYSE ...' % n_symbs)
+        print('Pulling for %d symbols ...' % n_symbs)
 
         if self.n_cpu > 1:
 
