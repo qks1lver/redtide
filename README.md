@@ -3,6 +3,8 @@ My attempt to model stock...
 
 **Python 3.5+**
 
+Notes about updates at the bottom... also shout out to helpful Redditor **u/siem**
+
 ## Intro
 If you are looking at this, chances are you were on Reddit. This is
 currently documented very very poorly. You have been warned. Hopefully,
@@ -64,6 +66,37 @@ down arrow icon next to "DOWNLOAD SYMBOL LIST")
 If you want to know some other options:
 ```
 $ python3 redtide.py -h
+```
+
+## Updates
+- **u/siem** found a problem with how Macs handles forking. His full comment:
+
+"I had problems running the code at first on my Mac
+("python +\[__NSPlaceholderDate initialize] may have been in progress
+in another thread when fork() was called.") -
+supposedly Apple has changed their fork implementation to disallow forking with active threads.
+When I ran this before running the code I didn't get errors:
+
+```export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES```"
+
+- **u/siem** also found that after 2000-3000 pulls,
+connection to Yahoo Finance could fail.
+Possibly due to a tempoary IP ban.
+Suggested that there be a 1 sec delay between each request. While I was
+working on this, I found realized that my code to retry connection was
+implemented incorrectly, so I changed that part completely. While fixing
+everything, I realized that I cannot pause threads independently with
+```time.sleep(1)``` when I'm using multiprocessing's ```Pool.map()```, so...
+I'm open to suggestions, because right now, I just have a max attempt of
+20 and hoping that one of those would return something (fortunately this works
+ for me... but definitely not the best solution)
+- **New:** If connection fails or you get banned temporary, it will try
+to fetch for the failed ones again (**maximum of 5 passes**). If after 5 passes
+, there are still failed symbols left, they
+will be written to a **failed_symbs-<5 random characters>.txt** file.
+And you'll see a suggestion to run something like the following to retry.
+```
+$ python3 redtide.py -v -d --file failed_symbs-abe93.txt
 ```
 
 ## Contact
