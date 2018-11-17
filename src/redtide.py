@@ -14,6 +14,7 @@ if __name__ == '__main__':
     parser.add_argument('-a', dest='analyze', action='store_true', help='Analyze')
     parser.add_argument('-c', dest='compile', action='store_true', help='Compile symbols')
     parser.add_argument('-v', dest='verbose', action='store_true', help='Verbose')
+    parser.add_argument('--file', dest='list', default='', help='Symbol file')
     parser.add_argument('--clust', dest='cluster', action='store_true', help='Cluster')
     parser.add_argument('--from', dest='from_date', default='2018-1-1', help='Analyze data from this date')
     parser.add_argument('--to', dest='to_date', default='', help='Analyze data until this date')
@@ -34,6 +35,8 @@ if __name__ == '__main__':
         if args.symbol:
             symb,success = s.retrieve_symb(args.symbol)
             print('Symb: %s (%d)' % (symb, success))
+        elif args.list:
+            s.retrieve_all_symbs(p_symbs=args.list)
         else:
             s.retrieve_all_symbs()
 

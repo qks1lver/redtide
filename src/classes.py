@@ -197,14 +197,22 @@ class Stock:
 
         return sorted(symbs)
 
-    def retrieve_all_symbs(self):
+    def retrieve_all_symbs(self, symbs=None, p_symbs='', i_pass=1, max_pass=5):
 
-        symbs = self.all_symbols()
-        updated_symbs = self.updated_symbs()
-        if updated_symbs:
-            symbs = list(set(symbs) - set(updated_symbs))
-            if self.verbose:
-                print('Skip pull for %d symbols, only pulling for %d symbols ...' % (len(updated_symbs), len(symbs)))
+        if p_symbs:
+            if os.path.isfile(p_symbs):
+                with open(p_symbs, 'r') as f:
+                    symbs = f.read().strip().split('\n')
+            else:
+                print('No such file: %s' % p_symbs)
+
+        elif symbs is None:
+            symbs = self.all_symbols()
+            updated_symbs = self.updated_symbs()
+            if updated_symbs:
+                symbs = list(set(symbs) - set(updated_symbs))
+                if self.verbose:
+                    print('Skip pull for %d symbols, only pulling for %d symbols ...' % (len(updated_symbs), len(symbs)))
 
         n_symbs = len(symbs)
         n_success = 0
@@ -246,6 +254,17 @@ class Stock:
             print('Failed for:')
             for symb in failed_symbs:
                 print('\t%s' % symb)
+
+            if i_pass < max_pass:
+                i_pass += 1
+                print('\n|--- Pass %d (try to fetch %d failed ones, maximum %d passes ---|' % (i_pass, len(failed_symbs), max_pass))
+                self.retrieve_all_symbs(symbs=failed_symbs, i_pass=i_pass, max_pass=max_pass)
+            else:
+                p_symbs = 'failed_symbs-%s.txt' % (''.join(np.random.choice(list('abcdefgh12345678'), 5)))
+                with open(p_symbs, 'w+') as f:
+                    _ = f.write('\n'.join(failed_symbs))
+                print('Failed symbols written to: %s' % p_symbs)
+                print('Run this to try fetching the missed symbols again:\npython3 redtide.py -v -d --file %s' % p_symbs)
 
         return
 
