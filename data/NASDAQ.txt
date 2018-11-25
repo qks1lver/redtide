@@ -64,7 +64,6 @@ ADTN	Adtran Inc
 ADUS	Addus Homecare Corpo
 ADVM	Adverum Biotechnlgs
 ADXS	Advaxis Inc
-ADXSW	Advaxis Inc Wts
 AEGN	Aegion Corp
 AEHR	Aehr Test Systems
 AEIS	Advanced Energy
@@ -154,6 +153,7 @@ AMBA	Ambarella Inc
 AMBC	Ambac Financial Grp
 AMBCW	Ambac Financial Grp
 AMCA	Russell 1000 Pure US Rev Ishares ETF
+AMCIU	Amci Acquisition Corp. Unit
 AMCN	Airmedia Group Inc
 AMCX	Amc Networks Cl A
 AMD	Adv Micro Devices
@@ -332,7 +332,6 @@ BBOX	Black Box Cp
 BBSI	Barrett Business S
 BCAC	Bison Capital Acquistion Corp Ordinary Shares
 BCACR	Bison Capital Acquistion Corp Rights
-BCACU	Bison Capital Acquisition Corp Unit
 BCACW	Bison Capital Acquistion Corp Warrant
 BCBP	Bcb Bancorp Inc
 BCLI	Brainstorm Cell
@@ -356,6 +355,7 @@ BFIT	G-X Health & Wellness Thematic Et
 BFRA	Biofrontera Ag ADR
 BFST	Business First Bancshares Inc
 BGCP	Bgc Partners Cl A
+BGCPV	Bgc Partners Inc. Class A Common Stock Ex-Distr
 BGFV	Big 5 Sporting
 BGNE	Beigene Ltd Ads
 BHACR	Barington/Hilco Rgts
@@ -412,6 +412,7 @@ BNGO	Bionano Genomics Inc
 BNGOW	Bionano Genomics Inc Warrant
 BNSO	Bonso Elec Intl In
 BNTC	Benitec Biopharm Ads
+BNTCW	Benitec Biopharm Wrt
 BOCH	Bank of Commerce Hld
 BOJA	Bojangles Inc CS
 BOKF	Bok Financial Corp
@@ -445,7 +446,6 @@ BRKR	Bruker Corp
 BRKS	Brooks Automation
 BRPA	Big Rock Partners Acquisition Corp
 BRPAR	Big Rock Partners Acquisition Corp Right
-BRPAU	Big Rock Partners Acquisition Corp Unit
 BRPAW	Big Rock Partners Acquisition Corp Warrant
 BRQS	Borqs Technologies Inc
 BRY	Berry Pete Corp
@@ -466,6 +466,7 @@ BVXVW	Biondvax Pharma WT
 BWB	Bridgewater Bancshares Inc
 BWEN	Broadwind Energy Inc
 BWFG	Bankwell Financial
+BWMCU	Boxwood Merger Corp. Unit
 BYFC	Broadway Fin Cp
 BYSI	Beyondspring Inc Ordinary Shares
 BZUN	Baozun Inc Ads
@@ -580,6 +581,7 @@ CGEN	Compugen Ltd
 CGIX	Cancer Genetics Inc
 CGNX	Cognex Cp
 CGO	Calamos Glb Ttl Rtn
+CGVIC	Causeway Etmf Trust Causeway Global Value Nextsh
 CHCI	Comstock Hldgs Cos
 CHCO	City Holding Co
 CHDN	Churchill Downs In
@@ -648,7 +650,6 @@ CLXT	Calyxt Inc
 CMCO	Columbus Mckinnon
 CMCSA	Comcast Corp A
 CMCT	Cim Commercial TR Cp
-CMCTP	Cim Commercial Trust Corp Series L Prfd
 CME	CME Group Inc
 CMFN	Cm Finance
 CMFNL	Cm Finance Inc 6.125% Notes Due 2023
@@ -721,6 +722,7 @@ CRBP	Corbus Pharma
 CREE	Cree Inc
 CREG	China Recycling Ener
 CRESY	Cresud Sacif ADR
+CREX	Creative Realities Inc
 CRIS	Curis Inc
 CRMT	America's Car-Mart
 CRNT	Ceragon Networks Ltd
@@ -842,7 +844,6 @@ DEST	Destination Maternty
 DFBG	Differntl Brands
 DFBH	Dfb Healthcare Acquisitions Corp
 DFBHU	Dfb Healthcare Acquisitions Corp. Unit
-DFBHW	Dfb Healthcare Acquisitions Corp. Warrant
 DFFN	Diffusion Pharmaceuticals Inc
 DFNL	Davis Select Financial ETF
 DFRG	Del Frisco's Restrnt
@@ -903,7 +904,6 @@ DSPG	D S P Group Inc
 DSWL	Deswell Inds Inc
 DTEA	Davidstea Inc
 DTRM	Determine Inc
-DTUL	Ipath US Treasury 2 Yr Bull ETN
 DTUS	Ipath Treasury 2-Year Bear ETN
 DTYS	Ipath Treasury 10-Year Bear ETN
 DUSA	Davis Select USA ETF
@@ -937,7 +937,6 @@ DYSL	Dynasil Cp America
 DZSI	Dasan Zhone Solutions Inc
 EA	Electronic Arts Inc
 EACQ	Easterly Acq
-EACQU	Easterly Acquisition Corp
 EACQW	Easterly Acq Warrant
 EAGL	Platinum Eagle Acquisition Corp. Class A
 EAGLU	Double Eagle Units
@@ -976,7 +975,6 @@ EFOI	Energy Focus
 EFSC	Enterprises Finl Svc
 EGAN	Egain Corp
 EGBN	Eagle Bancorp Inc
-EGC	Energy Xxi Gulf Coast Inc
 EGLE	Eagle Bulk Ship New
 EGOV	Nic Inc
 EGRX	Eagle Pharmaceutical
@@ -1047,6 +1045,7 @@ ESTR	Estre Ambiental Inc
 ESTRW	Estre Ambiental Inc Warrant
 ESXB	Community Bankers
 ETFC	E*Trade Finl Corp
+ETON	Eton Pharmaceutcials Inc. Common Stock
 ETSY	Etsy Inc
 ETTX	Entasis Therapeutics Holdings Inc.
 EUFN	Europe Financials Ishares MSCI ETF
@@ -1054,6 +1053,7 @@ EVBG	Everbridge Inc
 EVER	Everquote Inc. Class A
 EVFM	Evofem Biosciences Inc
 EVFTC	Eaton Vance Nextshares Trust II
+EVGBC	Eaton Vance Nextshares Global Income Builder
 EVGN	Evogene Ltd Ord
 EVK	Ever Glory Intl Grp
 EVLO	Evelo Biosciences Inc
@@ -1118,6 +1118,7 @@ FCVT	Ssi Strategic Convertible Securities ETF FT
 FDBC	Fidelity D & D Bancorp Inc
 FDEF	First Defiance Finl
 FDIV	Strategic Income ETF FT
+FDNI	FT DJ International Internet ETF
 FDT	Dev Mkts Ex-US Alphadex Fund FT
 FDTS	Dev Mkts Ex-US Small Cap Alphadex Fund FT
 FDUS	Fidus Investment Cor
@@ -1240,6 +1241,7 @@ FSTR	Foster L B Co
 FSV	Firstsrvce Sub Vt Sh
 FSZ	Switzerland Alphadex Fund FT
 FTA	Largecap Value Alphadex Fund FT
+FTACU	Fintech Acquisition Corp. III Unit
 FTAG	Indxx Global Agriculture ETF FT
 FTC	Largecap Growth Alphadex Fund FT
 FTCS	Capital Strength ETF FT
@@ -1327,6 +1329,7 @@ GLACR	Greenland Acquisition Corporation Right
 GLACU	Greenland Acquisition Corporation Unit
 GLACW	Greenland Acquisition Corporation Warrant
 GLAD	Gladstone Cap Corp
+GLADD	Gladstone Capital Corporation 6.125% Notes Due 2
 GLADN	Gladstone Capital Corp Term Pfd. Ser 2024
 GLBS	Globus Maritime Limi
 GLBZ	Glen Burnie Bancorp
@@ -1431,6 +1434,7 @@ HBP	Huttig Bldg Products
 HCAP	Harvest Capital Cred
 HCAPZ	Harvest Capital Credit Corporation 6.125% Notes
 HCCH	Hl Acquisitions Corp
+HCCHR	Hl Acquisitions Corp. Right
 HCCHU	Hl Acquisitions Corp. Unit
 HCCHW	Hl Acquisitions Corp. Warrant
 HCCI	Heritage-Crystal
@@ -1677,7 +1681,6 @@ IUSS	Invesco US Small Company ETF
 IUSV	S&P US Value Ishares Core ETF
 IVAC	Intevac Inc
 IVFVC	Ivy Nextshares Ivy Focused Value Nextshares
-IVTY	Invuity Inc
 IXUS	Total Intl Stock Ishares Core MSCI ETF
 IZEA	Izea Inc
 JACK	Jack In The Box Inc
@@ -1723,7 +1726,6 @@ KANG	Ikang Healthcare ADR
 KBAL	Kimball Intl Cl B
 KBLM	Kbl Merger Corp IV
 KBLMR	Kbl Merger Corp IV Right
-KBLMU	Kbl Merger Corp IV Unit
 KBLMW	Kbl Merger Corp IV Warrant
 KBSF	Kbs Fashion Gp Ltd
 KBWB	KBW Bank Portfolio PS
@@ -1920,8 +1922,6 @@ MBFIO	MB Financial Inc Dep Shs Repstg 1/40Th Int Sh No
 MBII	Marrone Bio Innov
 MBIN	Merchants Bancorp
 MBIO	Mustang Bio Inc
-MBNAA	Mercantil Bank Holding Class A
-MBNAB	Mercantil Bank Holding Class B
 MBOT	Microbot Medical Inc
 MBRX	Moleculin Biotech CS
 MBSD	Flexshares Disciplined Duration MBS Index Fund
@@ -2026,7 +2026,6 @@ MPAC	Matlin & Partners Acquisition Corporation Class
 MPACU	Matlin & Partners Acquisition Corporation Units
 MPACW	Matlin & Partners Acquisition Corporation Warran
 MPB	Mid Penn Bancorp Inc
-MPCT	Global Impact Ishares Sustainable MSCI ETF
 MPVD	Mountain Prv Dmds
 MPWR	Monolithic Power Sys
 MRAM	Everspin Technologies Inc
@@ -2152,6 +2151,7 @@ NLNK	Newlink Genetics Cor
 NMIH	Nmi Holdings Cmn A
 NMRD	Nemaura Med Inc
 NMRK	Newmark Group Inc Class A
+NMRKV	Newmark Group Inc.
 NNBR	NN Inc
 NNDM	Nano Dimension Ads
 NODK	Ni Holdings Inc
@@ -2375,7 +2375,6 @@ PEIX	Pacific Ethanol Inc
 PENN	Penn Natl Gaming Inc
 PEP	Pepsico Inc
 PERI	Perion Network Ltd
-PERY	Perry Ellis Int
 PESI	Perma-Fix Envir
 PETQ	Petiq Inc Class A
 PETS	Petmed Express Inc
@@ -2403,6 +2402,8 @@ PGNX	Progenics Pharmaceut
 PHAS	Phasebio Pharmaceuticals Inc.
 PHII	PHI Inc
 PHIIK	PHI Inc Non-Voting
+PHIO	Phio Pharmaceuticals Corp.
+PHIOW	Phio Pharmaceuticals Corp. Warrants
 PHO	Water Resources Portfolio PS
 PI	Impinj Inc
 PICO	Pico Holdings Inc
@@ -2765,8 +2766,6 @@ SHBI	Shore Bancshares Inc
 SHEN	Shenandoah Telecom
 SHIP	Seanergy Maritime Hl
 SHIPW	Seanergy Maritime Holdings Corp Class A Warrants
-SHLD	Sears Hldgs Corp
-SHLDW	Sears Holdings C WT
 SHLO	Shiloh Inds Inc
 SHOO	Steven Maddens Ltd
 SHOS	Sears Hometown
@@ -2918,7 +2917,6 @@ STKL	Sunopta Inc
 STKS	The One Group
 STLD	Steel Dynamics Inc
 STLR	Stellar Acquisition III Inc
-STLRU	Stellar Acquisition III Inc. Unit
 STLRW	Stellar Acquisition III Inc Warrants
 STML	Stemline Therapeutic
 STMP	Stamps.com Inc
@@ -2948,7 +2946,6 @@ SVBI	Severn Bancorp Inc
 SVMK	Svmk Inc.
 SVRA	Savara Inc
 SVVC	Firsthand Technology
-SWIN	Alps ETF Trust Alps/Dorsey Wright Sector Moment
 SWIR	Sierra Wireless In
 SWKS	Skyworks Solutions
 SYBT	Stock Yards Bancorp
@@ -2978,11 +2975,13 @@ TAYD	Taylor Devices Inc
 TBBK	The Bancorp Inc
 TBIO	Translate Bio Inc
 TBK	Triumph Bancorp
+TBLTU	Toughbuilt Industries Inc. Class A Units
 TBNK	Territorial Bancorp
 TBPH	Theravance Bio Ord
 TBRG	Thunder Bridge Acquisition Ltd. Class A
 TBRGU	Thunder Bridge Acquisition Ltd. Unit
 TBRGW	Thunder Bridge Acquisition Ltd. Warrant
+TC	Tuanche Limited American Depositary Shares
 TCBI	Texas Capital Bncsh
 TCBIL	Texas Cap 6.5 Sr NTS
 TCBIP	Texas Capital
@@ -3035,6 +3034,7 @@ TLF	Tandy Leather Fctry
 TLGT	Teligent
 TLND	Talend S.A.
 TLRY	Tilray Inc
+TLSA	Tiziana Life Sciences Plc American Depository Sh
 TLT	20+ Year Treas Bond Ishares ETF
 TMCX	Trinity Merger Corp. Class A
 TMCXU	Trinity Merger Corp. Unit
@@ -3098,6 +3098,7 @@ TTNP	Titan Pharma
 TTOO	T2 Biosystems CS
 TTPH	Tetraphase Pharmaceu
 TTS	Tile Shop Hldgs
+TTTN	Tigershares China-U.S. Internet Titans ETF
 TTWO	Take-Two Interacti
 TUES	Tuesday Morning Co
 TUR	Turkey Ishares MSCI ETF
@@ -3345,6 +3346,9 @@ WSTL	Westell Technologies
 WTBA	West Bancorporation
 WTFC	Wintrust Finl Corp
 WTFCM	Wintrust Fin Pref D
+WTFCW	Wintrust Financial Corporation Warrants
+WTRH	Waitr Holdings Inc.
+WTRHW	Waitr Holdings Inc. Warrants
 WTW	Weight Watchers International Inc
 WVE	Wave Life Sci Ord Sh
 WVFC	Wvs Financial Corp

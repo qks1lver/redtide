@@ -294,7 +294,6 @@ BAC-L	Bank of America Corp Pfd L
 BAC-W	Bank of America Corp Pfd W
 BAC-Y	Bank of America Corp Pfd Y
 BAC.A	Bank of America Corp Cl A
-BAC.B	Bank of America Corp Cl B
 BAF	Blackrock Income Inv Quality Trust
 BAH	Booz Allen Hamilton Holding Corp
 BAK	Braskem S.A.
@@ -334,6 +333,7 @@ BCO	Brink's Company
 BCRH	Blue Capital Reinsurance Holdi
 BCS	Barclays Plc
 BCS-D	Barclays Bank Plc
+BCSF	Bain Capital Specialty Finance Inc.
 BCX	Blackrock Resources
 BDC	Belden Inc
 BDC-B	Belden Inc
@@ -488,7 +488,6 @@ BYM	Blackrock Muni Income Quality Trust
 BZH	Beazer Homes USA
 BZM	Blackrock Maryland Muni Trust
 C	Citigroup Inc
-C-C	Citigroup Inc Prfd C 5.8 P12/31/49 +C
 C-J	Citigroup Inc Prfd C V7.125 P12/31/49 J
 C-K	Citigroup Inc Prfd C V6.875 P12/31/49 K
 C-L	Citigroup Inc Prfd C 6.875 P12/31/49 L
@@ -662,7 +661,7 @@ CMU	Colonial Muni Income Trust
 CNA	Cna Financial Corp
 CNC	Centene Corp
 CNDT	Conduent Inc
-CNF	CNF Inc.
+CNF	Cnfinance Holdings Limited ADR
 CNHI	CNH Industrial N.V.
 CNI	Canadian National Railway
 CNK	Cinemark Holdings Inc
@@ -1028,14 +1027,12 @@ ESTE	Earthstone Energy
 ESV	Ensco Plc
 ET	Energy Transfer LP
 ETB	Eaton Vance Tax-Managed Buy-Write
-ETE	Energy Transfer Equity LP
 ETG	Eaton Vance Tax-Advantaged Global Dividend
 ETH	Ethan Allen Interiors Inc
 ETJ	Eaton Vance Risk-Managed Diversified Equity
 ETM	Entercom Communications Corp
 ETN	Eaton Corp
 ETO	Eaton Vance Tax-Advantage Global Dividend Opp
-ETP	Energy Transfer Operating LP
 ETP-C	Energy Transfer Operating L.P. Pfd Ser C
 ETP-D	Energy Transfer Operating LP Pfd Ser D
 ETR	Entergy Corp
@@ -1249,6 +1246,7 @@ GJV	Strats Sm Trust For News Corp Securities Series
 GKOS	Glaukos Corp
 GLO-A	Gaslog Partners LP 8.625% Series A
 GLO-B	Gaslog Partners LP Perp Pref Unit Ser B Fixed/Fl
+GLO-C	Gaslog Partners LP Perp Pref Unit Ser C Fixed/Fl
 GLO-G	Gaslog Partners LP 8.75% Series A
 GLOB	Globant S.A.
 GLOG	Gaslog Ltd
@@ -1528,7 +1526,7 @@ IT	Gartner Inc
 ITCB	Itau Corpbanca
 ITG	Investment Technology Group
 ITGR	Integer Holdings Corp
-ITT	ITT Industries
+ITT	ITT Inc. Common Stock
 ITUB	Itau Unibanco Banco Holding S.A.
 ITW	Illinois Tool Works Inc
 IVC	Invacare Corp
@@ -1599,7 +1597,6 @@ JPM-E	Jpmorgan Chase & Co
 JPM-F	J P Morgan Chase & Co Depositar
 JPM-G	J P Morgan Chase & Co Depositar
 JPM-H	Jpmorgan Chase & Co
-JPM.W	JP Morgan Chase & Co
 JPS	Nuveen Quality Preferred 2
 JPT	Nuveen Preferred and Income 2022 Term Fund
 JQC	Nuveen Preferred and Convertible 2
@@ -1651,7 +1648,6 @@ KMB	Kimberly-Clark Corp
 KMF	Kayne Anderson Midstream Energy Fund
 KMG	KMG Chemicals
 KMI	Kinder Morgan
-KMI-A	Kinder Morgan Inc
 KMM	Scudder Multi-Market Income Trust
 KMPA	Kemper Corporation 7.375% Subor
 KMPR	Kemper Corp
@@ -2252,7 +2248,6 @@ PEN	Penumbra Inc
 PEO	Adams Natural Resources Fund Inc
 PER	Sandridge Permian Trust
 PES	Pioneer Energy Services Corp
-PF	Pinnacle Foods Inc
 PFD	Flaherty & Crumrine Preferred Inc
 PFE	Pfizer Inc
 PFGC	Performance Food Group Co
@@ -2490,6 +2485,7 @@ RSG	Republic Services
 RST	Rosetta Stone
 RTEC	Rudolph Technologies
 RTN	Raytheon Company
+RTW	Rtw Retailwinds Inc.
 RUBI	The Rubicon Project Inc
 RVI	Retail Value Inc
 RVT	Royce Value Trust
@@ -2720,7 +2716,6 @@ SUM	Summit Materials Inc
 SUN	Sunoco LP
 SUP	Superior Industries International
 SUPV	Grupo Supervielle S.A.
-SVU	Supervalu Inc
 SWCH	Switch Inc
 SWI	Solarwinds Corporation
 SWJ	Stanley Black & Decker Inc
@@ -2968,6 +2963,7 @@ V	Visa Inc
 VAC	Marriot Vacations Worldwide Cor
 VALE	Vale S.A.
 VAM	The Vivaldi Opportunities Fund
+VAPO	Vapotherm Inc. Common Stock
 VAR	Varian Medical Systems
 VBF	Invesco Van Kampen Bond Fund
 VCRA	Vocera Communications Inc
@@ -3048,6 +3044,7 @@ WD	Walker & Dunlop
 WDR	Waddell & Reed Financial
 WEA	Western Asset Bond Fund
 WEC	Wisconsin Energy Corp
+WEI	Weidai Ltd. ADR
 WEL-I	Welltower Inc. Pfd Series I
 WELL	Welltower Inc
 WES	Western Gas Partners LP
@@ -3065,7 +3062,6 @@ WFC-V	Wells Fargo & Company Depositar
 WFC-W	Wells Fargo & Company
 WFC-X	Wells Fargo & Company
 WFC-Y	Wells Fargo & Co. Dep Shs Repstg 1/1000Th Int No
-WFC.W	Wells Fargo and Co
 WFE-A	Wells Fargo Real Estate Invest
 WFT	Weatherford International Ltd
 WGO	Winnebago Industries

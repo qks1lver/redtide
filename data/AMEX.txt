@@ -75,6 +75,7 @@ AXJL	Asia Pacific Ex-Japan Wisdomtree
 AXJV	Asia Ex Japan Min Vol Ishares Edge MSCI ETF
 AXU	Alexco Resource Corp
 BAB	Taxable Muni Bond Portfolio PS
+BAL	Ipatha Cotton Subindex Total Return ETN
 BALB	Ipath.B Cotton Subindex TR Series B ETN
 BAR	Graniteshares Gold Trust Shares of Beneficial In
 BATT	Amplify Advanced Battery Metals and Materials Et
@@ -236,6 +237,7 @@ COMG	GSCI Commodity Broad Strategy No K-1 ETF
 COPX	G-X Copper Miners ETF
 CORN	Teucrium Corn
 CORP	Invest Grade Corp Bd Index ETF Pimco
+COW	Ipatha Livestock Subindex Total Return ETN
 COWB	Ipath.B Livestock Subindex TR Series B ETN
 COWZ	Pacer US Cash Cows 100 ETF
 CPER	US Copper
@@ -338,7 +340,6 @@ DIT	Amcon Distributing Company
 DIV	G-X Super Dividend ETF
 DIVA	Quantshares Hedged Dividend Income ETF
 DIVB	US Dividend and Buyback Ishares ETF
-DIVC	Citigroup Inc C-Tracks ETN
 DIVO	Amplify Yieldshares Cwp Dividend Option Inc ETF
 DIVY	Reality Shares Divs ETF
 DJCI	DJ-UBS Commodity Idx TR ETN UBS E-Tracs
@@ -543,6 +544,7 @@ EVX	Environmental Svcs ETF Vaneck
 EVY	Eaton Vance New York Muni Income Trust
 EWA	Australia Ishares MSCI ETF
 EWC	Canada Ishares MSCI ETF
+EWCO	Invesco S&P 500 Equal Weight Communication Servi
 EWD	Sweden Ishares MSCI ETF
 EWEM	Emrg Mkts Equal Country Wgt PS MSCI Port
 EWG	Germany Ishares MSCI ETF
@@ -639,6 +641,7 @@ FLCH	China Franklin FTSE ETF
 FLCO	Liberty Investment Grade Corp ETF
 FLDR	Fidelity Low Duration Bond Factor ETF
 FLEE	Europe Franklin FTSE ETF
+FLEH	Europe Hedged Franklin FTSE ETF
 FLEU	FI Enhanced Europe 50 ETN Series B
 FLFR	France Franklin FTSE ETF
 FLGB	United Kingdom Franklin FTSE ETF
@@ -750,6 +753,7 @@ GAMR	Purefunds Video Game Tech ETF
 GARD	Reality Divcon Dividend Guard ETF
 GASL	Natural Gas Bull 3X Direxion
 GASX	Direxion Natural Gas Bear 3X
+GAZ	Ipath Bloomberg Natural Gas Subindex Total Retur
 GAZB	Ipath.B Natural Gas Subindex TR Series B ETN
 GBF	Government/Credit Bond Ishares ETF
 GBIL	GS Treasuryaccess 0-1 Year ETF
@@ -757,6 +761,8 @@ GBR	New Concept Energy Inc
 GCC	Continuous Commodity Index
 GCE	CEF GS Connect ETN Claymore
 GCOW	Pacer Global Cash Cows Dividend
+GDG	Gadsdena Dynamica Growtha ETF
+GDMA	Gadsdena Dynamica Multi-Asseta ETF
 GDP	Goodrich Petroleum Corp
 GDVD	Principal Active Global Dividend Income ETF
 GDX	Gold Miners Vaneck ETF
@@ -786,6 +792,7 @@ GLQ	Clough Global Equity Fund
 GLTR	Physical Precious Metals Basket
 GLU	Gabelli Global Utility
 GLU-A	The Gabelli Global Utility and
+GLU.P	Gabelli Global Utility & Income Trust
 GLV	Clough Global Allocation Fund
 GMF	S&P Emerging Asia Pacific SPDR
 GMFL	Multi-Factor Large Cap Port PS
@@ -938,6 +945,7 @@ IBMJ	Dec 2021 Term Muni Bond Ishares Ibonds ETF
 IBMK	Dec 2022 Term Muni Bond Ishares Ibonds ETF
 IBML	Dec 2023 Term Muni Bond Ishares Ibonds ETF
 IBMM	Dec 2024 Term Muni Bond Ishares Ibonds ETF
+IBMN	Ishares Ibonds Dec 2025 Term Muni Bond ETF
 IBND	Intl Corp Bond ETF SPDR
 ICAN	Serenityshares Impact ETF
 ICF	Cohen & Steers REIT Ishares ETF
@@ -1112,14 +1120,24 @@ JHMS	JH Consumer Staples Multifactor ETF
 JHMT	JH Technology Multifactor ETF
 JHMU	JH Utilities Multifactor ETF
 JHSC	John Hancock Multifactor Small Cap ETF
+JJA	Ipatha Agriculture Subindex Total Return ETN
 JJAB	Ipath.B Agriculture Subindex TR Series B ETN
+JJC	Ipatha Copper Subindex Total Return ETN
 JJCB	Ipath.B Copper Subindex TR Series B ETN
+JJE	Ipath.B Energy Subindex TR ETN
 JJEB	Ipath.B Energy Subindex TR Series B ETN
+JJG	Ipatha Grains Subindex Total Return ETN
 JJGB	Ipath.B Grains Subindex TR Series B ETN
+JJM	Ipatha Industrial Metals Subindex Total Retur
 JJMB	Ipath.B Industrial Metals Subindex TR Series B E
+JJN	Ipath.B Nickel Subindex TR Series B ETN
+JJP	Ipatha Precious Metals Subindex Total Return
 JJPB	Ipath.B Precious Metals Subindex TR Series B ETN
+JJS	Ipatha Softs Subindex Total Return ETN
 JJSB	Ipath.B Softs Subindex TR Series B ETN
+JJT	Ipatha Tin Subindex Total Return ETN
 JJTB	Ipath.B Tin Subindex TR Series B ETN
+JJU	Ipatha Aluminum Subindex Total Return ETN
 JJUB	Ipath.B Aluminum Subindex TR Series B ETN
 JKD	Mstar Large-Cap Ishares ETF
 JKE	Mstar Large-Cap Growth Ishares ETF
@@ -1136,6 +1154,7 @@ JMST	Jpmorgan Ultra-Short Municipal ETF
 JMUB	Jpmorgan Municipal ETF
 JNK	High Yield Bond ETF SPDR
 JNUG	Direxion Junior Gold Mine Bull 3X
+JO	Ipath.B Coffee Subindex TR Series B ETN
 JOB	General Employment Enterprises
 JPBI	James Purpose Based Investment ETF
 JPED	JPM Event Driven ETF
@@ -1372,6 +1391,7 @@ OGCP	Empire State Realty Op LP Se
 OGEN	Oragenics Inc
 OGIG	O'Shares Global Internet Giants ETF
 OIH	Oil Services Vaneck ETF
+OIL	Ipath Series B S&P GSCI Crude Oil
 OILB	Ipath S&P GSCI Crude Oil TR Index Series B ETN
 OILD	Ultrapro Short Crude Oil Proshares
 OILK	Crude Oil Strategy Proshares
@@ -1399,6 +1419,7 @@ OVLC	US Large Cap Optimized Vlty Port PS
 OVLU	Oppenheimer Rus 1000 Value Factor ETF
 OVOL	Oppenheimer Rus 1000 Low Volatility Factor ETF
 OYLD	Oppenheimer Rus 1000 Yield Factor ETF
+PACA	Xtrackers MSCI Latin America Pacific Alliance ET
 PAF	FTSE RAFI Asia Pacific Ex-Japan Portfolio PS
 PAK	G-X MSCI Pakistan ETF
 PALL	Physical Palladium
@@ -1442,6 +1463,7 @@ PFXF	Preferred Securities Vaneck ETF
 PGAL	G-X FTSE Portugal 20 ETF
 PGF	Financial Preferred Portfolio PS
 PGHY	Global Short Term Hi Yld Bond Port PS
+PGM	Ipath.B Platinum Subindex TR ETN
 PGMB	Ipath.B Platinum Subindex TR Series B ETN
 PGX	Preferred Portfolio PS
 PHB	Fundamental High Yld Corp Bond Port PS
@@ -1476,6 +1498,8 @@ PPMC	Portfolio S&P Mid Cap ETF
 PPSC	Portfolio S&P Small Cap
 PPTY	Ppty U.S. Diversified Real Estate ETF
 PQLC	PGIM Qma Strategic Alpha Large-Cap Core ETF
+PQSG	PGIM Qma Strategic Alpha Small-Cap Growth ETF
+PQSV	PGIM ETF Trust ETF PGIM Qma Strategic Alpha Smal
 PRB	Pre-Refunded Muni ETF Vaneck
 PREF	Principal Spectrum Preferred Securities Active E
 PRF	FTSE RAFI US 1000 Portfolio PS
@@ -1709,6 +1733,7 @@ SFIG	Wisdomtree Short-Term Corp Bond Fundamental
 SGB	Southwest Georgia Financial Corp
 SGDJ	Alps ETF Trust Sprott Junior Gold
 SGDM	Sprott Gold Miners ETF
+SGG	Ipatha Sugar Subindex Total Return ETN
 SGGB	Ipath.B Sugar Subindex TR Series B ETN
 SGOL	Physical Swiss Gold
 SH	S&P 500 Short Proshares
@@ -1742,6 +1767,7 @@ SMDD	Ultrapro Short Midcap 400 Proshares
 SMDV	Russell 2000 Divd Proshares
 SMEZ	Euro Stoxx Smallcap ETF SPDR
 SMH	Semiconductor Vaneck ETF
+SMHB	Etracs Monthly Pay 2X Leveraged Small Cap High D
 SMHD	Etracs Mt Pay 2X US Smallcap Hi Div ETN
 SMIN	India Small-Cap Ishares MSCI ETF
 SMLF	USA Multifactor Small-Cap Ishares Edge MSCI ETF
@@ -1840,7 +1866,6 @@ TECL	Technology Bull 3X Direxion
 TECS	Technology Bear 3X Direxion
 TERM	Equitycompass Tactical Risk Manager ETF
 TETF	Industry Exposure & Fin Srvs ETF
-TEUM	Pareteum Corp
 TFI	Muni Bond ETF SPDR
 TFIV	Global X Targetincome 5 ETF
 TFLO	Treasury Floating Rate Bond Ishares ETF

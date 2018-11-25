@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 import torch.nn as nn
 import pdb
+import subprocess
 from time import tzset, sleep, time
 from multiprocessing import Pool
 from sklearn.decomposition import KernelPCA
@@ -20,6 +21,7 @@ from sklearn.metrics import precision_score, roc_auc_score
 from sklearn.dummy import DummyClassifier, DummyRegressor
 from sklearn import linear_model
 from sklearn import preprocessing
+from platform import mac_ver
 
 
 # Constants
@@ -32,6 +34,15 @@ _p_excluded_symbols_ = _d_data_ + 'excluded_symbols.txt'
 _url_cnn_ = 'https://money.cnn.com/quote/quote.html?symb=%s'
 _url_yahoo_ = 'https://finance.yahoo.com/quote/%s'
 _url_yahoo_daily_ = 'https://finance.yahoo.com/quote/%s/history?period1=%d&period2=%d&interval=1d&filter=history&frequency=1d'
+
+# To by-pass Mac's new security things that causes multiprocessing to crash
+try:
+    v = mac_ver()
+    if v and float(v[0]) >= 10:
+        print('Detected Mac > High Sierra, deploy multiprocessing fix')
+        _ = subprocess.run('export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES'.split())
+except:
+    print('Did not detect MAC')
 
 
 # Classes
@@ -636,6 +647,8 @@ class Stock:
         for batch in symb_batches:
             with Pool(processes=self.n_cpu) as pool:
                 res = pool.map(self._compile_symb, batch)
+            pool.close()
+            pool.terminate()
 
             with open(_p_all_symbols_, 'a+') as f, open(_p_excluded_symbols_, 'a+') as fx:
                 for symb, success in res:
