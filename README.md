@@ -42,7 +42,7 @@ down arrow icon next to "DOWNLOAD SYMBOL LIST")
 **ONLY if you updated the listing files in step 1, if not, skip this step**
  - Delete **all_symbols.txt** and **excluded_symbols.txt** under the
  **redtide/data/** folder
- - Navigate to the **redtide/src/** folder and run the following command
+ - Navigate to the **redtide/** folder and run the following command
  in a terminal.
  ```
  $ python3 redtide.py -v -c
@@ -53,7 +53,7 @@ down arrow icon next to "DOWNLOAD SYMBOL LIST")
  - When it's done, you'll see the new **all_symbols.txt** and
  **excluded_symbols.txt** under the **redtide/data/** folder
 #### 3. Pull data.
-  - Navigate to **redtide/src/** folder, and run:
+  - Navigate to **redtide/** folder, and run:
   ```
   $ python3 redtide.py -v -d
   ```
@@ -82,21 +82,20 @@ When I ran this before running the code I didn't get errors:
 - **u/siem** also found that after 2000-3000 pulls,
 connection to Yahoo Finance could fail.
 Possibly due to a tempoary IP ban.
-Suggested that there be a 1 sec delay between each request. While I was
-working on this, I found realized that my code to retry connection was
-implemented incorrectly, so I changed that part completely. While fixing
-everything, I realized that I cannot pause threads independently with
-```time.sleep(1)``` when I'm using multiprocessing's ```Pool.map()```, so...
-I'm open to suggestions, because right now, I just have a max attempt of
-20 and hoping that one of those would return something (fortunately this works
- for me... but definitely not the best solution)
+After that, I also noticed that around 120 fast page crawls, there's a temporary IP ban.
+To circumvent this issue, I implemented pauses around 10 - 20 seconds for every 100 page loads.
+Also, did the same for compiling the symbols, except the pauses are 5 - 10 seconds for every 200 page loads.
 - **New:** If connection fails or you get banned temporary, it will try
 to fetch for the failed ones again (**maximum of 5 passes**). If after 5 passes
 , there are still failed symbols left, they
 will be written to a **failed_symbs-<5 random characters>.txt** file.
 And you'll see a suggestion to run something like the following to retry.
 ```
+# For failed daily history fetches
 $ python3 redtide.py -v -d --file failed_symbs-abe93.txt
+
+# For failed symbols during symbol compile
+$ python3 redtide.py -v -c --file data/excluded_symbols.txt
 ```
 
 ## Contact

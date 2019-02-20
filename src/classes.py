@@ -25,7 +25,7 @@ from platform import mac_ver
 
 
 # Constants
-_d_data_ = '../data/'
+_d_data_ = 'data/'
 _p_nasdaq_listing_ = _d_data_ + 'NASDAQ.txt'
 _p_nyse_listing_ = _d_data_ + 'NYSE.txt'
 _p_amex_listing_ = _d_data_ + 'AMEX.txt'
@@ -210,6 +210,8 @@ class Stock:
 
     def retrieve_all_symbs(self, symbs=None, p_symbs='', i_pass=1, max_pass=5):
 
+        t0 = time()
+
         if p_symbs:
             if os.path.isfile(p_symbs):
                 with open(p_symbs, 'r') as f:
@@ -234,15 +236,27 @@ class Stock:
 
             print('\tUsing %d CPUs' % self.n_cpu)
 
-            with Pool(processes=self.n_cpu) as pool:
+            # To avoid getting blocked by Yahoo, pause for 10 - 20 seconds after 100 symbols
+            symb_batches = self._gen_symbol_batches(symbs, batch_size=100)
+            n_symb_completed = 0
+            for batch in symb_batches:
+                with Pool(processes=self.n_cpu) as pool:
+                    res = pool.map(self.retrieve_symb, batch)
 
-                res = pool.map(self.retrieve_symb, symbs)
+                for symb,success in res:
+                    if success:
+                        n_success += 1
+                    else:
+                        failed_symbs.append(symb)
 
-            for symb,success in res:
-                if success:
-                    n_success += 1
-                else:
-                    failed_symbs.append(symb)
+                n_symb_completed += len(batch)
+                if self.verbose:
+                    print('{0:.1f}% completed - {1:.0f} / {2:.0f}'.format(n_symb_completed / n_symbs * 100, n_symb_completed, n_symbs))
+
+                # pause
+                tpause = np.random.randint(10, 21)
+                print('Pause for %d seconds' % tpause)
+                sleep(tpause)
 
         else:
 
@@ -276,6 +290,8 @@ class Stock:
                     _ = f.write('\n'.join(failed_symbs))
                 print('Failed symbols written to: %s' % p_symbs)
                 print('Run this to try fetching the missed symbols again:\npython3 redtide.py -v -d --file %s' % p_symbs)
+
+        print('\tTime elapsed: %.1f hours\n' % ((time() - t0)/3600))
 
         return
 
@@ -625,30 +641,33 @@ class Stock:
 
         return '%d seconds' % dtime
 
-    def compile_symbols(self):
+    def compile_symbols(self, p_symbs=None, append=False, batch_size=200):
 
         print('Compiling symbols ...')
 
-        self.symbs = self.all_symbols(try_compiled=False)
+        if p_symbs:
+            with open(p_symbs, 'r') as f:
+                self.symbs = f.read().strip().split('\n')
+        else:
+            self.symbs = self.all_symbols(try_compiled=False)
         n_symbs = len(self.symbs)
         n_compiled = 0
         n_excluded = 0
 
         # Initialize/clear write files
-        with open(_p_all_symbols_, 'w+') as f, open(_p_excluded_symbols_, 'w+') as fx:
-            _ = f.write('')
-            _ = fx.write('')
+        if not append:
+            with open(_p_all_symbols_, 'w+') as f, open(_p_excluded_symbols_, 'w+') as fx:
+                _ = f.write('')
+                _ = fx.write('')
 
         if self.verbose:
             print('Looking up symbols on Yahoo Finance ...')
 
-        symb_batches = self._gen_symbol_batches(self.symbs)
+        symb_batches = self._gen_symbol_batches(self.symbs, batch_size=batch_size)
         n_symb_completed = 0
         for batch in symb_batches:
-            with Pool(processes=self.n_cpu) as pool:
+            with Pool(processes=self.n_cpu, maxtasksperchild=1) as pool:
                 res = pool.map(self._compile_symb, batch)
-            pool.close()
-            pool.terminate()
 
             with open(_p_all_symbols_, 'a+') as f, open(_p_excluded_symbols_, 'a+') as fx:
                 for symb, success in res:
@@ -661,19 +680,33 @@ class Stock:
 
             n_symb_completed += len(batch)
             if self.verbose:
-                print('{}% completed - {} / {}'.format(int(n_symb_completed / n_symbs * 100), n_symb_completed, n_symbs))
+                print('{0:.1f}% completed - {1:.0f} / {2:.0f}'.format(n_symb_completed / n_symbs * 100, n_symb_completed, n_symbs))
+
+            tpause = np.random.randint(5, 11)
+            print('Pause for %s seconds' % tpause)
+            sleep(tpause)
+
+        # Remove duplicates when using append
+        if append:
+            with open(_p_all_symbols_, 'r') as f:
+                symbs = set(f.read().strip().split('\n'))
+            with open(_p_all_symbols_, 'w+') as f:
+                _ = f.write('\n'.join(symbs))
 
         print('Started with: %d\nCompiled: %d\nExcluded: %d\nCompiled to: %s' % (n_symbs, n_compiled, n_excluded, _p_all_symbols_))
 
         return
 
     @staticmethod
-    def _gen_symbol_batches(symbs, n_batches=20):
+    def _gen_symbol_batches(symbs, n_batches=None, batch_size=None):
+
+        if not batch_size:
+            if not n_batches:
+                n_batches = 20
+            n_symbs = len(symbs)
+            batch_size = np.ceil(n_symbs / n_batches)
 
         symb_batches = []
-        n_symbs = len(symbs)
-        batch_size = np.ceil(n_symbs / n_batches)
-
         batch = []
         for i, s in enumerate(symbs):
 

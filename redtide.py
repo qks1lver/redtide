@@ -2,7 +2,7 @@
 
 # Import
 import argparse
-from classes import Stock, Regressor
+from src.classes import Stock, Regressor
 
 # Run
 if __name__ == '__main__':
@@ -14,7 +14,7 @@ if __name__ == '__main__':
     parser.add_argument('-a', dest='analyze', action='store_true', help='Analyze')
     parser.add_argument('-c', dest='compile', action='store_true', help='Compile symbols')
     parser.add_argument('-v', dest='verbose', action='store_true', help='Verbose')
-    parser.add_argument('--file', dest='list', default='', help='Symbol file')
+    parser.add_argument('--file', dest='list', default=None, help='Symbol file')
     parser.add_argument('--clust', dest='cluster', action='store_true', help='Cluster')
     parser.add_argument('--from', dest='from_date', default='2018-1-1', help='Analyze data from this date')
     parser.add_argument('--to', dest='to_date', default='', help='Analyze data until this date')
@@ -46,7 +46,10 @@ if __name__ == '__main__':
         s.cluster(X, symbs)
 
     if args.compile:
-        s.compile_symbols()
+        if args.list:
+            s.compile_symbols(p_symbs=args.list, append=True, batch_size=40)
+        else:
+            s.compile_symbols()
 
     if args.analyze:
         s.read_full_histories()
