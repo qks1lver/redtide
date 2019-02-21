@@ -14,10 +14,11 @@ if __name__ == '__main__':
     parser.add_argument('-a', dest='analyze', action='store_true', help='Analyze')
     parser.add_argument('-c', dest='compile', action='store_true', help='Compile symbols')
     parser.add_argument('-v', dest='verbose', action='store_true', help='Verbose')
+    parser.add_argument('--concat', dest='concat', default=None, help='Concatenate data into one file, give path')
     parser.add_argument('--file', dest='list', default=None, help='Symbol file')
     parser.add_argument('--clust', dest='cluster', action='store_true', help='Cluster')
-    parser.add_argument('--from', dest='from_date', default='2018-1-1', help='Analyze data from this date')
-    parser.add_argument('--to', dest='to_date', default='', help='Analyze data until this date')
+    parser.add_argument('--from', dest='from_date', default=None, help='Analyze data from this date')
+    parser.add_argument('--to', dest='to_date', default=None, help='Analyze data until this date')
     parser.add_argument('--now', dest='live_now', action='store_true', help='Get live now, even if market is closed')
     parser.add_argument('--debug', dest='debug', action='store_true', help='Debug current updates')
 
@@ -54,6 +55,12 @@ if __name__ == '__main__':
     if args.analyze:
         s.read_full_histories()
         s.analyze(from_date=args.from_date, to_date=args.to_date)
+
+    if args.concat:
+        df = s.concat(from_date=args.from_date, to_date=args.to_date)
+        p_out = args.concat + '.csv' if not args.concat.endswith('.csv') else args.concat
+        df.to_csv(p_out)
+        print('Saved to: %s' % p_out)
 
     if args.debug:
         symbs = ['NVDA']

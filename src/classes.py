@@ -7,7 +7,6 @@ import datetime
 import os
 import pandas as pd
 import numpy as np
-import torch.nn as nn
 import pdb
 import subprocess
 from time import tzset, sleep, time
@@ -17,7 +16,7 @@ from sklearn.cluster import AffinityPropagation
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.model_selection import KFold
 from sklearn.utils import shuffle
-from sklearn.metrics import precision_score, roc_auc_score
+from sklearn.metrics import precision_score
 from sklearn.dummy import DummyClassifier, DummyRegressor
 from sklearn import linear_model
 from sklearn import preprocessing
@@ -25,7 +24,8 @@ from platform import mac_ver
 
 
 # Constants
-_d_data_ = 'data/'
+_d_classes_ = os.path.realpath(os.path.split(__file__)[0]) + '/'
+_d_data_ = _d_classes_ + '../data/'
 _p_nasdaq_listing_ = _d_data_ + 'NASDAQ.txt'
 _p_nyse_listing_ = _d_data_ + 'NYSE.txt'
 _p_amex_listing_ = _d_data_ + 'AMEX.txt'
@@ -36,13 +36,18 @@ _url_yahoo_ = 'https://finance.yahoo.com/quote/%s'
 _url_yahoo_daily_ = 'https://finance.yahoo.com/quote/%s/history?period1=%d&period2=%d&interval=1d&filter=history&frequency=1d'
 
 # To by-pass Mac's new security things that causes multiprocessing to crash
+v = None
 try:
     v = mac_ver()
-    if v and float(v[0]) >= 10:
-        print('Detected Mac > High Sierra, deploy multiprocessing fix')
-        _ = subprocess.run('export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES'.split())
 except:
     print('Did not detect MAC')
+
+if v and int(v[0].split('.')[0]) >= 10:
+    print('Detected Mac > High Sierra, deploy multiprocessing fix')
+    try:
+        _ = subprocess.Popen('export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES', shell=True)
+    except:
+        print('\tFailed to send fix: export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES')
 
 
 # Classes
@@ -351,7 +356,7 @@ class Stock:
         if self.verbose:
             print('Read %d / %d full histories to dataframes' % (len(self.dfs), len(symbs)))
 
-        return
+        return self
 
     @staticmethod
     def transform(df, shift0=1, shift1=-1, ratio0=0.01, ratio1=0.01):
@@ -438,10 +443,10 @@ class Stock:
 
         return np.array(features), preprocessing.scale(np.array(labels), axis=0)
     
-    def analyze(self, from_date='', to_date=''):
+    def analyze(self, from_date=None, to_date=None):
 
         if not to_date:
-            to_date = self.dfs[list(self.dfs.keys())[0]][0:1].index[0].to_pydatetime().strftime('%Y-%m-%d')
+            to_date = datetime.datetime.now().strftime('%Y-%m-%d')
 
         if not from_date:
             from_date = (datetime.datetime.strptime(to_date, '%Y-%m-%d') - datetime.timedelta(days=365)).strftime('%Y-%m-%d')
@@ -470,10 +475,10 @@ class Stock:
 
         return m
 
-    def range_norm(self, from_date='', to_date=''):
+    def range_norm(self, from_date=None, to_date=None):
 
         if not to_date:
-            to_date = self.dfs[list(self.dfs.keys())[0]][0:1].index[0].to_pydatetime().strftime('%Y-%m-%d')
+            to_date = datetime.datetime.now().strftime('%Y-%m-%d')
 
         if not from_date:
             from_date = (datetime.datetime.strptime(to_date, '%Y-%m-%d') - datetime.timedelta(days=365)).strftime('%Y-%m-%d')
@@ -789,24 +794,39 @@ class Stock:
 
         return symb, True
 
-class NN(nn.Module):
+    def concat(self, from_date=None, to_date=None):
 
-    def __init__(self, n_sampling=10):
-        super(NN, self).__init__()
+        if not to_date:
+            to_date = datetime.datetime.now().strftime('%Y-%m-%d')
 
-        self.n_sampling = n_sampling
+        if not from_date:
+            # Default 60 days
+            from_date = (datetime.datetime.strptime(to_date, '%Y-%m-%d') - datetime.timedelta(days=60)).strftime('%Y-%m-%d')
 
-        self.n_l1 = 2 * self.n_sampling
+        dfx = pd.DataFrame()
+        order = ['symbol', 'volume', 'open', 'close', 'high', 'low', 'adjclose']
+        symbs = self.all_symbols()
+        n_symbs = len(symbs)
 
-        self.bn = nn.BatchNorm1d(self.n_sampling)
-        self.l1 = nn.Linear(self.n_sampling, self.n_l1)
-        self.l2 = nn.Linear(self.n_l1, self.n_l1)
-        self.l3 = nn.Linear(self.n_l1, self.n_l1)
-        self.l4 = nn.Linear(self.n_l1, 1)
+        print('Concatenating %d symbols between %s - %s ...' % (n_symbs, from_date, to_date))
 
-    def forward(self, input):
+        for i, symb in enumerate(symbs):
 
-        return self.l4(self.l3(self.l2(self.l1(self.bn(input)))))
+            p_data = self._dir_full_history_ + '%s.csv' % symb
+
+            if not os.path.isfile(p_data):
+                if self.verbose:
+                    print('No full history available: %s' % symb)
+                continue
+
+            dtmp = pd.read_csv(p_data, index_col='date', parse_dates=True)[to_date:from_date].assign(symbol=symb)
+            dfx = dfx.append(dtmp, ignore_index=False)
+            if (i + 1) % 400 == 0:
+                print('{0:.1f}% completed'.format((i+1)/n_symbs*100))
+
+        print('Concatenated!')
+
+        return dfx[order]
 
 class Regressor:
 
@@ -823,16 +843,9 @@ class Regressor:
 
     def train(self, features, labels):
 
-        if self.clf_type == 'nn':
-            self.train_nn()
-        elif self.clf_type == 'rf':
-            self.train_rf(features, labels)
+        # More types of classifiers will be added
 
-        return
-
-    def train_nn(self):
-
-        self.model = NN(n_sampling=self.n_sampling0)
+        self.train_rf(features, labels)
 
         return
 
