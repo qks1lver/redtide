@@ -42,7 +42,7 @@ try:
 except:
     print('Did not detect MAC')
 
-if v and int(v[0].split('.')[0]) >= 10:
+if v and v[0] and int(v[0].split('.')[0]) >= 10:
     print('Detected Mac > High Sierra, deploy multiprocessing fix')
     try:
         _ = subprocess.Popen('export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES', shell=True)
