@@ -848,6 +848,7 @@ HACK	ISE Cyber Security ETF
 HAO	China Small Cap Invesco ETF
 HAP	Rve Hard Assets Producers Vaneck ETF
 HAUD	Australia Curr Hedged Ishares MSCI ETF
+HAUZ	Xtrackers International Real Estate ETF
 HAWX	ACWI Curr Hedged Ex US Ishares MSCI ETF
 HDAW	Db-Xt MSCI All World Ex-US Div Yld Hgd Eq
 HDEF	Db-Xt MSCI EAFE High Div Yld Hgd Eq
@@ -984,6 +985,7 @@ IFLY	Purefunds Drone Economy Strategy ETF
 IFRA	US Infrastructure Ishares ETF
 IG	Principal Investment Grade Corporate Active ETF
 IGBH	Int. Rate Hedged Long-Term Corp Bond Ishares
+IGC	India Globalization Capital Inc.
 IGE	Natural Resources North American Ishares ETF
 IGEB	Invst Grade Enhanced Bond Ishares Edge ETF
 IGHG	Invest Grade Interest Rate Proshares
@@ -1625,6 +1627,7 @@ RLY	SSGA Multi-Asset Real Return ETF SPDR
 RNN	Rexahn Pharmaceuticals
 ROAM	Lattice EM Strategy ETF
 ROBO	Global Robotics and Automation ETF
+RODI	Barclays Return On Disability ETN
 RODM	Lattice Developed Markets Ex-US ETF
 ROGS	Lattice Global Smallcap Strategy ETF
 ROM	Ultra Technology Proshares
@@ -2078,9 +2081,7 @@ VUSE	Vident Core US Equity
 VV	Largecap ETF Vanguard
 VWO	Emrg Mkts ETF MSCI Vanguard
 VXF	Extended Market Index ETF Vanguard
-VXX	Ipath S&P 500 VIX Short Term Futures ETN
 VXXB	Ipath.B S&P 500 VIX Short-Term Futures ETN
-VXZ	Ipath S&P 500 VIX Mid-Term Futures ETN
 VXZB	Ipath.B S&P 500 VIX Mid-Term Futures ETN
 VYM	High Dividend Yield Vanguard ETF
 WANT	Direxion Daily Consumer Discretionary Bull 3X Sh

@@ -9,3 +9,4 @@ data/archive/*
 *.pyc
 data/.DS_Store
 .DS_Store
+*.csv

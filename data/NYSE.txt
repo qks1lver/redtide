@@ -171,7 +171,6 @@ AOS	Smith [A.O.] Corp
 AP	Ampco-Pittsburgh Corp
 APA	Apache Corp
 APAM	Artisan Partners Asset Manageme
-APB	Asia Pacific Fund Inc
 APC	Anadarko Petroleum Corp
 APD	Air Products and Chemicals
 APF	Morgan Stanley Asia Pacific Fund Inc
@@ -343,6 +342,7 @@ BEL	Belmond Ltd
 BEN	Franklin Resources
 BEP	Brookfield Renewable
 BERY	Berry Global Group
+BEST	Best Inc.
 BF.A	Brown Forman Inc Cl A
 BF.B	Brown Forman Inc Cl B
 BFAM	Bright Horizons Family Solutions Inc
@@ -652,6 +652,7 @@ CMS	Cms Energy Corp
 CMS-B	Consumers Engry 4.50
 CMSA	Cms Energy Corporation 5.625% Junior Subordinate
 CMSC	Cms Energy Corporation
+CMSD	Cms Energy Corporation 5.875% Junior Subordinate
 CMU	Colonial Muni Income Trust
 CNA	Cna Financial Corp
 CNC	Centene Corp
@@ -734,6 +735,7 @@ CTLT	Catalent Inc
 CTR	Clearbridge Energy MLP Fund IN
 CTRA	Contura Energy Inc
 CTS	Cts Corp
+CTST	Canntrust Holdings Inc.
 CTT	Catchmark Timber Trust Inc
 CTV	Qwest Corp
 CTY	Qwest Corp
@@ -755,7 +757,6 @@ CVEO	Civeo Corp
 CVI	Cvr Energy Inc
 CVIA	Covia Holdings Corp
 CVNA	Carvana Co. Class A
-CVRR	Cvr Refining LP
 CVS	CVS Corp
 CVX	Chevron Corp
 CW	Curtiss-Wright Corp
@@ -836,7 +837,6 @@ DLR-H	Digital Realty
 DLR-I	Digital Rlty TR Inc Pfd Sr I %
 DLR-J	Digital Realty Trust Inc Cum Redeemable Pfd Ser
 DLX	Deluxe Corp
-DM	Dominion Midstream Partners LP
 DMB	Dreyfus Municipal Bond Infrastr
 DMO	Western Asset Mortgage Defined Opp
 DNB	Dun & Bradstreet Corp
@@ -968,7 +968,6 @@ ENIA	Enersis Americas S.A. American
 ENIC	Enersis Chile S.A. ADR
 ENJ	Entergy New Orleans Inc
 ENLC	Enlink Midstream Llc
-ENLK	Enlink Midstream Partners LP
 ENO	Entergy New Orleans Inc.First
 ENR	Energizer Holdings Inc
 ENR-A	Energizer Holdings Inc Mandatory Conv Pfd Ser A
@@ -1343,12 +1342,12 @@ HEI.A	Heico Cp Cl A
 HEP	Holly Energy Partners LP
 HEQ	John Hancock Hedged Eqty & Inc
 HES	Hess Corp
-HES-A	Hess Corp
 HESM	Hess Midstream Partners LP
 HF	HFF Inc
 HFC	Hollyfrontier Corp
 HFRO	Highland Floating Rate Opportunities Fund
 HGH	The Hartford Financial Srvcs G
+HGLB	Highland Global Allocation Fund
 HGV	Hilton Grand Vacations Inc
 HHC	Howard Hughes Corp
 HHS	Harte-Hanks
@@ -1872,6 +1871,7 @@ MPW	Medical Properties Trust
 MPX	Marine Products Corp
 MQT	Blackrock Muniyield Quality Fund II
 MQY	Blackrock Muniyield Quality Fund
+MR	Mindray Medical International Ltd
 MRC	Mrc Global Inc
 MRK	Merck & Company
 MRO	Marathon Oil Corp
@@ -2299,6 +2299,7 @@ PRH	Prudential Financial Inc
 PRI	Primerica Inc
 PRI-A	Priority Income Fund Inc Term Pfd Ser A
 PRI-B	Priority Income Fund Inc. 6.25% Series Bquisf
+PRI-C	Priority Income Fund Inc Term Pfd Ser C
 PRLB	Proto Labs Inc
 PRO	Pros Holdings
 PRS	Prudential Financial Inc. 5.625% Junior
@@ -3010,7 +3011,7 @@ WEC	Wisconsin Energy Corp
 WEI	Weidai Ltd. ADR
 WEL-I	Welltower Inc. Pfd Series I
 WELL	Welltower Inc
-WES	Western Gas Partners LP
+WES	Western Midstream Partners LP
 WEX	Wex Inc
 WF	Woori Finance Holdings CO Ltd
 WF.P	Woori Financial Group Inc

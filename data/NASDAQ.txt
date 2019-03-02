@@ -18,6 +18,7 @@ ABMD	Abiomed Inc
 ABTX	Allegiance Banc CS
 ABUS	Arbutus Biopharma Cp
 ACAD	Acadia Pharmaceutica
+ACAMU	Acamar Partners Acquisition Corp. Units
 ACBI	Atlantic Capital
 ACER	Acer Therapeutics Inc
 ACET	Aceto Cp
@@ -208,7 +209,6 @@ APOPW	Cellect Biotechnology Ltd
 APPF	Appfolio Cl A
 APPN	Appian Corporation Class A
 APPS	Digital Turbine
-APRI	Apricus Biosc Inc
 APTO	Aptose Bioscns
 APTX	Aptinyx Inc
 APVO	Aptevo Therapeutics Inc
@@ -228,6 +228,7 @@ ARCT	Arcturus Therapeutics Ltd
 ARCW	Arc Group Worldwide
 ARDS	Aridis Pharmaceuticals Inc
 ARDX	Ardelyx Inc
+AREC	American Resources Corp
 AREX	Approach Res. Inc
 ARGX	Argenx Se Ads
 ARKR	Ark Restaurants Cp
@@ -334,6 +335,7 @@ BBH	Biotech Vaneck ETF
 BBSI	Barrett Business S
 BCAC	Bison Capital Acquistion Corp Ordinary Shares
 BCACR	Bison Capital Acquistion Corp Rights
+BCACU	Bison Capital Acquisition Corp Unit
 BCACW	Bison Capital Acquistion Corp Warrant
 BCBP	Bcb Bancorp Inc
 BCLI	Brainstorm Cell
@@ -417,7 +419,6 @@ BNSO	Bonso Elec Intl IN
 BNTC	Benitec Biopharm Ads
 BNTCW	Benitec Biopharm Wrt
 BOCH	Bank of Commerce Hld
-BOJA	Bojangles Inc CS
 BOKF	Bok Financial Corp
 BOKFL	Bok Financial Corp
 BOLD	Audentes Therapeutics Inc
@@ -447,6 +448,7 @@ BRKL	Brookline Bancorp
 BRKR	Bruker Corp
 BRKS	Brooks Automation
 BRPA	Big Rock Partners Acquisition Corp
+BRPAR	Big Rock Partners Acquisition Corp Right
 BRPAU	Big Rock Partners Acquisition Corp Unit
 BRPAW	Big Rock Partners Acquisition Corp Warrant
 BRQS	Borqs Technologies Inc
@@ -621,6 +623,7 @@ CIGI	Colliers Intl Grp IN
 CIL	Victory Intl Vol Wtd ETF
 CINF	Cincinnati Financial
 CIVB	Civista Bncshrs
+CIVBP	Civista Bancshrs Dep
 CIVEC	Causeway Etmf Trust Causeway International Value
 CIZ	Victory Dev Enhd Vol Wtd ETF
 CIZN	Citizens Hldg CO
@@ -635,7 +638,6 @@ CLDX	Celldex Therapeutics
 CLFD	Clearfield Inc
 CLGN	Collplant Holdings Ltd
 CLIR	Clearsign Combustion
-CLIRW	Clearsign Combustion Corporation Warrant
 CLLS	Cellectis S.A. Ads
 CLMT	Calumet Specialty Pr
 CLNE	Clean Energy Fuels
@@ -654,7 +656,6 @@ CLXT	Calyxt Inc
 CMCO	Columbus Mckinnon
 CMCSA	Comcast Corp A
 CMCT	Cim Commercial TR Cp
-CMCTP	Cim Commercial Trust Corp Series L Prfd
 CME	CME Group Inc
 CMFN	Cm Finance
 CMFNL	Cm Finance Inc 6.125% Notes Due 2023
@@ -1014,6 +1015,7 @@ ENZL	New Zealand Ishares MSCI ETF
 EOLS	Evolus Inc
 EPAY	Bottomline Tech IN
 EPIX	Essa Pharma
+EPSN	Epsilon Energy
 EPZM	Epizyme Inc
 EQ	Equillium Inc.
 EQBK	Equity Bncsrs Cm A
@@ -1036,7 +1038,6 @@ ESGRP	Enstar Group Ltd
 ESGU	USA ESG Optimized Ishares MSCI ETF
 ESIO	Electro Sci Inds
 ESLT	Elbit Systems Ltd
-ESND	Essendant Inc
 ESPR	Esperion Theraptc
 ESQ	Esquire Financial Holdings Inc
 ESSA	Essa Bancorp Inc
@@ -1056,7 +1057,6 @@ EVFTC	Eaton Vance Nextshares Trust II
 EVGBC	Eaton Vance Nextshares Global Income Builder
 EVGN	Evogene Ltd Ord
 EVK	Ever Glory Intl Grp
-EVLMC	Eaton Vance Nextshares Trust II Eaton Vance Tabs
 EVLO	Evelo Biosciences Inc
 EVLV	Evine Live Cl A
 EVOK	Evoke Pharma
@@ -1432,6 +1432,7 @@ HBK	Hamilton Bancorp
 HBMD	Howard Bancorp MD
 HBNC	Horizon Bancorp
 HBP	Huttig Bldg Products
+HCACU	Hennessy Ctl Ut II
 HCAP	Harvest Capital Cred
 HCAPZ	Harvest Capital Credit Corporation 6.125% Notes
 HCCH	Hl Acquisitions Corp
@@ -1481,7 +1482,7 @@ HOLX	Hologic Inc
 HOMB	Home Bancshares Inc
 HONE	Harborone Bancorp Inc
 HOPE	Hope Bancorp Inc
-HOTH	Hoth Therapeutics
+HOTH	Hoth Therapeutics Inc.
 HOVNP	Hovnanian Entr Dep A
 HPJ	Highpower Intl Inc
 HPT	Hospitality Properites Trust
@@ -1585,6 +1586,7 @@ IKNX	Ikonics Corp
 ILMN	Illumina Inc
 ILPT	Industrial Logistics Properties Trust
 IMAC	Imac Holdings Inc.
+IMACW	Imac Holdings Inc. Warrant
 IMDZ	Immune Design CS
 IMGN	Immunogen Inc
 IMI	Intermolecular Inc
@@ -1652,7 +1654,7 @@ IRTC	Irhythm Technologies Inc
 IRWD	Ironwood Pharmaceuti
 ISBC	Investors Bancorp
 ISCA	Intl Speedway Cl A
-ISDX	Invesco Developed Ex-US ETF
+ISDS	Invesco Developed Ex-US Small Company ETF
 ISEM	Invesco Emerging Markets ETF
 ISHG	1-3 Year Intl Treas Bond Ishares ETF
 ISIG	Insignia Systems
@@ -1973,6 +1975,8 @@ MIND	Mitcham Industries Inc
 MINDP	Mitcham Industries Inc
 MINI	Mobile Mini Inc
 MITK	Mitek Systems Inc
+MITO	Stealth Biotherapeutics Corp. Ads
+MJCO	Majesco
 MKGI	Monaker Group Inc
 MKSI	Mks Instruments Inc
 MKTX	Marketaxess Holdings
@@ -1986,7 +1990,6 @@ MLVF	Malvern Bncp
 MMAC	Mma Capital Mngt
 MMDM	Modern Media Acquisition Corp
 MMDMR	Modern Media Acquisition Corp Right
-MMDMU	Modern Media Acquisition Corp Unit
 MMDMW	Modern Media Acquisition Corp Warrant
 MMLP	Martin Midstrm LP
 MMSI	Merit Medical Sys
@@ -2003,7 +2006,6 @@ MNTA	Momenta Pharma
 MNTX	Manitex Intl Inc
 MOBL	Mobileiron Inc
 MOFG	Midwestone Fnl Gp
-MOGLC	Gabelli Nextshares Trust Gabelli Media Mogul Nex
 MOGO	Mogo Finance Technology Inc
 MOMO	Momo Inc Ads
 MOR	Morphosys Ag ADR
@@ -2071,6 +2073,7 @@ MYOK	Myokardia Inc Cm ST
 MYOS	Myos Rens Tech
 MYRG	MYR Group Inc
 MYSZ	My Size Inc
+MYT	Urban Tea Inc.
 NAII	Natural Alternativ
 NAKD	Naked Brand Group Inc
 NANO	Nanometrics Inc
@@ -2324,7 +2327,6 @@ PANL	Pangaea Logistics So
 PATI	Patriot TR HD
 PATK	Patrick Inds Inc
 PAVM	Pavmed Inc
-PAVMW	Pavmed Inc WT
 PAVMZ	Pavmed Inc. Series Z Warrant
 PAYX	Paychex Inc
 PBBI	Pb Bancorp Inc
@@ -2467,7 +2469,6 @@ PRQR	Proqr Therapeutics
 PRSC	Providence Svc Cp
 PRTA	Prothena Corp
 PRTH	Priority Techno Holdings Inc
-PRTHU	Priority Techno Holdings Inc Unit
 PRTHW	Priority Technology Holdings Inc Warrant
 PRTK	Paratek Pharma Inc
 PRTO	Proteon Thera Com ST
@@ -2787,6 +2788,7 @@ SKYY	Cloud Computing ETF FT
 SLAB	Silicon Labs Inc
 SLCT	Select Bancorp Inc
 SLDB	Solid Biosciences Inc
+SLGG	Super League Gaming Inc.
 SLGL	Sol-Gel Technologies Ltd
 SLGN	Silgan Holdings
 SLIM	Obesity ETF
@@ -2840,6 +2842,7 @@ SOHOO	Sotherly Hotels LP
 SOHU	Sohu.com Inc
 SOLO	Electrameccanica Vehs Corp
 SOLOW	Electrameccanica Vehicles Corp. Ltd. Warrants
+SOLY	Soliton Inc.
 SONA	Southern National Bk
 SONO	Sonos Inc
 SORL	Sorl Auto Parts Inc
@@ -3038,8 +3041,6 @@ TOPS	Top Ships Inc
 TORC	Restorbio Inc
 TOTA	Tottenham Acquisition I Limited Ordinary Shares
 TOTAR	Tottenham Acquisition I Limited Right
-TOTAU	Tottenham Acquisition I Limited Unit
-TOTAW	Tottenham Acquisition I Limited Warrant
 TOUR	Tuniu Corporatio Ads
 TOWN	Towne Bank
 TPCO	Tribune Publishing Company
@@ -3058,6 +3059,7 @@ TRMD	Torm Plc Class A
 TRMK	Trustmark Corp
 TRMT	Tremont Mortgage Trust Common Shares of Benefici
 TRNS	Transcat Inc
+TRNX	Taronis Technologies Inc.
 TROV	Trovagene Inc
 TROW	T Rowe Price Group
 TRPX	Therapix Biosciences Ltd
@@ -3199,6 +3201,7 @@ VEON	Veon Ltd
 VERI	Veritone Inc
 VERU	Veru Inc
 VETS	Pacer Military Times Best Employers ETF
+VFF	Village Farms Intl
 VGIT	Interm Govt Bond Vanguard
 VGLT	Long-Term Govt Bond Vanguard
 VGSH	Sht-Term Govt Bond Vanguard
@@ -3303,8 +3306,6 @@ WIN	Windstream Hldgs Inc
 WINA	Winmark Corp
 WINC	Western Asset Short Duration Income ETF
 WING	Wingstop Inc
-WINR	Simplicity Esports & Gaming Co.
-WINRW	Simplicity Esports & Gaming Co. Warrants
 WINS	Wins Finance Holdings Inc
 WIRE	Encore Wire Cp
 WISA	Summit Semiconductor Inc
