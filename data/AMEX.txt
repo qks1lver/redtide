@@ -45,6 +45,7 @@ AMUB	Etracs Alerian MLP ETN Series B
 AMZA	Infracap MLP ETF
 ANGL	Fallen Angel HY Bond ETF Vaneck
 AOA	Aggressive Allocation Ishares Core ETF
+AOIL	Aberdeen Standard Bloomberg WTI Crude Oil Strate
 AOK	Conservative Allocation Ishares Core ETF
 AOM	Moderate Allocation Ishares Core ETF
 AOR	Growth Allocation Ishares Core ETF
@@ -115,7 +116,6 @@ BIZD	Bdc Income Vaneck ETF
 BJAN	Innovator S&P 500 Buffer ETF - January
 BJK	Gaming ETF Vaneck
 BJUL	Innovator S&P 500 Buffer ETF
-BKC	Rex Bkcm ETF
 BKF	BRIC Ishares MSCI ETF
 BKJ	Bancorp of New Jersey Inc
 BKLN	Senior Loan Invesco ETF
@@ -274,7 +274,6 @@ CWEB	Direxion CSI China Internet Idx Bull 2X
 CWI	ACWI [Ex-Us] MSCI ETF SPDR
 CWS	Advisorshares Focused Equity ETF
 CYB	Wisdomtree Chinese Yuan Fund
-CYM	Cymat Technologies Ltd
 CZA	Zacks Mid-Cap Invesco ETF
 DAG	DB Agriculture 2X ETN Powershares
 DALT	Anfield Capital Diversified Alternatives ETF
@@ -430,7 +429,6 @@ EDOW	First Trust Dow 30 Equal Weight ETF
 EDV	Extended Dur Trs Idx ETF Vanguard
 EDZ	Emrg Mkts Bear 3X Direxion
 EEB	BRIC Invesco ETF
-EED	Xxeed - Claymore BNY BRIC ETF Intraday
 EEH	Spectrum Lg Cap U.S. Sector ETN Elements
 EELV	S&P Emerging Markets Low Vol Invesco ETF
 EEM	Emerging Markets Ishares MSCI ETF
@@ -594,6 +592,8 @@ FCOM	Fidelity Telecommunication MSCI ETF
 FCOR	Fidelity Corporate Bond ETF
 FCTR	First Trust Lunt U.S. Factor Rotation ETF
 FDD	Stoxx Euro Select Div First Trust
+FDEM	Fidelity Targeted Emerging Markets Factor ETF
+FDEV	Fidelity Targeted International Factor ETF
 FDHY	Fidelity High Yield Factor ETF
 FDIS	Fidelity Consumer Disc MSCI ETF
 FDL	Mstar Dividend Leaders
@@ -629,6 +629,7 @@ FINU	Ultrapro Financials Proshares
 FINZ	Ultrapro Short Financials Proshares
 FISK	Empire State Realty Op LP Se
 FIVA	Fidelity International Value Factor ETF
+FIVG	Defiance Next Gen Connectivity ETF
 FIW	Water ETF FT
 FIYY	Barclays Plc
 FLAG	Weatherstorm Forensic Accounting
@@ -707,6 +708,7 @@ FRLG	Large Cap Growth Index-Linked Exchange Traded No
 FRN	Frontier Markets Invesco ETF
 FSI	Flexible Solutions International Inc
 FSMB	First Trust Short Duration Managed Municipal ETF
+FSMD	Fidelity Small-Mid Factor ETF
 FSP	Franklin Street Properties
 FSTA	Fidelity Consumer Staples MSCI ETF
 FTEC	Fidelity Info Tech MSCI ETF
@@ -794,7 +796,6 @@ GLU-B	Gabelli Global Utility & Income TR
 GLV	Clough Global Allocation Fund
 GMF	S&P Emerging Asia Pacific SPDR
 GMFL	Multi-Factor Large Cap Invesco ETF
-GMI	Xxgmi - Market Vectors Gold Miners Index Intrada
 GMO	General Moly Inc
 GMOM	Cambria Global Momentum ETF
 GNAF	Microsectors Fang Index Inverse Etns 01/08/2023
@@ -804,7 +805,7 @@ GOAU	US Global Go Gold and Precious Metal Miners ETF
 GOEX	G-X Gold Explorers ETF
 GORO	Gold Resource Corp
 GOVT	US Treasury Bond Ishares ETF
-GPL	Great Panther Silver Ltd
+GPL	Great Panther Mining Ltd.
 GQRE	Flexshares Global Quality Real Estate
 GREK	G-X FTSE Greece 20 ETF
 GRES	IQ Global Resources ETF
@@ -897,7 +898,6 @@ HTUS	Hull Tactical US ETF
 HUSA	Houston American Energy Corp
 HUSE	US Equity Rotation Strategy ETF
 HUSV	Horizon Vol Domestic ETF FT
-HVX	Xxhvx - Market Vectors Environment Services Inde
 HYD	High Yld Muni ETF Vaneck
 HYDB	High Yield Defensive Bond Ishares Edge ETF
 HYDD	Direxion High Yield Bear 2X
@@ -1154,7 +1154,6 @@ JNK	High Yield Bond ETF SPDR
 JNUG	Direxion Junior Gold Mine Bull 3X
 JO	Ipatha.B Coffee Subindex TR ETN
 JOB	General Employment Enterprises
-JPBI	James Purpose Based Investment ETF
 JPED	JPM Event Driven ETF
 JPEH	JPM Dvsd Rtns Europe Currency Hedged
 JPEM	JPM Dvsd Rtns EM ETF
@@ -1193,7 +1192,6 @@ KGRN	Kraneshares MSCI China Environment Index ETF
 KIE	S&P Insurance ETF SPDR
 KIQ	Kelso Technologies I
 KLDW	Exchange Listed Funds Trust Gav
-KLX	Xxklx - Market Vectors Steel Index Intraday
 KMED	Kraneshares Emerging Markets Healthcare Index
 KNG	ETF Series Solutions ETF CBOE Vest S&P 500 Divid
 KNOW	All Cap Insider Sentiment Direxion
@@ -1339,7 +1337,6 @@ NEAR	Short Maturity Bond Ishares ETF
 NEED	Direxion Daily Consumer Staples Bull 3X Shares
 NEN	New England Realty Associates Limited Partnershi
 NES	Nuverra Environmental Solutions
-NFA	Xxnfa - Claymore/Sabrient Insider ETF Index Intr
 NFLT	Virtus Multi-Sector Uncstd Bond
 NFO	Insider Sentiment Invesco ETF
 NFRA	Flexshares Global Broad Infr Fund

@@ -84,6 +84,7 @@ AGLE	Aeglea Biothera
 AGMH	Agm Group Holdings Inc. Class A
 AGNC	American Capital Age
 AGNCB	American Cap Agy Cor
+AGNCM	Agnc Investment Corp Cum Red Pfd Ser D Fixed To
 AGNCN	Agnc Investment Corp
 AGND	Wisdomtree Neg Duration US Agg Bond Fund
 AGRX	Agile Therap
@@ -161,7 +162,6 @@ AMED	Amedisys Inc
 AMEH	Apollo Medical Holdings Inc
 AMGN	Amgen Inc
 AMKR	Amkor Technology
-AMMA	Alliance Mma Inc
 AMNB	American Natl Bksh
 AMOT	Allied Motion Tech
 AMPH	Amphastar Pharma
@@ -185,8 +185,10 @@ AMZN	Amazon.com Inc
 ANAB	Anaptysbio Inc
 ANAT	Amer Natl Insurance
 ANCN	Anchiano Therapeutics Ltd. ADR
-ANCX	Access National Corp
+ANDA	Andina Acq Cp Ord Sh
+ANDAR	Andina Acq Cp Rt
 ANDAU	Andina Acquisition Corp. III Unit
+ANDAW	Andina Acq Cp WT
 ANDE	Andersons Inc
 ANGI	Homeservices Inc
 ANGO	Angiodynamics Inc
@@ -463,7 +465,6 @@ BTAI	Bioxcel Therapeutics Inc
 BTEC	Principal Healthcare Innovators Index
 BURG	Chanticleer Hldgs
 BUSE	First Busey Corp
-BVNSC	Brandes Value Nextshare Investment Trust
 BVSN	Broadvision Inc
 BVXV	Biondvax Pharma Ads
 BVXVW	Biondvax Pharma WT
@@ -586,7 +587,6 @@ CGEN	Compugen Ltd
 CGIX	Cancer Genetics Inc
 CGNX	Cognex Cp
 CGO	Calamos Glb Ttl Rtn
-CGVIC	Causeway Etmf Trust Causeway Global Value Nextsh
 CHCI	Comstock Hldgs Cos
 CHCO	City Holding CO
 CHDN	Churchill Downs IN
@@ -624,7 +624,6 @@ CIL	Victory Intl Vol Wtd ETF
 CINF	Cincinnati Financial
 CIVB	Civista Bncshrs
 CIVBP	Civista Bancshrs Dep
-CIVEC	Causeway Etmf Trust Causeway International Value
 CIZ	Victory Dev Enhd Vol Wtd ETF
 CIZN	Citizens Hldg CO
 CJJD	China Jojo Drugstore
@@ -656,6 +655,7 @@ CLXT	Calyxt Inc
 CMCO	Columbus Mckinnon
 CMCSA	Comcast Corp A
 CMCT	Cim Commercial TR Cp
+CMCTP	Cim Commercial Trust Corp Series L Prfd
 CME	CME Group Inc
 CMFN	Cm Finance
 CMFNL	Cm Finance Inc 6.125% Notes Due 2023
@@ -738,7 +738,6 @@ CROX	Crocs Inc
 CRSP	Crispr Therapeutics Ag
 CRTO	Criteo S.A. Ads
 CRUS	Cirrus Logic Inc
-CRUSC	Calvert Ultra-Short Income Nextshares
 CRVL	Corvel Cp
 CRVS	Corvus Pharma Com
 CRWS	Crown Crafts Inc
@@ -855,7 +854,6 @@ DFBHW	Dfb Healthcare Acquisitions Corp. Warrant
 DFFN	Diffusion Pharmaceuticals Inc
 DFNL	Davis Select Financial ETF
 DFRG	Del Frisco's Restrnt
-DFVS	Ipath US Treasury 5 Yr Bear ETN
 DGICA	Donegal Group Cl A
 DGICB	Donegal Group Cl B
 DGII	Digi Intl Inc
@@ -894,9 +892,9 @@ DOOO	Brp Inc
 DORM	Dorman Products Inc
 DOVA	Dova Pharmaceuticals Inc
 DOX	Amdocs Ltd Ord
+DPHCU	Diamondpeak Holdings Corp. Units
 DRAD	Digirad Corp
 DRIO	Labstyle Innovat
-DRIOW	Labstyle Innovati WT
 DRIV	Global X Autonomous & Electric Vehicles ETF
 DRNA	Dicerna Pharmaceutic
 DRRX	Durect Corp
@@ -910,7 +908,6 @@ DSWL	Deswell Inds Inc
 DTEA	Davidstea Inc
 DTSS	Datasea Inc
 DTUS	Ipath US Treasury 2 Yr Bear ETN
-DTYL	Ipath US Treasury 10 Yr Bull ETN
 DTYS	Ipath US Treasury 10 Yr Bear ETN
 DUSA	Davis Select USA ETF
 DVAX	Dynavax Technologies
@@ -995,7 +992,6 @@ EMCF	Emclaire Finl Cor
 EMCG	Wisdomtree EM Consumer Growth
 EMCI	E M C Insurance Gp
 EMIF	Emrg Mkts Infrastructure Ishares ETF
-EMITF	Elbit Imaging Ord
 EMKR	Emcore Corp
 EML	Eastern CO
 EMMS	Emmis Commun Cl A
@@ -1036,7 +1032,6 @@ ESGR	Enstar Group Ltd
 ESGRO	Enstar Group Limited Depository Shares 7.00% Per
 ESGRP	Enstar Group Ltd
 ESGU	USA ESG Optimized Ishares MSCI ETF
-ESIO	Electro Sci Inds
 ESLT	Elbit Systems Ltd
 ESPR	Esperion Theraptc
 ESQ	Esquire Financial Holdings Inc
@@ -1432,7 +1427,7 @@ HBK	Hamilton Bancorp
 HBMD	Howard Bancorp MD
 HBNC	Horizon Bancorp
 HBP	Huttig Bldg Products
-HCACU	Hennessy Ctl Ut II
+HCACU	Hennessy Capital Acquisition Corp. IV Unit
 HCAP	Harvest Capital Cred
 HCAPZ	Harvest Capital Credit Corporation 6.125% Notes
 HCCH	Hl Acquisitions Corp
@@ -1676,8 +1671,6 @@ IUSG	S&P US Growth Ishares Core ETF
 IUSS	Invesco US Small Company ETF
 IUSV	S&P US Value Ishares Core ETF
 IVAC	Intevac Inc
-IVENC	Ivy Nextshares Ivy Focused Energy Nextshares
-IVFVC	Ivy Nextshares Ivy Focused Value Nextshares
 IXUS	Total Intl Stock Ishares Core MSCI ETF
 IZEA	Izea Inc
 JACK	Jack IN The Box Inc
@@ -1707,6 +1700,7 @@ JRVR	James River Gp HD
 JSM	SLM Cp 6% Sr Nt
 JSMD	Janus Small/Midcap Growth ETF
 JSML	Janus Smallcap Growth ETF
+JSYN	Jensyn Acq Cp CS
 JSYNR	Jensyn Acq Cp Rt
 JSYNW	Jensyn Acq Cp WT
 JVA	Coffee Holding CO
@@ -1741,6 +1735,7 @@ KIN	Kindred Biosciences
 KINS	Kingstone Cos Inc
 KIRK	Kirkland's Inc
 KLAC	K L A-Tencor Corp
+KLDO	Kaleido Biosciences Inc.
 KLIC	Kulicke and Soffa
 KLXE	Klx Energy Services Holdings Inc
 KMDA	Kamada Ltd
@@ -1990,11 +1985,14 @@ MLVF	Malvern Bncp
 MMAC	Mma Capital Mngt
 MMDM	Modern Media Acquisition Corp
 MMDMR	Modern Media Acquisition Corp Right
+MMDMU	Modern Media Acquisition Corp Unit
 MMDMW	Modern Media Acquisition Corp Warrant
 MMLP	Martin Midstrm LP
 MMSI	Merit Medical Sys
 MMYT	Makemytrip Ltd
+MNCL	Monocle Acquisition Corporation
 MNCLU	Monocle Acquisition Corporation Units
+MNCLW	Monocle Acquisition Corporation Warrants
 MNDO	Mind C.T.I. Ltd
 MNGA	Magnegas Corp
 MNKD	Mannkind Corp
@@ -2006,6 +2004,7 @@ MNTA	Momenta Pharma
 MNTX	Manitex Intl Inc
 MOBL	Mobileiron Inc
 MOFG	Midwestone Fnl Gp
+MOGLC	Gabelli Nextshares Trust Gabelli Media Mogul Nex
 MOGO	Mogo Finance Technology Inc
 MOMO	Momo Inc Ads
 MOR	Morphosys Ag ADR
@@ -2118,7 +2117,6 @@ NEWTZ	Newtek 7.5% NTS 2022
 NEXT	Nextdecade Corp
 NFBK	Northfield Bncrp Del
 NFE	New Fortress Energy Llc
-NFEC	NF Energy Saving Cor
 NFLX	Netflix Inc
 NFTY	First Trust India Nifty 50 EW ETF
 NGHC	National General Hld
@@ -2236,7 +2234,6 @@ OHAI	Oha Investmnt Cp
 OHGI	One Horizon Grp
 OHRP	Ohr Pharmceutial
 OIIM	O2Micro Intl Ltd
-OKDCC	Eaton Vance Nextshares Trust II Eaton Vance Oakt
 OKTA	Okta Inc Class A
 OLBK	Old Line Bancshs MD
 OLD	Long-Term Care ETF
@@ -2518,7 +2515,6 @@ PWOD	Penns Woods Bancorp
 PXI	DWA Energy Momentum Invesco ETF
 PXLW	Pixelworks Inc
 PXS	Pyxis Tankers
-PXUS	Principal Intl Multi-Factor Index ETF
 PY	Principal Shareholders Yield ETF
 PYDS	Payment Data Syst
 PYPL	Paypal Holdings
@@ -2653,6 +2649,7 @@ ROSEW	Rosehill Resources Inc
 ROST	Ross Stores Inc
 RP	Realpage Inc
 RPD	Rapid7 Inc
+RPIBC	Managed Portfolio Series Reinhart Intermediate B
 RRGB	Red Robin Gourm
 RRR	Rd Rock Rsrts Cla
 RTIX	Rti Surgical Inc
@@ -2795,7 +2792,6 @@ SLIM	Obesity ETF
 SLM	SLM Corp
 SLMBP	SLM Cp Srs B Pfd
 SLNO	Soleno Therapeutics Inc
-SLNOW	Soleno Therapeutics Inc
 SLP	Simulations Plus Inc
 SLQD	0-5 Year Invst Grade Corp Bond Ishares ETF
 SLRC	Solar Capital
@@ -3003,6 +2999,7 @@ TGA	Transglobe Energy Cp
 TGEN	Tecogen Inc
 TGLS	Tecnoglass Inc
 TGTX	Tg Therapeuticscmn
+THCBU	Tuscan Holdings Corp. Unit
 THFF	First Finl Corp [In]
 THOR	Synthorx Inc.
 THRM	Gentherm Inc
@@ -3040,7 +3037,6 @@ TOCA	Tocagen Inc
 TOPS	Top Ships Inc
 TORC	Restorbio Inc
 TOTA	Tottenham Acquisition I Limited Ordinary Shares
-TOTAR	Tottenham Acquisition I Limited Right
 TOUR	Tuniu Corporatio Ads
 TOWN	Towne Bank
 TPCO	Tribune Publishing Company
@@ -3142,7 +3138,7 @@ UHAL	A M E R C O
 UIHC	United Insurance Hld
 ULBI	Ultralife Corp
 ULH	Universal Logis Hldg
-ULTA	Ulta Salon Cosmetic
+ULTA	Ulta Beauty Inc.
 ULTI	Ultimate Software
 UMBF	Ump Financial Corp
 UMPQ	Umpqua Holdings Corp
@@ -3215,6 +3211,7 @@ VIIX	VS VIX Short Term
 VIOT	Viomi Technology Co. Ltd ADR
 VIRC	Virco MFG Cp
 VIRT	Virtu Financial Cm A
+VISL	Vislink Technologies Inc.
 VIVE	Viveve Medical
 VIVO	Meridian Bioscience
 VKTX	Viking Thera

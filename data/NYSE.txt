@@ -53,14 +53,6 @@ AFGE	American Financial Group Inc
 AFGH	American Financial Group Inc
 AFI	Armstrong Flooring Inc
 AFL	Aflac Incorporated
-AFS-A	Amtrust Financial Services Inc
-AFS-B	Amtrust Financial Services Dep Pfd
-AFS-C	Amtrust Financial Services Series C
-AFS-D	Amtrust Financial Services Dep Pfd
-AFS-E	Amtrust Financial Services Inc Prf
-AFS-F	Amtrust Financial Services Inc
-AFSS	Amtrust Financial Services Inc
-AFST	Amtrust Financial Services Inc
 AFT	Apollo Senior Floating Rate Fund Inc
 AG	First Majestic Silver
 AGCO	Agco Corp
@@ -815,6 +807,7 @@ DGX	Quest Diagnostics Inc
 DHF	Dreyfus High Yield Strategies Fund
 DHI	D.R. Horton
 DHR	Danaher Corp
+DHR-A	Danaher Corp Mandatory Conv Pfd Ser A
 DHT	Dht Holdings
 DHX	Dice Holdings
 DIAX	Nuveen Dow
@@ -839,7 +832,6 @@ DLR-J	Digital Realty Trust Inc Cum Redeemable Pfd Ser
 DLX	Deluxe Corp
 DMB	Dreyfus Municipal Bond Infrastr
 DMO	Western Asset Mortgage Defined Opp
-DNB	Dun & Bradstreet Corp
 DNI	Chartwell Dividend & Income Fund
 DNOW	Now Inc
 DNP	Duff & Phelps Utilities Income
@@ -1416,7 +1408,6 @@ HTA	Healthcare Trust of America I
 HTD	John Hancock Tax Advantaged Dividend
 HTFA	Horizon Technology Finance 6.25% Notes Due 2022
 HTGC	Hercules Technology Growth Capital
-HTGX	Hercules Technology Growth Cap
 HTH	Hilltop Holdings Inc
 HTY	John Hancock Tax-Advantaged Global
 HTZ	Hertz Global Holdings Inc
@@ -1871,7 +1862,7 @@ MPW	Medical Properties Trust
 MPX	Marine Products Corp
 MQT	Blackrock Muniyield Quality Fund II
 MQY	Blackrock Muniyield Quality Fund
-MR	Mindray Medical International Ltd
+MR	Montage Resources Corp.
 MRC	Mrc Global Inc
 MRK	Merck & Company
 MRO	Marathon Oil Corp
@@ -2168,14 +2159,12 @@ OUT	Outfront Media Inc
 OXM	Oxford Industries
 OXY	Occidental Petroleum Corp
 OZM	Och-Ziff Capital Management
-P	Pandora Media Inc
 PAA	Plains All American Pipeline LP
 PAC	Grupo Aeroportuario Del Pacifico
 PACD	Pacific Drilling S.A.
 PAG	Penske Automotive Group
 PAGP	Plains Gp Holdings LP
 PAGS	Pagseguro Digital Ltd. Class A
-PAH	Platform Specialty Products Corp
 PAI	Pacific American Income Shares
 PAM	Pampa Energia S.A.
 PANW	Palo Alto Networks Inc
@@ -2526,7 +2515,6 @@ SEAS	Seaworld Entertainment Inc CO
 SEE	Sealed Air Corp
 SEM	Select Medical Holdings Corp
 SEMG	Semgroup Corp
-SEND	Sendgrid Inc
 SERV	Servicemaster Global Holdings I
 SF	Stifel Financial Corp
 SF-A	Stifel Financial Corp
@@ -2981,7 +2969,6 @@ VSTO	Vista Outdoor Inc
 VTA	Invesco Dynamic Credit Fund
 VTN	Invesco Trust New York Muni
 VTR	Ventas Inc
-VVC	Vectren Corp
 VVI	Viad Corp
 VVR	Invesco Senior Income Trust
 VVV	Valvoline Inc
@@ -3066,7 +3053,6 @@ WRB-B	W.R. Berkley Corp
 WRB-C	W.R. Berkley Corp
 WRB-D	W.R. Berkley Corporation 5.75%
 WRB-E	W.R. Berkley Corp. 5.70% Sub Debentures
-WRD	Wildhorse Resour
 WRE	Washington Real Estate Investment
 WRI	Weingarten Realty Investors
 WRK	Westrock Company
