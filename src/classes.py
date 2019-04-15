@@ -52,7 +52,14 @@ if v and v[0] and int(v[0].split('.')[0]) >= 10:
 
 # Classes
 class Stock:
+    """
+    A class for scraping stock data
 
+    :param __init__: sets default values
+    :param
+
+
+    """
     def __init__(self):
 
         os.environ['TZ'] = 'America/New_York'
@@ -86,13 +93,27 @@ class Stock:
             print('Created: %s' % self._dir_live_quotes_)
 
     def pull_history(self, symb, period1=0, period2=0):
+        """
+        Grabs historical data for symbol from dates period1 to period2
+        :param symb: symbol to grab
+        :param period1: starting time period in seconds
+        :param period2: ending time period in seconds
+        :return: data: nested list containing pricing data in following format:
+                        [... [date, volume, open, close, high, low, adjusted close]...]
+                note - consider adjusting this to standard OHLC order
+        """
 
+        # grab prices up to the current day if period2 not set
         if not period2:
             period2 = (datetime.datetime.now() - self._date0_).total_seconds()
 
+        # url to grab prices
         url = _url_yahoo_daily_ % (symb, period1, period2)
 
+
         r = self._try_request(url)
+
+        # errors - should convert these to try/except blocks
         if r is None:
             if self.verbose:
                 print('Page load failed for %s' % symb)
@@ -112,6 +133,7 @@ class Stock:
 
         data = []
         for r in raw:
+            # cleaning data
             parts = r[1:-1].replace('"','').split(',')
             got_data = 0
 
@@ -154,8 +176,14 @@ class Stock:
                     adj_close_price = float(d[1])
                     got_data += 1
 
+                else:
+                    print('unknown data value')
+                    continue
+
             if got_data == 7:
                 data.append([date, volume, open_price, close_price, high_price, low_price, adj_close_price])
+            else:
+                print('failed to retrieve all data values')
 
         if self.verbose:
             print('Pulled %d days of %s' % (len(data), symb))
@@ -163,7 +191,13 @@ class Stock:
         return data
 
     def write_history(self, data, symb, dir_out=''):
-
+        """
+        Writes pricing data out to csv file as dir_out/symb.csv
+        :param data: pricing data
+        :param symb: stock symbol for pricing data
+        :param dir_out: the directory to write to
+        :return: p_out, string of 'dir_out/symb.csv'
+        """
         if not dir_out:
             dir_out = self._dir_full_history_
 
@@ -182,6 +216,12 @@ class Stock:
         return p_out
 
     def all_symbols(self, try_compiled=True):
+        """
+        Returns a sorted list of all symbols from _p_all_symbols_ file if present,
+        or from a combination of all symbols in _p_nasdar_listing_ , _p_nyse_listing_ , _p_amex_listing_
+        :param try_compiled:
+        :return: sorte
+        """
 
         symbs = []
 
@@ -211,7 +251,8 @@ class Stock:
         if symbs and self.verbose:
             print('\tFound %d symbols' % len(symbs))
 
-        return sorted(symbs)
+        sorted_symbs = sorted(symbs)
+        return sorted_symbs
 
     def retrieve_all_symbs(self, symbs=None, p_symbs='', i_pass=1, max_pass=5):
 
