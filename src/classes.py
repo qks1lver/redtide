@@ -21,19 +21,8 @@ from sklearn.dummy import DummyClassifier, DummyRegressor
 from sklearn import linear_model
 from sklearn import preprocessing
 from platform import mac_ver
-
-
-# Constants
-_d_classes_ = os.path.realpath(os.path.split(__file__)[0]) + '/'
-_d_data_ = _d_classes_ + '../data/'
-_p_nasdaq_listing_ = _d_data_ + 'NASDAQ.txt'
-_p_nyse_listing_ = _d_data_ + 'NYSE.txt'
-_p_amex_listing_ = _d_data_ + 'AMEX.txt'
-_p_all_symbols_ = _d_data_ + 'all_symbols.txt'
-_p_excluded_symbols_ = _d_data_ + 'excluded_symbols.txt'
-_url_cnn_ = 'https://money.cnn.com/quote/quote.html?symb=%s'
-_url_yahoo_ = 'https://finance.yahoo.com/quote/%s'
-_url_yahoo_daily_ = 'https://finance.yahoo.com/quote/%s/history?period1=%d&period2=%d&interval=1d&filter=history&frequency=1d'
+from constants import (_d_classes_, _d_data_, _p_nasdaq_listing_, _p_nyse_listing_, _p_amex_listing_,
+                        _p_all_symbols_, _p_excluded_symbols_, _url_cnn_, _url_yahoo_, _url_yahoo_daily_)
 
 # To by-pass Mac's new security things that causes multiprocessing to crash
 v = None
@@ -51,6 +40,7 @@ if v and v[0] and int(v[0].split('.')[0]) >= 10:
 
 
 # Classes
+# consider segmenting this into separate classes for getting stock data and processing for ML
 class Stock:
     """
     A class for scraping stock data
@@ -255,6 +245,16 @@ class Stock:
         return sorted_symbs
 
     def retrieve_all_symbs(self, symbs=None, p_symbs='', i_pass=1, max_pass=5):
+        """
+        Grabs pricing history for all stock symbols in symbs and writes out data to csv's
+        by making n = len(symbs) calls of retrieve_symb(symbol) for each symbol in symbs.
+        Uses multithreading if available
+        :param symbs: list of stock symbols to retrieve from yahoo
+        :param p_symbs: file containing list of symbols for symbs
+        :param i_pass: current attempt at grabbing failed symbols
+        :param max_pass: max attempts to grab failed symbols
+        :return nothing, as we'll call retrieve_symb to write our csv files
+        """
 
         t0 = time()
 
@@ -285,6 +285,9 @@ class Stock:
             # To avoid getting blocked by Yahoo, pause for 10 - 20 seconds after 100 symbols
             symb_batches = self._gen_symbol_batches(symbs, batch_size=100)
             n_symb_completed = 0
+
+            # for each batch of symbols have a worker thread execute self.retrieve_symb(batch)
+            # which then calls write_history to write our pricing csv
             for batch in symb_batches:
                 with Pool(processes=self.n_cpu) as pool:
                     res = pool.map(self.retrieve_symb, batch)
@@ -299,7 +302,7 @@ class Stock:
                 if self.verbose:
                     print('{0:.1f}% completed - {1:.0f} / {2:.0f}'.format(n_symb_completed / n_symbs * 100, n_symb_completed, n_symbs))
 
-                # pause
+                # pause to avoid Yahoo block
                 tpause = np.random.randint(10, 21)
                 print('Pause for %d seconds' % tpause)
                 sleep(tpause)
@@ -321,6 +324,7 @@ class Stock:
         if self.verbose:
             print('\nRetrieved full histories for %d / %d symbols' % (n_success, n_symbs))
 
+        # does this suggest failed_symbs should be it's own keyword arg?
         if failed_symbs:
             print('Failed for:')
             for symb in failed_symbs:
@@ -342,7 +346,9 @@ class Stock:
         return
 
     def updated_symbs(self):
-
+        """
+        Returns a list of updated symbols
+        """
         t = datetime.datetime.today()
         t_close = datetime.datetime(year=t.year, month=t.month, day=t.day, hour=18).timestamp()
 
@@ -358,7 +364,7 @@ class Stock:
         return symbs
 
     def retrieve_symb(self, symb):
-
+        """ calls pull_history to grab price data on symb and writes result to csv using write_history"""
         success = False
 
         if self.verbose:
@@ -372,6 +378,7 @@ class Stock:
         return symb, success
 
     def read_full_histories(self, symbs=None):
+        """ reads price history from csv files into Pandas Dataframes stored in self.dfs """
 
         self.dfs = {}
 
@@ -401,6 +408,7 @@ class Stock:
 
     @staticmethod
     def transform(df, shift0=1, shift1=-1, ratio0=0.01, ratio1=0.01):
+        """ transforming dataframes for ML """
 
         tmp0 = (1 - df['low'].shift(shift0) / df['open'] >= ratio0).values
         tmp1 = (df['high'].shift(shift1) / df['open'] - 1 >= ratio1).values
@@ -416,6 +424,7 @@ class Stock:
         return rate, freq
 
     def gen_features(self, symbs, n_sampling=10, n_project=1):
+        """ generate features for machine learning """
 
         not_in_dfs = []
         not_enough_data = []
@@ -446,6 +455,7 @@ class Stock:
         return feats, labels
 
     def gen_feature(self, symb, n_sampling=10, n_project=1):
+        """ generate features for machine learning"""
 
         if symb not in self.dfs:
             raise ValueError('{} not in read stock dataframe dictionary'.format(symb))
