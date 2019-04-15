@@ -220,7 +220,7 @@ class Stock:
         Returns a sorted list of all symbols from _p_all_symbols_ file if present,
         or from a combination of all symbols in _p_nasdar_listing_ , _p_nyse_listing_ , _p_amex_listing_
         :param try_compiled:
-        :return: sorte
+        :return: sorted_symbs, a sorted list of stock symbols
         """
 
         symbs = []
