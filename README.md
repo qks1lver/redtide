@@ -5,6 +5,8 @@ My attempt to model stock...
 
 Notes about updates at the bottom... also shout out to helpful Redditor **u/siem**
 
+And a big thanks to **John Ecker** (JECKER@rollins.edu) for help make Redtide better with better documentation and code organization!
+
 ## Intro
 If you are looking at this, chances are you were on Reddit. This is
 currently documented very very poorly. You have been warned. Hopefully,
