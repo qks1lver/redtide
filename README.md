@@ -13,7 +13,7 @@ down and follow the steps. If you really want to know what else it does
 (i.e. retrieve live stock prices, dimensionality reduction,
 transformation, all that ML stuff) You will probably find much better
 resources else where. But, of course, you are more than welcome to look
-through the code. For now, I'm a bit too busy and streassed out by work
+through the code. For now, I'm a bit too busy and stressed out by work
 to document anything thoroughly, so... have fun!
 
 ## Dependencies
