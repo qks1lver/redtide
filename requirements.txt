@@ -1,0 +1,6 @@
+requests
+pandas
+numpy
+torchvision
+scikit-learn
+seaborn
