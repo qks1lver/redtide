@@ -21,7 +21,7 @@ from sklearn.dummy import DummyClassifier, DummyRegressor
 from sklearn import linear_model
 from sklearn import preprocessing
 from platform import mac_ver
-from constants import (_d_classes_, _d_data_, _p_nasdaq_listing_, _p_nyse_listing_, _p_amex_listing_,
+from src.constants import (_d_classes_, _d_data_, _p_nasdaq_listing_, _p_nyse_listing_, _p_amex_listing_,
                         _p_all_symbols_, _p_excluded_symbols_, _url_cnn_, _url_yahoo_, _url_yahoo_daily_)
 
 # To by-pass Mac's new security things that causes multiprocessing to crash
