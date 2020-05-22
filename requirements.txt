@@ -1,0 +1,9 @@
+DateTime==4.3
+lxml==4.5.0
+numpy==1.18.4
+pandas==1.0.3
+python-dateutil==2.8.1
+PyYAML==5.3.1
+requests==2.23.0
+scipy==1.4.1
+selenium==3.141.0

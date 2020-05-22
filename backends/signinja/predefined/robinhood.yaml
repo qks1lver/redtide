@@ -1,0 +1,13 @@
+url: 'https://robinhood.com/login'
+username: '//input[@name="username"]'
+password: '//input[@name="password"]'
+submit: '//button[@type="submit"]'
+fail_catch:
+  in_page_source: 'Unable to log'
+has_2fa_page: true
+wait_2fa_timeout: 3600
+return_webdriver: true
+loadup_wait_sec: 4
+login_wait_sec: 5
+login_success_catch:
+  in_page_source: 'Cash'

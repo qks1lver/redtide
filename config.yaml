@@ -1,0 +1,23 @@
+file_paths:
+  dir_data: 'data'
+  dir_listings: 'listings'
+  dir_full_history: 'full_history'
+  dir_financials: 'financials'
+  dir_options: 'options'
+  all_symbols: 'all_symbols.txt'
+  excluded_symbols: 'excluded_symbols.txt'
+
+selenium:
+  path_geckodriver: 'geckodriver'
+
+alpha_vantage:
+  api_key_file: '/home/john/auths/alphavantage_api_key'
+  calls_per_minute: 5
+  calls_per_day: 500
+
+eoddata:
+  auth_file: '/home/john/auths/eoddata'
+  exchanges: ['AMEX', 'NYSE', 'NASDAQ']
+
+robinhood:
+  auth_file: '/home/john/auths/robinhood'

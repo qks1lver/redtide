@@ -1,0 +1,10 @@
+url: 'http://eoddata.com/symbols.aspx'
+username: '//input[@id="ctl00_cph1_ls1_txtEmail"]'
+password: '//input[@id="ctl00_cph1_ls1_txtPassword"]'
+submit: '//input[@id="ctl00_cph1_ls1_btnLogin"]'
+fail_catch:
+  in_page_source: 'Invalid email or password'
+loadup_wait_sec: 0
+login_wait_sec: 1
+login_success_catch:
+  in_page_source: 'Account Details'

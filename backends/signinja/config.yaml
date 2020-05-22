@@ -1,0 +1,5 @@
+predefined_auths: 'backends/signinja/predefined'
+loadup_wait_sec: 3
+login_wait_sec: 3
+wait_2fa_timeout: 600
+wait_2fa_interval: 2
